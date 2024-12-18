@@ -8,20 +8,26 @@
     <script src="https://unpkg.com/lucide@latest"></script>
 </head>
 <body>
-    <header>
-        <nav>
-            <div class="container">
-                <a href="#" class="logo">
-                    <i data-lucide="hash"></i>
-                    <span>HashLabs</span>
-                </a>
-                <ul>
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="about.html">About</a></li>
-                    <li><a href="services.html">Services</a></li>
-                    <li><a href="contact.html">Contact</a></li>
-                </ul>
-            </div>
+
+    <header class="floating-header">
+        <div class="logo">Hash Labs</div>
+        <!-- Hamburger Menu Icon -->
+        <div class="hamburger" id="hamburger">
+          <div class="bar"></div>
+          <div class="bar"></div>
+          <div class="bar"></div>
+        </div>
+        <!-- Navigation -->
+        <nav class="nav-menu" id="nav-menu">
+          <ul>
+            <li><a href="index.html">Why Mixpanel</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="team.html">Team</a></li>
+          </ul>
+          <ul class="btn-cotn">
+            <li><a href="contact.html" class="btn contact">Contact Us</a></li>
+          </ul>
         </nav>
     </header>
 
