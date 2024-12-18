@@ -8,22 +8,63 @@
     <script src="https://unpkg.com/lucide@latest"></script>
 </head>
 <body>
-    <header>
-        <nav class="container">
-            <a href="#" class="logo">
-                <i data-lucide="hash" class="logo-icon"></i>
-                <span>HashLabs</span>
-            </a>
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="about.html">About</a></li>
-                <li><a href="services.html">Services</a></li>
-                <li><a href="contact.html">Contact</a></li>
-            </ul>
+    <!-- Floating Sticky Header -->
+    <header class="floating-header">
+        <div class="logo">Hash Labs</div>
+        <!-- Hamburger Menu Icon -->
+        <div class="hamburger" id="hamburger">
+          <div class="bar"></div>
+          <div class="bar"></div>
+          <div class="bar"></div>
+        </div>
+        <!-- Navigation -->
+        <nav class="nav-menu" id="nav-menu">
+          <ul>
+            <li><a href="index.html">Why Mixpanel</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="team.html">Team</a></li>
+          </ul>
+          <ul class="btn-cotn">
+            <li><a href="contact.html" class="btn contact">Contact Us</a></li>
+          </ul>
         </nav>
     </header>
 
     <main>
+        <section class="scroller-section">
+            <!-- Image Container -->
+            <div class="scrollContainer" id="scrollContainer">
+              <div class="imageWrapper">
+                <img src="V1.png" alt="Discover Amazing Places" />
+              </div>
+              <div class="imageWrapper">
+                <img src="V2.png" alt="Experience Unique Cultures" />
+              </div>
+              <div class="imageWrapper">
+                <img src="V3.png" alt="Explore Natural Wonders" />
+              </div>
+              <div class="imageWrapper">
+                <img src="V4.png" alt="Indulge in Culinary Delights" />
+              </div>
+            </div>
+      
+            <!-- Text Overlay -->
+            <div id="textContainer" class="text-overlay">
+              <h2 id="heading" class="text-heading">Discover Amazing Places</h2>
+              <p id="description" class="text-description">
+                Embark on a journey through breathtaking landscapes and unforgettable experiences.
+              </p>
+            </div>
+      
+            <!-- Buttons -->
+            <div class="controls">
+              <button id="prevBtn">◀</button>
+              <button id="nextBtn">▶</button>
+              <button id="pauseBtn">❚❚ Pause</button>
+            </div>
+        </section>
+        
         <section class="hero">
             <div class="container">
                 <h1 class="animate-on-load">Welcome to HashLabs</h1>
