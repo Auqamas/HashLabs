@@ -12,15 +12,15 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 
-    // Header background change on scroll
-    const header = document.querySelector('header');
-    window.addEventListener('scroll', () => {
-        if (window.scrollY > 100) {
-            header.classList.add('scrolled');
-        } else {
-            header.classList.remove('scrolled');
-        }
-    });
+    // Toggle Mobile Menu
+    const hamburger = document.getElementById('hamburger');
+    const navMenu = document.getElementById('nav-menu');
+
+    hamburger.addEventListener('click', () => {
+    hamburger.classList.toggle('active');
+    navMenu.classList.toggle('active');
+        });
+
 
     // Animate elements on scroll
     const animateOnScroll = () => {
@@ -137,3 +137,84 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 });
 
+const content = [
+    {
+      heading: "Seamless Integration of Engineering & AI",
+      text: "By bridging electrical engineering and AI, we develop smart systems like IoT devices, robotics, and automation tools to transform industries and everyday life.",
+    },
+    {
+      heading: "Custom Software & Hardware Solutions",
+      text: "We specialize in end-to-end solutions, integrating software algorithms with robust hardware to meet unique project requirements and accelerate results.",
+    },
+    {
+      heading: "Advanced Simulations for Precision and Performance",
+      text: "We use advanced simulations to model, test, and optimize systems, ensuring accurate predictions, reduced risks, and reliable performance across engineering and AI projects.",
+    },
+    {
+      heading: "Research-Driven Excellence",
+      text: "Combining deep expertise in computer science, AI, and engineering, we focus on R&D with the help of simulations to model complex systems, solve challenges, and deliver future-ready solutions.",
+    },
+  ];
+  
+  let currentIndex = 0;
+  let autoScroll = true;
+  let interval;
+  
+  const scrollContainer = document.getElementById("scrollContainer");
+  const heading = document.getElementById("heading");
+  const description = document.getElementById("description");
+  const pauseBtn = document.getElementById("pauseBtn");
+  const prevBtn = document.getElementById("prevBtn");
+  const nextBtn = document.getElementById("nextBtn");
+  
+  function updateContent() {
+    scrollContainer.style.transform = `translateX(-${currentIndex * 25}%)`;
+    heading.textContent = content[currentIndex].heading;
+    description.textContent = content[currentIndex].text;
+  }
+  
+  function startAutoScroll() {
+    interval = setInterval(() => {
+      currentIndex = (currentIndex + 1) % content.length;
+      updateContent();
+    }, 4000);
+  }
+  
+  function stopAutoScroll() {
+    clearInterval(interval);
+  }
+  
+  function toggleAutoScroll() {
+    autoScroll = !autoScroll;
+    if (autoScroll) {
+      pauseBtn.textContent = "❚❚ Pause";
+      startAutoScroll();
+    } else {
+      pauseBtn.textContent = "▶ Resume";
+      stopAutoScroll();
+    }
+  }
+  
+  function slideLeft() {
+    stopAutoScroll();
+    currentIndex = (currentIndex - 1 + content.length) % content.length;
+    updateContent();
+  }
+  
+  function slideRight() {
+    stopAutoScroll();
+    currentIndex = (currentIndex + 1) % content.length;
+    updateContent();
+  }
+  
+  // Event Listeners
+  pauseBtn.addEventListener("click", toggleAutoScroll);
+  prevBtn.addEventListener("click", slideLeft);
+  nextBtn.addEventListener("click", slideRight);
+  
+  // Initialize
+  window.onload = () => {
+    updateContent();
+    startAutoScroll();
+  };
+  
