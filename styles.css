@@ -32,6 +32,7 @@ body {
     margin: 0 auto;
     padding: 0 20px;
 }
+
 /* Floating Header */
 .floating-header {
     position: fixed;
@@ -74,7 +75,7 @@ body {
 .nav-menu ul li a {
     text-decoration: none;
     padding: 8px 7px;
-    color: #fff;
+    color: #ffffff;
     font-size: 1.1rem;
     transition: all 1s ease-out;
 }
@@ -87,10 +88,11 @@ body {
 }
 
   /* Buttons */
-.btn-cotn li a {
+.btn-cotn li a{
     padding: 8px 15px;
-    border: 1px solid #ffffff;
-    border-radius: 4px;
+    color: #000 !important;
+    background-color: #fff;
+    border-radius: 10px;
     text-decoration: none;
     transition: all 0.3s ease;
 }
@@ -201,7 +203,7 @@ body {
 
 .cta-button:hover {
     background-color: #F59E0B;
-    transform: translateY(-2px);
+    transform: translateY(-3px);
 }
 
 .services, .featured-projects, .about-content, .mission, .values, .service-detail, .contact-content, .map, .innovation-process {
