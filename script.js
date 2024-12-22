@@ -218,3 +218,33 @@ const content = [
     startAutoScroll();
   };
   
+// Progress Bar Update
+document.addEventListener("scroll", () => {
+    const scrollTop = window.scrollY;
+    const docHeight = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+    const scrollProgress = (scrollTop / docHeight) * 100;
+  
+    const progressBar = document.querySelector(".custom-progress-bar");
+    progressBar.style.width = `${scrollProgress}%`;
+  });
+  
+  // Section Animation on Scroll
+  const customSections = document.querySelectorAll(".custom-section");
+  
+  const customObserver = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("in-view");
+        }
+      });
+    },
+    {
+      threshold: 0.1, // Trigger when 10% of the section is visible
+      rootMargin: "-100px", // Adjust viewport margin
+    }
+  );
+  
+  // Attach the observer to each section
+  customSections.forEach((section) => customObserver.observe(section));
+  
