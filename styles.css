@@ -10,9 +10,15 @@
     --gray-300: #D1D5DB;
     --gray-700: #374151;
 }
+
 ::-webkit-scrollbar {
     display: none;
 }
+::selection{
+    color: #fff;
+    background-color: #000000;
+}
+
 .custom-progress-bar {
     position: fixed;
     top: 0;
@@ -23,7 +29,6 @@
     z-index: 1000;
     transition: width 0.1s linear;
 }
-  
 
 * {
     margin: 0;
@@ -198,7 +203,8 @@ body {
   
   /* Hero Title: Increased font size */
 .custom-hero-title {
-    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;    font-size: 10rem; /* Increased size */
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;    
+    font-size: 10rem; /* Increased size */
     font-weight: bold;
     margin: 0 0 2rem;
     line-height: .75;
@@ -225,6 +231,23 @@ body {
     margin: 0 auto;
     border: 6px solid #666; /* Added border */
     border-radius: 15px; /* Rounded corners */
+}
+
+@media (max-width: 1024px) {
+    .custom-section{
+        min-height: 70vh;
+    }
+    .custom-hero-title {
+        font-size: 7rem;
+        line-height: .78;
+    }
+}
+
+@media (max-width: 560px) {
+    .custom-hero-title {
+        line-height: 0.87;
+        font-size: 3.8rem;
+    }
 }
   
   
