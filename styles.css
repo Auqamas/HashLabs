@@ -122,12 +122,12 @@ body {
   
     .nav-menu {
       position: absolute;
-      top: 60px;
+      top: 67px;
       right: 20px;
-      width: calc(100% - 40px);
+      width: calc(100% - 150px);
       background: #262626;
       border-radius: 8px;
-      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+      box-shadow: 0 4px 8px rgba(10, 10, 10, 0.3);
       flex-direction: column;
       display: none;
       padding: 20px 0;
@@ -158,7 +158,7 @@ body {
       transform: rotate(-45deg) translate(5px, -5px);
     }
 }
-  
+
 .hero {
     background-color: var(--purple-700);
     color: var(--white);
@@ -688,20 +688,20 @@ footer {
         max-width: 90%;
         padding: 8px 16px;
     }
-  
+
     .text-heading {
         font-size: 2.5rem;
     }
-  
+
     .text-description {
         font-size: 1rem;
     }
-  
+
     .controls {
         bottom: 10%;
         right: 2%;
     }
-  
+
     .controls button {
         font-size: 0.9rem;
         padding: 6px 12px;
