@@ -172,6 +172,9 @@ body {
 
 .custom-section {
     color: #fff;
+    background-image: url(bg\ img.png);
+    background-position: center;
+    background-size: cover;
     background-color: #000;
     display: flex;
     flex-direction: column;
@@ -216,6 +219,7 @@ body {
 }
   
   .custom-portfolio-image-container {
+    z-index: -1;
     max-width: 500px;
     margin: 0 auto;
     border: 6px solid #666; /* Added border */
