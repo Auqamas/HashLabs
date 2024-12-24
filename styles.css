@@ -11,9 +11,6 @@
     --gray-700: #374151;
 }
 
-::-webkit-scrollbar {
-    display: none;
-}
 ::selection{
     color: #fff;
     background-color: #000000;
@@ -34,6 +31,10 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+}
+#main{
+    width: auto;
+    height: auto;
 }
 
 body {
@@ -250,6 +251,159 @@ body {
     }
 }
 
+/* Sheriyans animaed */
+
+#hero{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    margin-top: 15vw;
+    padding: 0vw 10vw;
+    
+}
+
+#sustain{
+    width: 10vw;
+}
+
+#sustain p{
+    text-transform: capitalize;
+    font-weight: 800;
+    opacity: .5;
+    font-size: 12px;
+    margin: 10px 0;
+}
+#sustain #susimagewrapper{
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    height: 15vw;
+}
+
+#susimagewrapper img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+#ephemeral{
+    position: relative;
+    width: 30vw;
+   min-height: 42vw;
+}
+
+#imagetext{
+    width: fit-content;
+    height: fit-content; 
+}
+
+#ephemeral img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+#ephemeral p{
+    font-weight: 400;
+    font-size: 1.3vw;
+    letter-spacing: -.07vw;
+    line-height: 1.3;
+    width: 40%;
+}
+
+#ephemeral #headings{
+    position: absolute;
+    top: -21%;
+    left: -18%;
+}
+
+#ephemeral h1{
+    letter-spacing: -.4vw;
+    line-height: 1;
+    font-size: 6vw;
+    font-weight: 400;
+}
+
+#visit{
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+
+#circlev{
+    border-radius: 50%;
+    border: 1px solid #5e5e5e;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 3vw;
+    height: 3vw;
+}
+
+#circlev i{
+    color: #5e5e5e;
+}
+
+#visit h3{
+    font-weight: 400;
+    color: #5e5e5e;
+}
+
+#motive{
+    margin-top: 3vw;
+    display: flex;
+    justify-content: space-between;
+    padding: 3vw 10vw;
+}
+
+#motive p{
+    line-height: 1.5;
+    letter-spacing: -.12vw;
+    position: relative;
+    right: 0;
+    width: 85%;
+    text-align: right;
+    font-size: 2vw;
+    
+
+}
+
+#motive span{
+    display: inline-block;
+    width: 85px;
+    height: 40px;
+    border-radius: 100px;
+    background-color: red;
+    margin: 0 13px;
+    margin-bottom: -12.5px;
+}
+
+#onespan{
+    width: 80px;
+    height: 60px;
+    background-image: url(./img3.jpg);
+    background-size: cover;
+    background-position: 0% 55%;
+}
+
+#twospan{
+    width: 130px;
+    height: 60px;
+    background-image: url(./shaljam.jpg);
+    background-size: cover;
+    background-position: center;
+}
+
+#threespan{
+    width: 85px;
+    height: 40px;
+    background-image: url(./grass.jpg);
+    background-size: cover;
+    background-position: center;
+}
+
+/* Code button */
 .cta-button {
     display: inline-block;
     background-color: var(--yellow-400);
