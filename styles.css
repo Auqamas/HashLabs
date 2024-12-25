@@ -480,12 +480,16 @@ html, body {
     }
 }
 
-
 #motive{
     margin-top: 3vw;
     display: flex;
     justify-content: space-between;
     padding: 3vw 10vw;
+}
+#motive h3{
+    font-size: 1.7vw;
+    font-weight: 100;
+    text-transform: capitalize;
 }
 
 #motive p{
@@ -531,7 +535,55 @@ html, body {
     background-size: cover;
     background-position: center;
 }
+/* Responsive styles */
+@media (max-width: 1024px) {
+    #motive h3 {
+        font-size: 3vw;
+    }
 
+    #motive p {
+        font-size: 3vw;
+    }
+
+    #onespan, #twospan, #threespan {
+        width: 70px;
+        height: 50px;
+    }
+}
+
+@media (max-width: 768px) {
+    #motive {
+        padding: 3vw 5vw;
+    }
+
+    #motive h3 {
+        font-size: 2vw;
+    }
+
+    #motive p {
+        font-size: 3vw;
+    }
+
+    #onespan, #twospan, #threespan {
+        width: 60px;
+        height: 40px;
+    }
+}
+
+@media (max-width: 480px) {
+    #motive h3 {
+        font-size: 4.6vw;
+    }
+
+    #motive p {
+        font-size: 5vw;
+    }
+
+    #onespan, #twospan, #threespan {
+        width: 30px;
+        height: 10px;
+    }
+}
 /* Code button */
 .cta-button {
     display: inline-block;
