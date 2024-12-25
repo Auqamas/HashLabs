@@ -1,3 +1,4 @@
+
 document.addEventListener('DOMContentLoaded', () => {
   // Initialize Lucide icons
   lucide.createIcons();
@@ -267,10 +268,10 @@ Shery.textAnimate("#headings h1", {
 // GSAP Animation for navigation links
 gsap.from(".animation-ephemeral", {
   stagger: .3,        // Animates one after the other
-  y: 50,               // Moves from 10px below
-  duration: 1,         // Animation lasts 2 seconds
-  ease: "expo",  // Easing function
-  opacity: 0           // Fades in
+  y: 50,              // Moves from 10px below
+  duration: 1,        // Animation lasts 2 seconds
+  ease: "expo",       // Easing function
+  opacity: 0          // Fades in
 });
 
   Shery.imageEffect("#imagetext img",{

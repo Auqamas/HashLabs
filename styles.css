@@ -16,17 +16,6 @@
     background-color: #000000;
 }
 
-.custom-progress-bar {
-    position: fixed;
-    top: 0;
-    left: 0;
-    height: 4px;
-    background: rgb(255, 255, 255);
-    width: 0%;
-    z-index: 1000;
-    transition: width 0.1s linear;
-}
-
 * {
     margin: 0;
     padding: 0;
@@ -37,10 +26,9 @@
     height: auto;
 }
 
-body {
+html, body {
     font-family: Arial, sans-serif;
     scroll-behavior: smooth;
-    color: black;
 }
 
 .container {
