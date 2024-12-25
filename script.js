@@ -290,3 +290,5 @@ gsap.from("#imgetext img", {
   duration: 2,
   ease: Expo,
 });
+
+
