@@ -3,14 +3,18 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Welcome to The Hash Labs, a hub of innovation and expertise in software engineering, electrical engineering, and advanced modeling technologies." />
     <title>Contact HashLabs - Get in Touch</title>
+    <link rel="stylesheet" href="https://unpkg.com/sheryjs/dist/Shery.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/locomotive-scroll@3.5.4/dist/locomotive-scroll.css">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css" rel="stylesheet" />
     <link rel="stylesheet" href="styles.css">
-    <script src="https://unpkg.com/lucide@latest"></script>
 </head>
+<link rel="icon" type="image/x-icon" href="logo.png">
 <body>
-
+    <!-- Floating Sticky Header -->
     <header class="floating-header">
-        <div class="logo">Hash Labs</div>
+        <img  class="logo" src="logo.png" alt="logo">
         <!-- Hamburger Menu Icon -->
         <div class="hamburger" id="hamburger">
           <div class="bar"></div>
@@ -20,7 +24,7 @@
         <!-- Navigation -->
         <nav class="nav-menu" id="nav-menu">
           <ul>
-            <li><a href="index.html">Why Mixpanel</a></li>
+            <li><a href="index.html">Home</a></li>
             <li><a href="about.html">About</a></li>
             <li><a href="services.html">Services</a></li>
             <li><a href="team.html">Team</a></li>
@@ -31,8 +35,8 @@
         </nav>
     </header>
 
-    <main>
-        <section class="hero contact-hero">
+    <main id="main">
+        <section class="hero-contact contact-hero">
             <div class="container">
                 <h1 class="animate-on-load">Contact Us</h1>
                 <p class="animate-on-load">Get in touch with HashLabs</p>
@@ -74,61 +78,58 @@
                 </div>
             </div>
         </section>
-
-        <section class="map">
-            <div class="container">
-                <h2>Our Location</h2>
-                <div class="map-container animate-on-scroll">
-                    <!-- Replace with actual map embed code -->
-                    <img src="https://via.placeholder.com/1200x400" alt="Map of HashLabs location">
-                </div>
-            </div>
-        </section>
     </main>
 
     <footer>
-        <div class="container">
-            <div class="footer-grid">
-                <div class="footer-section">
-                    <a href="#" class="logo">
-                        <i data-lucide="hash"></i>
-                        <span>HashLabs</span>
-                    </a>
-                    <p>Innovating in Electrical Engineering and Computer Science</p>
-                </div>
-                <div class="footer-section">
-                    <h3>Contact Us</h3>
-                    <ul>
-                        <li><i data-lucide="mail"></i> info@hashlabs.com</li>
-                        <li><i data-lucide="phone"></i> +1 (555) 123-4567</li>
-                        <li><i data-lucide="map-pin"></i> 123 Tech Street, Innovation City, TC 12345</li>
-                    </ul>
-                </div>
-                <div class="footer-section">
-                    <h3>Our Services</h3>
-                    <ul>
-                        <li><a href="services.html#electrical">Electrical Engineering</a></li>
-                        <li><a href="services.html#computer-science">Computer Science</a></li>
-                        <li><a href="services.html#innovation-lab">Innovation Lab</a></li>
-                        <li><a href="services.html#consulting">Tech Consulting</a></li>
-                    </ul>
-                </div>
-                <div class="footer-section">
-                    <h3>Follow Us</h3>
-                    <div class="social-icons">
-                        <a href="#"><i data-lucide="facebook"></i></a>
-                        <a href="#"><i data-lucide="twitter"></i></a>
-                        <a href="#"><i data-lucide="linkedin"></i></a>
-                        <a href="#"><i data-lucide="instagram"></i></a>
+            <div class="container">
+                <div class="footer-grid">
+                    <div class="footer-section">
+                        <a href="#" class="logo">
+                            <img style="height: 90px;" src="logo.png" alt="">
+                        </a>
+                        <p style="margin-top: 50px;">Innovating in Electrical Engineering and Computer Science</p>
+                    </div>
+                    <div class="footer-section">
+                        <h3>Contact Us</h3>
+                        <ul>
+                            <li><i data-lucide="mail"></i> info@hashlabs.com</li>
+                            <li><i data-lucide="phone"></i> +1 (555) 123-4567</li>
+                            <li><i data-lucide="map-pin"></i> 123 Tech Street, Innovation City, TC 12345</li>
+                        </ul>
+                    </div>
+                    <div class="footer-section">
+                        <h3>Our Services</h3>
+                        <ul>
+                            <li><a href="services.html#electrical">Electrical Engineering</a></li>
+                            <li><a href="services.html#computer-science">Computer Science</a></li>
+                            <li><a href="services.html#innovation-lab">Innovation Lab</a></li>
+                            <li><a href="services.html#consulting">Tech Consulting</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-section">
+                        <h3>Follow Us</h3>
+                        <div class="social-icons">
+                            <a href="#"><i data-lucide="facebook" class="social-icon"></i></a>
+                            <a href="#"><i data-lucide="twitter" class="social-icon"></i></a>
+                            <a href="#"><i data-lucide="linkedin" class="social-icon"></i></a>
+                            <a href="#"><i data-lucide="instagram" class="social-icon"></i></a>
+                        </div>
                     </div>
                 </div>
+                <div class="footer-bottom">
+                    <p>&copy; 2024 HashLabs. All rights reserved.</p>
+                </div>
             </div>
-            <div class="footer-bottom">
-                <p>&copy; 2024 HashLabs. All rights reserved.</p>
-            </div>
-        </div>
-    </footer>
+    </footer>    
+    </main>
 
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/0.155.0/three.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/automat/controlkit.js@master/bin/controlKit.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/locomotive-scroll@3.5.4/dist/locomotive-scroll.min.js"></script>
+    <script src="https://unpkg.com/sheryjs/dist/Shery.js"></script>
+    <script src="https://unpkg.com/lucide@latest"></script>
     <script src="script.js"></script>
 </body>
 </html>
