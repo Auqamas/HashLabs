@@ -240,59 +240,59 @@ html, body {
 }
 
 /* Sheriyans animaed */
-
-#hero{
+/* Base styles remain unchanged for larger screens */
+#hero {
     display: flex;
     justify-content: space-between;
     align-items: center;
     width: 100%;
     margin-top: 15vw;
     padding: 0vw 10vw;
-    
 }
 
-#sustain{
+#sustain {
     width: 10vw;
 }
 
-#sustain p{
+#sustain p {
     text-transform: capitalize;
-    font-weight: 800;
-    opacity: .5;
-    font-size: 12px;
+    font-weight: 500;
+    opacity: 0.6;
+    font-size: 14px;
     margin: 10px 0;
 }
-#sustain #susimagewrapper{
+
+#sustain #susimagewrapper {
     position: relative;
     overflow: hidden;
     width: 100%;
     height: 15vw;
 }
 
-#susimagewrapper img{
+#susimagewrapper img {
     width: 100%;
     height: 100%;
     object-fit: cover;
 }
 
-#ephemeral{
+#ephemeral {
     position: relative;
     width: 30vw;
-   min-height: 42vw;
+    min-height: 42vw;
 }
 
-#imagetext{
+#imagetext {
     width: fit-content;
-    height: fit-content; 
+    height: fit-content;
 }
 
-#ephemeral img{
+#ephemeral img {
     width: 100%;
     height: 100%;
     object-fit: cover;
 }
 
-#ephemeral p{
+#ephemeral p {
     font-weight: 400;
     font-size: 1.3vw;
     letter-spacing: -.07vw;
@@ -300,26 +300,27 @@ html, body {
     width: 40%;
 }
 
-#ephemeral #headings{
+#ephemeral #headings {
+    
     position: absolute;
     top: -21%;
     left: -18%;
 }
 
-#ephemeral h1{
+#ephemeral h1 {
     letter-spacing: -.4vw;
     line-height: 1;
     font-size: 6vw;
     font-weight: 400;
 }
 
-#visit{
+#visit {
     display: flex;
     gap: 10px;
     align-items: center;
 }
 
-#circlev{
+#circlev {
     border-radius: 50%;
     border: 1px solid #5e5e5e;
     display: flex;
@@ -329,14 +330,156 @@ html, body {
     height: 3vw;
 }
 
-#circlev i{
+#circlev i {
     color: #5e5e5e;
 }
 
-#visit h3{
+#visit h3 {
     font-weight: 400;
     color: #5e5e5e;
 }
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+    #hero {
+        flex-wrap: wrap;
+        margin-top: 10vw;
+        padding: 5vw;
+    }
+
+    #sustain {
+        width: 40%;
+        margin-bottom: 5vw;
+    }
+
+    #sustain p{
+        margin-right: 150px;
+    }
+
+    #susimagewrapper img{
+        height: 22.3vh;
+    }
+
+    #ephemeral {
+        width: 50%;
+        margin-bottom: 5vw;
+    }
+
+    #ephemeral #headings {
+        top: -15%;
+        left: -10%;
+    }
+
+    #ephemeral p {
+        font-size: 2vw;
+        width: 80%;
+    }
+
+    #ephemeral h1 {
+        font-size: 6.5vw;
+    }
+
+    #visit {
+        padding: 0px 40%;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    #circlev {
+        width: 4vw;
+        height: 4vw;
+    }
+
+    #visit h3 {
+        text-align: center;
+        font-size: 1.5vw;
+    }
+}
+
+@media (max-width: 768px) {
+    #hero {
+        flex-direction: column;
+        margin-top: 5vw;
+    }
+
+    #sustain {
+        margin-bottom: 14vh;
+        width: 80%;
+    }
+    #sustain h2{
+        font-size: 22px;
+        margin-right: 270px;
+        border-bottom: 1px solid black;
+    }
+    #sustain p{
+        margin-top: 3px;
+    }
+    #imagetext img{
+        margin-top: 37px;
+    }
+
+    #ephemeral {
+        width: 100%;
+        min-height: auto;
+    }
+
+    #ephemeral #imagetext p {
+        font-size: 3vw;
+        margin-top: 2px;
+        margin-right: 1px;
+        width: 90%;
+    }
+
+    #ephemeral #headings h1 {
+        font-size: 15vw;
+    }
+
+    #visit {
+        flex-direction: column;
+    }
+
+    #circlev {
+        width: 6vw;
+        height: 6vw;
+    }
+
+    #visit h3 {
+        font-size: 3vw;
+    }
+}
+
+@media (max-width: 480px) {
+    #sustain {
+        width: 100%;
+    }
+
+    #sustain #susimagewrapper {
+        height: 40vw;
+    }
+
+    #ephemeral #headings {
+        top: -10%;
+        left: -5%;
+    }
+
+    #ephemeral p {
+        font-size: 4vw;
+    }
+
+    #ephemeral h1 {
+        font-size: 8vw;
+    }
+
+    #circlev {
+        width: 8vw;
+        height: 8vw;
+    }
+
+    #visit h3 {
+        font-size: 4vw;
+    }
+}
+
 
 #motive{
     margin-top: 3vw;
@@ -353,8 +496,6 @@ html, body {
     width: 85%;
     text-align: right;
     font-size: 2vw;
-    
-
 }
 
 #motive span{
