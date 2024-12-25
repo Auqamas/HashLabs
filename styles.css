@@ -896,66 +896,198 @@ html, body {
     border-radius: 0.5rem;
     overflow: hidden;
 }
+/* Footer Starts From here */
 
-footer {
-    background-color: var(--black);
-    color: var(--white);
-    padding: 4rem 0 2rem;
+footer{
+    height: 50vh;
+    width: 100%;
+    bottom: 0;
+    background: linear-gradient(to right,#00093c,#2d0b00);
+    color: #fff;
+    padding: 100px 0 30px;
+    border-top-left-radius: 125px;
+    font-size: 13px;
+    line-height: 20px;
 }
 
-.footer-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    gap: 2rem;
-}
-
-.footer-section h3 {
-    color: var(--yellow-400);
-    margin-bottom: 1rem;
-}
-
-.footer-section ul {
-    list-style-type: none;
-}
-
-.footer-section ul li {
-    margin-bottom: 0.5rem;
-}
-
-.footer-section ul li a {
-    color: var(--white);
-    text-decoration: none;
-    transition: color 0.3s ease;
-}
-
-.footer-section ul li a:hover {
-    color: var(--yellow-400);
-}
-
-.footer-section .logo i {
-    color: var(--yellow-400);
-}
-
-.social-icons {
+.footer-row{
+    width: 85%;
+    margin: auto;
     display: flex;
-    gap: 1rem;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    justify-content: space-between;
 }
 
-.social-icons a {
-    color: var(--yellow-400);
-    font-size: 1.5rem;
-    transition: color 0.3s ease;
+.footer-col{
+    flex-basis: 25%;
+    padding: 10px;
 }
 
-.social-icons a:hover {
-    color: var(--white);
+.footer-col p{
+    font-size: 16px;
+    padding-right: 100px;
+}
+.col:nth-child(2),.col:nth-child(3){
+    flex-basis: 15%;
 }
 
-.footer-bottom {
-    margin-top: 2rem;
-    padding-top: 2rem;
-    border-top: 1px solid var(--gray-700);
+.footer-location{
+    line-height: 1.5;
+}
+
+.footer-logo{
+    width: 80px;
+    margin-bottom: 30px;
+}
+.footer-col h3{
+    width: fit-content;
+    margin-bottom: 40px;
+    position: relative;
+}
+
+.footer-email-id{
+    width: fit-content;
+    border-bottom: 1px solid #ccc;
+    margin: 20px 0;
+}
+
+.footer-links li{
+    list-style: none;
+    margin-bottom: 12px;
+}
+
+.footer-links li a{
+    font-size: 16px;
+    text-decoration: none;
+    color: #fff;
+}
+
+.footer-form{
+    padding-bottom: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 1px solid #ccc;
+    margin-bottom: 50px;
+}
+
+.footer-form .fas{
+     font-size: 18px;
+     margin-right: 10px;
+}
+
+.footer-form input{
+     width: 100%;
+     background: transparent;
+     color: #ccc;
+     border: 0;
+     outline: none;
+}
+
+.footer-form button{
+    background: transparent;
+    border: 0;
+    outline: none;
+    cursor: pointer;
+}
+
+.footer-form button .fa-solid{
+    font-size: 16px;
+    color: #ccc;
+}
+
+.footer-soical-icon .fab{
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
     text-align: center;
+    line-height: 40px;
+    font-size: 20px;
+    color: #000;
+    background: #fff;
+    margin-right: 15px;
+    cursor: pointer;
+    transition: .5s ease-out;
+}
+
+.footer-soical-icon .fab:hover{
+    border: 1px solid white;
+    color: white;
+    background-color: transparent;
+    transition: .5s ease-in;
+}
+
+.footer-hr{
+    width: 90%;
+    border: 0;
+    border-bottom: 1px solid #ccc;
+    margin: 20px auto;
+}
+.footer-copyright{
+   text-align: center; 
+   font-size: 16px;
+}
+
+.footer-underline{
+    width: 100%;
+    height: 5px;
+    background-color: #767676;
+    border-radius: 3px;
+    position: absolute;
+    top: 25px;
+    left: 0;
+    overflow: hidden;
+}
+
+.footer-underline span{
+    width: 15px;
+    height: 100%;
+    background: #fff;
+    border-radius: 3px;
+    position: absolute;
+    top: 0;
+    left: 10px;
+    animation: moving 2s linear infinite;
+}
+
+@keyframes moving{
+    0%{
+        left: -20px;
+}
+100%{
+    left: 100%;
+    }
+}
+
+@media (max-width: 1200px){
+    
+    .col:nth-child(2),.col:nth-child(3){
+        flex-basis: 100%;
+    }
+    .footer-soical-icon{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+}
+
+@media (max-width: 700px){
+    footer{
+        bottom: unset;
+    }
+    .footer-col{
+        flex-basis: 100%;
+    }
+    
+    .col:nth-child(2),.col:nth-child(3){
+        flex-basis: 100%;
+    }
+    .footer-soical-icon{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
 }
 
 .animate-on-scroll {
@@ -1177,6 +1309,7 @@ footer {
     z-index: 9;
     position: relative;
     padding: 120px 100px;
+    margin-bottom: 100px;
 }
 
 .elem{
