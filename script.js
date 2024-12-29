@@ -292,3 +292,4 @@ gsap.from("#imgetext img", {
 });
 
 
+// Team Page Codes
