@@ -8,20 +8,25 @@
     <script src="https://unpkg.com/lucide@latest"></script>
 </head>
 <body>
-    <header>
-        <nav>
-            <div class="container">
-                <a href="#" class="logo">
-                    <i data-lucide="hash"></i>
-                    <span>HashLabs</span>
-                </a>
-                <ul>
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="about.html">About</a></li>
-                    <li><a href="services.html">Services</a></li>
-                    <li><a href="contact.html">Contact</a></li>
-                </ul>
-            </div>
+    <header class="floating-header">
+        <img  class="logo" src="logo.png" alt="logo">
+        <!-- Hamburger Menu Icon -->
+        <div class="hamburger" id="hamburger">
+          <div class="bar"></div>
+          <div class="bar"></div>
+          <div class="bar"></div>
+        </div>
+        <!-- Navigation -->
+        <nav class="nav-menu" id="nav-menu">
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="team.html">Team</a></li>
+          </ul>
+          <ul class="btn-cotn">
+            <li><a href="contact.html" class="btn contact">Contact Us</a></li>
+          </ul>
         </nav>
     </header>
 
@@ -54,29 +59,6 @@
                 <p class="animate-on-scroll">To revolutionize industries through cutting-edge technology solutions, fostering innovation, and creating a positive impact on society.</p>
                 <div class="mission-icon animate-on-scroll">
                     <i data-lucide="check-circle"></i>
-                </div>
-            </div>
-        </section>
-
-        <section class="values">
-            <div class="container">
-                <h2>Our Values</h2>
-                <div class="values-grid">
-                    <div class="value-card animate-on-scroll">
-                        <i data-lucide="users"></i>
-                        <h3>Collaboration</h3>
-                        <p>We believe in the power of teamwork and diverse perspectives.</p>
-                    </div>
-                    <div class="value-card animate-on-scroll">
-                        <i data-lucide="lightbulb"></i>
-                        <h3>Innovation</h3>
-                        <p>We constantly push the boundaries of what's possible.</p>
-                    </div>
-                    <div class="value-card animate-on-scroll">
-                        <i data-lucide="target"></i>
-                        <h3>Excellence</h3>
-                        <p>We strive for the highest quality in everything we do.</p>
-                    </div>
                 </div>
             </div>
         </section>
