@@ -1,36 +1,43 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>HashLabs Services - Innovative Technology Solutions</title>
+    <link rel="stylesheet" href="https://unpkg.com/sheryjs/dist/Shery.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/locomotive-scroll@3.5.4/dist/locomotive-scroll.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css" rel="stylesheet" />
     <link rel="stylesheet" href="styles.css">
-    <script src="https://unpkg.com/lucide@latest"></script>
+    <link rel="icon" type="image/x-icon" href="logo.png">
 </head>
+
 <body>
     <header class="floating-header">
-        <img  class="logo" src="logo.png" alt="logo">
+        <img class="logo" src="logo.png" alt="logo">
         <!-- Hamburger Menu Icon -->
         <div class="hamburger" id="hamburger">
-          <div class="bar"></div>
-          <div class="bar"></div>
-          <div class="bar"></div>
+            <div class="bar"></div>
+            <div class="bar"></div>
+            <div class="bar"></div>
         </div>
         <!-- Navigation -->
         <nav class="nav-menu" id="nav-menu">
-          <ul>
-            <li><a href="index.html">Home</a></li>
-            <li><a href="about.html">About</a></li>
-            <li><a href="services.html">Services</a></li>
-            <li><a href="team.html">Team</a></li>
-          </ul>
-          <ul class="btn-cotn">
-            <li><a href="contact.html" class="btn contact">Contact Us</a></li>
-          </ul>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="team.html">Team</a></li>
+            </ul>
+            <ul class="btn-cotn">
+                <li><a href="contact.html" class="btn contact">Contact Us</a></li>
+            </ul>
         </nav>
     </header>
 
-    <main>
+    <main id="main">
+
         <section class="hero services-hero">
             <div class="container">
                 <h1 class="animate-on-load">Our Services</h1>
@@ -47,7 +54,8 @@
                     <div class="service-text animate-on-scroll">
                         <i data-lucide="cpu"></i>
                         <h2>Electrical Engineering</h2>
-                        <p>Our electrical engineering services cover a wide range of applications, from power systems to microelectronics. We specialize in:</p>
+                        <p>Our electrical engineering services cover a wide range of applications, from power systems to
+                            microelectronics. We specialize in:</p>
                         <ul>
                             <li>Smart grid solutions</li>
                             <li>Renewable energy integration</li>
@@ -68,7 +76,8 @@
                     <div class="service-text animate-on-scroll">
                         <i data-lucide="code"></i>
                         <h2>Computer Science</h2>
-                        <p>Our computer science expertise drives innovation across various domains. Our services include:</p>
+                        <p>Our computer science expertise drives innovation across various domains. Our services
+                            include:</p>
                         <ul>
                             <li>Artificial Intelligence and Machine Learning</li>
                             <li>Big Data Analytics</li>
@@ -89,7 +98,8 @@
                     <div class="service-text animate-on-scroll">
                         <i data-lucide="zap"></i>
                         <h2>Innovation Lab</h2>
-                        <p>Our Innovation Lab is where groundbreaking ideas come to life. We combine cutting-edge research with practical applications to create solutions that shape the future.</p>
+                        <p>Our Innovation Lab is where groundbreaking ideas come to life. We combine cutting-edge
+                            research with practical applications to create solutions that shape the future.</p>
                         <ul>
                             <li>Prototype development</li>
                             <li>Emerging technology research</li>
@@ -110,7 +120,8 @@
                     <div class="service-text animate-on-scroll">
                         <i data-lucide="briefcase"></i>
                         <h2>Tech Consulting</h2>
-                        <p>Our consulting services help businesses navigate the complex world of technology. We offer:</p>
+                        <p>Our consulting services help businesses navigate the complex world of technology. We offer:
+                        </p>
                         <ul>
                             <li>Digital transformation strategies</li>
                             <li>Technology stack optimization</li>
@@ -137,13 +148,15 @@
                     <p>Innovating in Electrical Engineering and Computer Science.</p>
                 </div>
                 <div class="footer-col">
-                    <h3>Contact Us<div class="footer-underline"><span></span></div> </h3>
+                    <h3>Contact Us<div class="footer-underline"><span></span></div>
+                    </h3>
                     <p class="footer-location"><b>Location:</b> 80 CCA, DHA Phase 5 <br>Lahore, Punjab, Pakistan</p>
                     <p class="footer-email-id"><b>Mail:</b> support@thehashlabs.com</p>
                     <h4><b>Phone No:</b> +92 306 0429099</h4>
                 </div>
                 <div class="footer-col">
-                        <h3>Our Services<div class="footer-underline"><span></span></div></h3>
+                    <h3>Our Services<div class="footer-underline"><span></span></div>
+                    </h3>
                     <ul class="footer-links">
                         <li><a>Electrical Engineering</a></li>
                         <li><a>Computer Science</a></li>
@@ -153,7 +166,8 @@
                     </ul>
                 </div>
                 <div class="footer-col">
-                        <h3>Newsletter <div class="footer-underline"><span></span></div></h3>
+                    <h3>Newsletter <div class="footer-underline"><span></span></div>
+                    </h3>
                     <form class="footer-form">
                         <i class="fas fa-envelope"></i>
                         <input type="email" placeholder="Enter your email id" required>
@@ -169,12 +183,19 @@
             </div>
             <div>
                 <hr class="footer-hr">
-                <p class="footer-copyright" >&copy; 2024 The Hash Labs - All Rights Reserved</p>
+                <p class="footer-copyright">&copy; 2024 The Hash Labs - All Rights Reserved</p>
             </div>
         </footer>
     </main>
 
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/0.155.0/three.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/automat/controlkit.js@master/bin/controlKit.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/locomotive-scroll@3.5.4/dist/locomotive-scroll.min.js"></script>
+    <script src="https://unpkg.com/sheryjs/dist/Shery.js"></script>
+    <script src="https://unpkg.com/lucide@latest"></script>
     <script src="script.js"></script>
 </body>
-</html>
 
+</html>
