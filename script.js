@@ -311,3 +311,5 @@ gsap.from("#imgetext img", {
 
 
 // Team Page Codes
+// Global smooth scroll fix
+document.documentElement.style.scrollBehavior = 'smooth';
