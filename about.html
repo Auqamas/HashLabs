@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -11,32 +12,40 @@
     <link rel="stylesheet" href="styles.css">
     <link rel="icon" type="image/x-icon" href="logo.png">
 </head>
+
 <body>
     <header class="floating-header">
-        <img  class="logo" src="logo.png" alt="logo">
+        <img class="logo" src="logo.png" alt="logo">
         <!-- Hamburger Menu Icon -->
         <div class="hamburger" id="hamburger">
-          <div class="bar"></div>
-          <div class="bar"></div>
-          <div class="bar"></div>
+            <div class="bar"></div>
+            <div class="bar"></div>
+            <div class="bar"></div>
         </div>
         <!-- Navigation -->
         <nav class="nav-menu" id="nav-menu">
-          <ul>
-            <li><a href="index.html">Home</a></li>
-            <li><a href="about.html">About</a></li>
-            <li><a href="services.html">Services</a></li>
-            <li><a href="team.html">Team</a></li>
-          </ul>
-          <ul class="btn-cotn">
-            <li><a href="contact.html" class="btn contact">Contact Us</a></li>
-          </ul>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="team.html">Team</a></li>
+            </ul>
+            <ul class="btn-cotn">
+                <li><a href="contact.html" class="btn contact">Contact Us</a></li>
+            </ul>
         </nav>
     </header>
 
     <main>
-        <section>
-            <h1 class="about-heading">About <span><img src="about-image-round" alt=""> <br> The Hash Labs</span></h1>
+
+        <section class="about-hero-first">
+            <div id="page1" class="animate-on-scroll animate-on-load ">
+                <h1 style="font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;">About<img class="services-img" src="Services.jpg" alt=""></h1>
+                <h1 style="font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif">Hash labs</h1>
+            <div id="video-container">
+                <div id="play">PLAY</div>
+                <video autoplay loop muted src="About-us HAshlabs.mp4"></video>
+            </div>
         </section>
 
         <section class="hero about-hero">
@@ -54,8 +63,10 @@
                     </div>
                     <div class="about-text animate-on-scroll">
                         <h2>Our Story</h2>
-                        <p>Founded in 2010, HashLabs has been at the forefront of technological innovation, bridging the gap between electrical engineering and computer science.</p>
-                        <p>Our journey is marked by groundbreaking projects and a commitment to pushing the boundaries of what's possible.</p>
+                        <p>Founded in 2010, HashLabs has been at the forefront of technological innovation, bridging the
+                            gap between electrical engineering and computer science.</p>
+                        <p>Our journey is marked by groundbreaking projects and a commitment to pushing the boundaries
+                            of what's possible.</p>
                     </div>
                 </div>
             </div>
@@ -76,13 +87,15 @@
                     <p>Innovating in Electrical Engineering and Computer Science.</p>
                 </div>
                 <div class="footer-col">
-                    <h3>Contact Us<div class="footer-underline"><span></span></div> </h3>
+                    <h3>Contact Us<div class="footer-underline"><span></span></div>
+                    </h3>
                     <p class="footer-location"><b>Location:</b> 80 CCA, DHA Phase 5 <br>Lahore, Punjab, Pakistan</p>
                     <p class="footer-email-id"><b>Mail:</b> support@thehashlabs.com</p>
                     <h4><b>Phone No:</b> +92 306 0429099</h4>
                 </div>
                 <div class="footer-col">
-                        <h3>Our Services<div class="footer-underline"><span></span></div></h3>
+                    <h3>Our Services<div class="footer-underline"><span></span></div>
+                    </h3>
                     <ul class="footer-links">
                         <li><a>Electrical Engineering</a></li>
                         <li><a>Computer Science</a></li>
@@ -92,7 +105,8 @@
                     </ul>
                 </div>
                 <div class="footer-col">
-                        <h3>Newsletter <div class="footer-underline"><span></span></div></h3>
+                    <h3>Newsletter <div class="footer-underline"><span></span></div>
+                    </h3>
                     <form class="footer-form">
                         <i class="fas fa-envelope"></i>
                         <input type="email" placeholder="Enter your email id" required>
@@ -108,7 +122,7 @@
             </div>
             <div>
                 <hr class="footer-hr">
-                <p class="footer-copyright" >&copy; 2024 The Hash Labs - All Rights Reserved</p>
+                <p class="footer-copyright">&copy; 2024 The Hash Labs - All Rights Reserved</p>
             </div>
         </footer>
     </main>
@@ -122,5 +136,5 @@
     <script src="https://unpkg.com/lucide@latest"></script>
     <script src="script.js"></script>
 </body>
-</html>
 
+</html>
