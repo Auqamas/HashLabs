@@ -49,7 +49,7 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
     // Typewriter effect for hero title
-    const heroTitle = document.querySelector('.hero h1');
+    const heroTitle = document.querySelector('.page1 h1');
     if (heroTitle) {
         const heroText = heroTitle.textContent;
         heroTitle.textContent = '';
@@ -69,8 +69,6 @@ document.addEventListener('DOMContentLoaded', () => {
     if (contactForm) {
         contactForm.addEventListener('submit', (e) => {
             e.preventDefault();
-            // Add your form submission logic here
-            alert('Thank you for your message. We will get back to you soon!');
             contactForm.reset();
         });
     }
