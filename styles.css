@@ -326,7 +326,7 @@ body {
 }
 
 #ephemeral #headings {
-
+    z-index: 999;
     position: absolute;
     top: -21%;
     left: -18%;
@@ -552,7 +552,7 @@ body {
 #twospan {
     width: 130px;
     height: 60px;
-    background-image: url(https://fastforward.com.cy/sites/default/files/styles/media_image/public/2024-07/new_tech.png?h=d1cb525d&itok=56pZ0yux);
+    background-image: url(https://thumbs.dreamstime.com/b/future-medical-science-robot-theme-front-view-showcasing-innovation-technology-cybernetic-ai-generated-332657507.jpg);
     background-size: cover;
     background-position: center;
 }
@@ -560,7 +560,7 @@ body {
 #threespan {
     width: 85px;
     height: 40px;
-    background-image: url(https://www.opal-rt.com/wp-content/uploads/2016/07/fond_power_sys_control-1030x429.jpg);
+    background-image: url(https://www.pacw.org/wp-content/uploads/2024/09/Figure-00.jpg);
     background-size: cover;
     background-position: center;
 }
@@ -2037,3 +2037,17 @@ footer {
       width: 100%;
     }
   }
+
+  
+#custom-hero-image-container #page-image {
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    height: 15vw;
+}
+
+#page-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
