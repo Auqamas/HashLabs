@@ -953,7 +953,7 @@ body {
 /* Footer Starts From here */
 
 footer {
-    height: 50vh;
+    height: auto;
     width: 100%;
     bottom: 0;
     background: linear-gradient(to right, #00093c, #2d0b00);
