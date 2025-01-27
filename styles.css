@@ -1066,7 +1066,7 @@ footer {
     color: #ccc;
 }
 
-.footer-soical-icon .fab {
+.footer-social-icon .fab {
     width: 40px;
     height: 40px;
     border-radius: 50%;
@@ -1077,14 +1077,22 @@ footer {
     background: #fff;
     margin-right: 15px;
     cursor: pointer;
-    transition: .5s ease-out;
+    transition: 0.5s ease-out;
 }
 
-.footer-soical-icon .fab:hover {
+.footer-social-icon .fab:hover {
     border: 1px solid white;
     color: white;
     background-color: transparent;
-    transition: .5s ease-in;
+    transition: 0.5s ease-in;
+}
+@media (max-width: 768px) {
+    .footer-social-icon .fab {
+        width: 30px;
+        height: 30px;
+        line-height: 30px;
+        font-size: 16px;
+    }
 }
 
 .footer-hr {
