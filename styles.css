@@ -16,6 +16,10 @@
     background-color: #000000;
 }
 
+::-webkit-scrollbar{
+    display: none;
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -25,10 +29,10 @@
 #main {
     width: auto;
     height: auto;
+    scroll-behavior: smooth;
 }
 
-html,
-body {
+html, body {
     font-family: Arial, sans-serif;
     scroll-behavior: smooth;
 }
@@ -840,7 +844,6 @@ body {
     background-color: var(--gray-700);
 }
 
-.about-hero,
 .services-hero,
 .contact-hero {
     background-color: var(--purple-800);
@@ -966,16 +969,16 @@ footer {
     bottom: 0;
     background: linear-gradient(to right, #00093c, #2d0b00);
     color: #fff;
-    padding: 125px 0 30px;
+    padding: 125px 0px 30px;
     border-top-left-radius: 125px;
     font-size: 13px;
     line-height: 20px;
 }
 
-.footer-row {
+.footer-row{
     width: auto;
     margin: auto;
-    padding: 0 40px;
+    padding: 0 90px;
     display: flex;
     flex-wrap: wrap;
     align-items: flex-start;
@@ -1092,6 +1095,10 @@ footer {
         height: 30px;
         line-height: 30px;
         font-size: 16px;
+    }
+
+    .footer-row{
+        padding: 0 30px;
     }
 }
 
@@ -1490,47 +1497,7 @@ footer {
 
 
 /* Section's Heading */
-#page1 {
-    position: relative;
-    width: 100%;
-    padding: 0vh 1vw 3vw 1vw;
-    padding-top: 13vh;
-}
 
-#page1 h1 {
-    padding-top: 160px;
-    font-size: 15vw;
-    text-transform: uppercase;
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    line-height: 3vw;
-    letter-spacing: -13px;
-}
-
-#video-container {
-    height: 100vh;
-    width: 100%;
-    background-color: grey;
-    position: relative;
-}
-
-#video-container video {
-    height: 100%;
-    width: 100%;
-    object-fit: cover;
-}
-
-#video-container #play {
-    padding: 3vw 2.2vw;
-    background-color: black;
-    color: #fff;
-    font-size: 1.3vw;
-    position: fixed;
-    text-transform: uppercase;
-    font-family: futura;
-    border-radius: 50%;
-    opacity: 0;
-    scale: 0;
-}
 
 /* Team Member's */
 
@@ -2075,122 +2042,270 @@ footer {
 
 /*Team Section */
 .team-container {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 20px;
-    padding: 50px 0px 250px 0;
-}
-
-.team-row {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    column-gap: 30px;
-}
-
-.team-card {
-    text-align: center;
-    border-radius: 20px;
+    padding-top: 100px;
     overflow: hidden;
-    background: #fff;
-    border: 1px solid black;
-    box-shadow: 10px 10px;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-    position: relative;
 }
-
-.team-card:hover {
-    transform: translateY(-10px);
-    box-shadow: 0 6px 15px rgba(0, 0, 0, 0);
-    transition: 0.2s ease-in;
-}
-
-.team-image {
-    background: linear-gradient(to right, #012b5a 0%, #700517 100%);
-    overflow: hidden;
-    border-bottom: 2px solid linear-gradient(to right, #012b5a 0%, #d1ad0b 100%);
-    transition: transform 0.3s ease;
-}
-
-.team-card:hover .team-image {
-    transform: scale(1.1);
-}
-
-.team-image img {
-    width: 100%;
-    height: auto;
-    transition: transform 0.3s ease;
-}
-
-.team-details {
-    padding: 15px;
-    background: linear-gradient(to right, #012b5a 0%, #700517 100%);
-    color: #fff;
-    position: relative;
-    opacity: 0;
-    transform: translateY(20px);
-    transition: all 0.4s ease;
-}
-
-.team-card:hover .team-details {
-    opacity: 1;
-    transform: translateY(0);
-}
-
-.team-name {
-    font-size: 22px;
-    font-weight: bold;
+.team-container .team-heading-div .team-div-heading{
+    display: flex;
+    justify-content: center;
     text-transform: uppercase;
-    margin-bottom: 5px;
-    color: #fff;
+    font-family: "League Spartan", serif;
+    position: absolute;
+    /* overflow: hidden; */
+    font-size: 170px;
+    white-space: nowrap;
+    overflow: hidden;
+    filter: blur(0.6px);
+    padding-left: 400px;
+}
+.team-container .team-heading-div .team-div-heading .team-heading-hol{
+    padding: 0 30px;
+    -webkit-text-stroke: 2px black;
+    overflow: hidden;
+    color: transparent;
+}
+.team-container .team-heading-div {
+    animation: scrollText 18s infinite linear;
+}
+@keyframes scrollText {
+    from   { transform: translateX(0%); }
+    to { transform: translateX(-180%); }
 }
 
-.team-role {
-    font-size: 14px;
-    font-style: italic;
-    font-weight: 600;
-    margin-bottom: 10px;
-}
-
-.team-socials {
+.team-container .team-row{
+    margin-top: 27vh;
+    margin-bottom: 24vh;
+    padding-left: 10vw;
+    padding-right: 10vw;
     display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+    column-gap: 1.3vw;
+}
+.team-row .team-card .team-image .team-div-image{
+    width: 250px; 
+    height: 250px; 
+    object-fit: cover;
+    border: 2px solid black;
+    box-shadow: rgba(17, 17, 26, 0.25) 0px 4px 16px, rgba(17, 17, 26, 0.1) 0px 8px 24px, rgba(17, 17, 26, 0.1) 0px 16px 56px;
+    border-radius: 20vw;
+}
+.team-row .team-card{
     justify-content: center;
-    gap: 10px;
-    list-style: none;
-    padding: 0;
-    margin: 0;
+    align-items: center;
+    padding: 20px 30px;
+    background: linear-gradient(-45deg, #52eed4, #ad54f7, #33adda, #22e7b9);
+    background-size: 400% 400%;
+    animation: gradient 15s ease infinite;
+    border-radius: 10px;
+    margin-top: 40px;
 }
-
-.team-socials li {
-    transition: transform 0.3s ease;
+@keyframes gradient {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
 }
-
-.team-socials li:hover {
-    transform: scale(1.1);
+.team-row .team-card .team-details{
+    margin-top: -60px;
+    padding-top: 100px;
+    padding-bottom: 30px;
+    padding-left: 20px;
+    padding-right: 20px;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    /* position: absolute; */
+    background-color: #006affd3;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset;
 }
-
-.team-socials li a {
-    display: block;
+.team-row .team-card .team-details .team-name{
+    color: white;
+    /* text-transform: uppercase; */
+    letter-spacing: .5px;
+    font-weight: 500;
+    font-family: "League Spartan", serif;
+    font-size: 27px;
+}
+.team-row .team-card .team-details .team-role{
+    text-align: center;
+    text-wrap: wrap;
+    font-family: "Anonymous Pro", serif;
+    background: linear-gradient(to right, #006affd3 0%, #5f49d6 60%, #006affd3 120%);
+    padding-top: 2px;
+    text-transform: uppercase;
+    color: white;
+    border-bottom: 1px double rgb(211, 211, 211);
+    padding-bottom: 5px;
+    margin-bottom: 8px;
+}
+.team-row .team-card .team-details .team-socials{
+    display: flex;
+    padding-top: 20px;
+    list-style-type: none;
+    
+}
+.team-row .team-card .team-details .team-socials li a{
+    text-decoration: none;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    align-items: center;
     width: 40px;
     height: 40px;
-    line-height: 40px;
     border-radius: 50%;
-    background: black;
-    color: #fff;
-    font-size: 18px;
     text-align: center;
-    transition: background 0.3s ease;
+    /* line-height: 40px; */
+    font-size: 26px;
+    color: #ffffff;
+    background-size: 200% 300%;
+    background: linear-gradient(-45deg, #52eed4, #549bf7, #33adda, #22e7b9);
+    margin-right: 15px;
+    cursor: pointer;
+    transition: 0.2s ease-out;
+    gap: 50px;
+    border: 1px solid rgba(68, 68, 68, 0.377);
+}
+.team-row .team-card .team-details .team-socials li a:hover{
+    transform: translateY(-4px);
 }
 
-.team-socials li a:hover {
-    color: #000;
-    background: #fff;
-    color: linear-gradient(to right, #012b5a 0%, #700517 100%);
+
+/* New Update Starts Here */
+.about-hero{
+    padding-top: 20vh;
+    height: 130vh;
+    background: linear-gradient(to right, #003985 0%, #be27e7 100%);
+}
+#page1{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-items: flex-end;
 }
 
-@media (max-width: 990px) {
-    .team-card {
-        margin-bottom: 30px;
+#page1 .about-top-image{
+    display: flex;
+    align-items: flex-end;
+    /* border: 5px solid purple; */
+    width: 33%;
+    height: 40vw;
+    object-fit: cover;
+    border-radius: 10px;
+    image-resolution: 1080;
+}
+
+#page1 .page1-second-row,
+#page1 .page1-heading{
+    position: relative
+}
+
+#page1 .page1-heading{
+    /* border: 1px solid white; */
+    position: absolute;
+    padding-top: 100px;
+    font-family: "League Spartan", serif;
+    color: white;
+    font-size: 180px;
+    letter-spacing: -15px;
+    line-height: 0.77;
+    text-transform: uppercase;
+    padding-right: 20vw;
+    padding-left: 10px;
+    overflow: hidden;
+    animation: typing 1s steps(2, end),
+    blink-caret .75s step-end;
+}
+@keyframes typing {
+    from { width: 0 }
+    to { width: 100% }
+  }
+  
+  /* The typewriter cursor effect */
+  @keyframes blink-caret {
+    from, to { border-color: transparent }
+    50% { border-color: orange; }
+}
+
+#page1 .page1-second-row{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: flex-end;
+    /* background-color: red; */
+    /* display: none; */
+    /* padding-left: 250px;
+    padding-right: 150px; */
+    position: absolute;
+    margin-top: 730px;
+    margin-right: 20vw;
+    column-gap: 150px;
+}
+#page1 .page1-paragraph{
+    padding: 30px;
+    border: 1px solid black;
+    background: linear-gradient(to right, #8c52ffa6 0%, #ff7722b7 100%);
+    font-size: 22px;
+    font-family: "Anonymous Pro", serif;
+    color: white;
+    text-transform: uppercase;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+}
+
+
+@media (max-width: 1280px) {
+    #page1 .page1-heading{
+        padding-right: 3vw;
+        font-size: 160px;
+        letter-spacing: -7px;
+    }
+}
+@media (max-width: 1024px){
+    #page1 .page1-heading{
+        font-size: 130px;
+    }
+}
+@media (max-width: 900px){
+    #page1 .about-top-image{
+        width: 50%;
+        height: 64vh;
+    }
+    #page1 .page1-heading{
+        /* padding-left: 1000px; */
+        padding-right: 0vw;
+        font-size: 150px;
+    }
+}
+@media (max-width: 780px){
+    .about-hero{
+        padding-top: 0vh;
+        height: 110vh;
+    }
+    #page1 .page1-heading{
+        font-size: 20px;
+        padding-left: 10px;
+        padding-right: 10vw;
+    }
+}
+@media (max-width: 560px){
+    #page1 .about-top-image{
+        width: 70%;
+        right: 0;
+    }
+    #page1 .page1-heading .h1{
+        font-size: 900px;
+        letter-spacing: 5;
+        padding-left: -50px;
+        padding-right: 17vw;
     }
 }
