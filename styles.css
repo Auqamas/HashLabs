@@ -1418,6 +1418,64 @@ footer {
 }
 
 /* Our Services Section */
+.scroll-section-all{
+    padding-top: 100px;
+    padding-bottom: 130px;
+    overflow: hidden;
+}
+.scroll-section-all .scroll-text-div .scroll-text-left{
+    display: flex;
+    justify-content: center;
+    text-transform: uppercase;
+    font-family: "League Spartan", serif;
+    position: absolute;
+    /* overflow: hidden; */
+    font-size: 170px;
+    white-space: nowrap;
+    overflow: hidden;
+    filter: blur(0.6px);
+    padding-left: 400px;
+}
+.scroll-section-all .scroll-text-div-right .scroll-text-right{
+    display: flex;
+    justify-content: center;
+    text-transform: uppercase;
+    font-family: "League Spartan", serif;
+    position: absolute;
+    /* overflow: hidden; */
+    font-size: 170px;
+    white-space: nowrap;
+    overflow: hidden;
+    filter: blur(0.6px);
+    padding-left: 400px;
+}
+.scroll-section-all .scroll-text-div .scroll-text-left .scroll-text-hol{
+    padding: 0 30px;
+    -webkit-text-stroke: 2px black;
+    overflow: hidden;
+    color: transparent;
+}
+.scroll-section-all .scroll-text-div-right .scroll-text-right .scroll-text-hol{
+    padding: 0 30px;
+    -webkit-text-stroke: 2px black;
+    overflow: hidden;
+    color: transparent;
+}
+.scroll-section-all .scroll-text-div-right{
+    animation: scrollTextright 40s infinite linear;
+}
+.scroll-section-all .scroll-text-div{
+    animation: scrollTextleft 40s infinite linear;
+}
+@keyframes scrollTextleft {
+    from   { transform: translateX(0%); }
+    to { transform: translateX(-100%); }
+}
+@keyframes scrollTextright {
+    from   { transform: translateX(-100%); }
+    to { transform: translateX(0%); }
+}
+
 .services-heading h1 {
     font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     font-weight: lighter;
@@ -2066,6 +2124,7 @@ footer {
 }
 .team-container .team-heading-div {
     animation: scrollText 18s infinite linear;
+
 }
 @keyframes scrollText {
     from   { transform: translateX(0%); }
@@ -2100,6 +2159,7 @@ footer {
     animation: gradient 15s ease infinite;
     border-radius: 10px;
     margin-top: 40px;
+    box-shadow: rgba(46, 195, 240, 0.4) 5px 5px, rgba(34, 177, 233, 0.3) 10px 10px, rgba(46, 217, 240, 0.2) 15px 15px, rgba(46, 201, 240, 0.1) 20px 20px, rgba(46, 195, 240, 0.05) 25px 25px;
 }
 @keyframes gradient {
     0% {
@@ -2187,6 +2247,9 @@ footer {
     height: 130vh;
     background: linear-gradient(to right, #003985 0%, #be27e7 100%);
 }
+
+
+
 #page1{
     display: flex;
     flex-wrap: wrap;
