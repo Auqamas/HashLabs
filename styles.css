@@ -2375,16 +2375,121 @@ footer {
     box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 }
 .about-second .about-second-bottom .about-bottom-image-2{
-    border-radius: 15px 0 0 15px;
+    border-radius: 50px 0 0 50px;
     margin-right: 20px;
     height: 38vh;
     width: 50vw;
     box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 }
 
+/* Intro */
+.about-middle-intro{
+    height: auto;
+    /* margin-bottom: 150px; */
+    /* padding-left: 80px; */
+    padding-bottom: 250px;
+    background: linear-gradient(0deg, rgb(0, 0, 0) 0%, rgb(253, 253, 253) 40%, rgba(255,255,255,0) 100%);
+}
+.about-intro h1{
+    font-size: 70px;
+    text-transform: uppercase;
+    font-family: "League Spartan", serif;
+    font-optical-sizing: 50px;
+    text-align: center;
+    font-weight: 400;
+    padding-right: 120px;
+    padding-left: 120px;
+    line-height: 0.8;
+}
 
+/* Hard Work */
+.about-hard-work{
+    height: 100%;
+    background-color: black;
+    padding: 150px 200px;
+    color: white;
+}
+.about-hard-work .hard-word-div h1{
+    text-align: end;
+    font-family: "League Spartan", serif;
+    font-size: 130px;
+    text-transform: uppercase;
+    filter: blur(0.5px);
+}
+.about-hard-work .hard-word-div .hard-work-head .head-work-strok{
+    -webkit-text-stroke: 2.5px white;
+    color: transparent;
+}
+.about-hard-work .hard-work-columns{
+    display: flex;
+    column-gap: 20px;
+    padding-top: 140px;
+}
+.about-hard-work .hard-work-columns .hard-work-text img{
+    /* border: 1px solid white; */
+    height: 130px;
+    animation: rotate 60s linear infinite;
+}
+@keyframes rotate {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(360deg);
+    }
+  }
+.about-hard-work .hard-work-columns .hard-work-text .hard-work-text-top{
+    font-family: "League Spartan", serif;
+    filter: blur(0.4px);
+    padding-top: 39px;
+    font-size: 26px;
+    text-transform: uppercase;
+}
+.about-hard-work .hard-work-columns .hard-work-text .hard-work-text-btm{
+    /* border: 1px solid white; */
+    font-size: 20px;
+    font-weight: 300;
+    letter-spacing: 0.7px;
+    padding-top: 17px;
+}
 
-@media (max-width: 1380px) {
+/* Being Reson */
+.being-reason{
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-left: 60px;
+    padding-right: 90px;
+}
+.being-reason .being-reason-img{
+    /* box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px; */
+    left: 0;
+    height: 70vh;
+    width: 27vw;
+    object-fit: cover;
+    border-radius: 80px;
+}
+.being-reason .being-reason-content{
+    margin-left: 40px;
+}
+.being-reason .being-reason-content .being-reason-para{
+    padding-bottom: 20px;
+    font-size: 25px;
+}
+.being-reason .being-reason-content .being-reason-head{
+    padding-right: 10px;
+    font-family: "League Spartan", serif;
+    line-height: 0.93;
+    text-transform: uppercase;
+    font-size: 100px;
+}
+.any-hollow{
+    -webkit-text-stroke: 1.5px rgb(0, 0, 0);
+    color: transparent;
+}
+
+@media (max-width: 1700px) {
     #page1 .page1-heading{
         padding-right: 120px;
         font-size: 140px;
@@ -2403,14 +2508,40 @@ footer {
         font-size: 29px;
     }
     .about-second .about-second-top .about-second-images .about-second-image{
-        height: 19vh;
+        height: 29vh;
     }
     .about-second .about-second-bottom .about-bottom-image-1{
-        height: 17vh;
-        width: 20vw;
+        height: 27vh;
+        width: 14vw;
     }
     .about-second .about-second-bottom .about-bottom-image-2{
-        height: 17vh;
+        height: 27vh;
+    }
+    .about-intro h1{
+        padding-right: 10px;
+        padding-left: 10px;
+    }
+    .about-hard-work{
+        padding: 150px 60px;
+    }
+    .about-hard-work .hard-word-div h1{
+        font-size: 100px;
+    }
+    .about-hard-work .hard-work-columns{
+        display: flex;
+        column-gap: 20px;
+        padding-top: 100px;
+    }
+    .about-hard-work .hard-work-columns .hard-work-text img{
+        /* border: 1px solid white; */
+        height: 130px;
+    }
+    .about-hard-work .hard-work-columns .hard-work-text .hard-work-text-top{
+        padding-top: 39px;
+        font-size: 26px;
+    }
+    .about-hard-work .hard-work-columns .hard-work-text .hard-work-text-btm{
+        padding-top: 17px;
     }
 
 }
