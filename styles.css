@@ -2491,9 +2491,12 @@ footer {
 
 @media (max-width: 1700px) {
     #page1 .page1-heading{
-        padding-right: 120px;
-        font-size: 140px;
+        padding-right: 320px;
+        font-size: 150px;
         letter-spacing: -7px;
+    }
+    #page1 .page1-second-row .page1-paragraph{
+        margin-top: -140px;
     }
     .about-second{
         height: 80vh;
