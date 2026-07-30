@@ -1,251 +1,75 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Welcome to The Hash Labs, a hub of innovation and expertise in software engineering, electrical engineering, and advanced modeling technologies." />
-    <title>TheHashLabs - Innovating in Electrical Engineering and Computer Science</title>
-    <link rel="stylesheet" href="https://unpkg.com/sheryjs/dist/Shery.css" />
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/locomotive-scroll@3.5.4/dist/locomotive-scroll.css">
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
-    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css" rel="stylesheet" />
-    <link href="https://fonts.googleapis.com/css2?family=Anonymous+Pro:ital,wght@0,400;0,700;1,400;1,700&family=Cabin:ital,wght@0,400..700;1,400..700&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=League+Spartan:wght@100..900&family=Londrina+Solid:wght@100;300;400;900&family=Megrim&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="styles.css">
-    <link rel="icon" type="image/x-icon" href="logo.png">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="HashLabs — Developers are currently building the next gen thing. Launching soon.">
+  <title>HashLabs — Coming Soon</title>
+  <link rel="icon" type="image/png" href="logo.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+  <div class="bg-layer" aria-hidden="true">
+    <div class="orb orb-1"></div>
+    <div class="orb orb-2"></div>
+    <div class="orb orb-3"></div>
+    <div class="noise"></div>
+  </div>
 
-    <!-- Floating Sticky Header -->
-    <header class="floating-header">
-        <img  class="logo" src="logo.png" alt="logo">
-        <!-- Hamburger Menu Icon -->
-        <div class="hamburger" id="hamburger">
-          <div class="bar"></div>
-          <div class="bar"></div>
-          <div class="bar"></div>
-        </div>
-        <!-- Navigation -->
-        <nav class="nav-menu" id="nav-menu">
-          <ul>
-            <li><a href="index.html">Home</a></li>
-            <li><a href="about.html">About</a></li>
-            <li><a href="services.html">Services</a></li>
-            <li><a href="team.html">Team</a></li>
-          </ul>
-          <ul class="btn-cotn">
-            <li><a href="contact.html" class="btn contact">Contact Us</a></li>
-          </ul>
-        </nav>
+  <div class="frame">
+    <header class="site-header">
+      <a href="/" class="brand" aria-label="HashLabs home">
+        <img src="logo.png" alt="HashLabs" class="brand-logo">
+        <span class="brand-text">
+          <span>HASH</span>
+          <span>LABS</span>
+        </span>
+      </a>
     </header>
 
-    <main id="main">
-        <section class="top-banner">
-            <div class="banner-content">
-                <h1>Unleashing Digital Alchemy</h1>
-                <p>A realm where raw ideas are transformed into digital gold. We blend design, development, and disruptive thinking to shape experiences that stand out. This isn’t just innovation it’s experimentation with purpose.</p>
-                <div class="banner-buttons">
-                    <button>Contact Us!</button>
-                    <button>Collaborate With Us</button>
-                </div>
-            </div>
-        </section>
-         <!-- main Hero Section -->
-        <section class="scroller-section">
-            <!-- Image Container -->
-            <div class="scrollContainer" id="scrollContainer">
-              <div class="imageWrapper">
-                <img src="https://img.freepik.com/free-photo/shot-part-high-voltage-electric-power-station_181624-19111.jpg?t=st=1737575183~exp=1737578783~hmac=eb99960a5476b2c18664ccc17aa2883226ef8c111279a374b80e299ba7207f1b&w=1380" />
-              </div>
-              <div class="imageWrapper">
-                <img src="img--2.jpeg" alt="Experience Unique Cultures" />
-              </div>
-              <div class="imageWrapper">
-                <img src="https://1.bp.blogspot.com/-d9fZbHATK98/X9u5nS9_h3I/AAAAAAAAGIs/AqJgTH5DslszXO1FldXBGyyxN-nFJbuYwCLcBGAsYHQ/w640-h428/relay-control-protection-guides.jpg" alt="Explore Natural Wonders" />
-              </div>
-              <div class="imageWrapper">
-                <img src="img--4.jpeg" alt="Indulge in Culinary Delights" />
-              </div>
-            </div>
-      
-            <!-- Text Overlay -->
-            <div id="textContainer" class="text-overlay">
-              <h2 id="heading" class="text-heading">Empowering Smart Energy Networks</h2>
-              <p id="description" class="text-description">
-                Offering high-performance switchgear solutions to safeguard electrical systems and enhance operational safety.
-              </p>
-            </div>
-            
-            <!-- Buttons -->
-            <div class="controls">
-              <button id="prevBtn">◀</button>
-              <button id="nextBtn">▶</button>
-              <button id="pauseBtn">❚❚ Pause</button>
-            </div>
-        </section>
+    <main class="hero">
+      <p class="eyebrow">Developers are Currently Building the Next Gen Thing</p>
 
-        <!-- Working section -->
-        <section class="custom-section">
-            <div class="custom-section-content">
-                <h1 class="custom-hero-title">
-                    CIRCUITs<br>SIMULATIONs<br>HARDWAREs
-                </h1>
-                <div class="custom-hero-image-container" id="page-image">
-                    <img src="sim\ img.png" alt="Hero Image" class="custom-hero-image">
-                </div>
-            </div>
-        </section>
+      <div class="countdown" id="countdown" role="timer" aria-live="polite" aria-atomic="true">
+        <div class="unit">
+          <span class="value" id="days">00</span>
+          <span class="label">Days</span>
+        </div>
+        <span class="sep" aria-hidden="true">:</span>
+        <div class="unit">
+          <span class="value" id="hours">00</span>
+          <span class="label">Hours</span>
+        </div>
+        <span class="sep" aria-hidden="true">:</span>
+        <div class="unit">
+          <span class="value" id="minutes">00</span>
+          <span class="label">Minutes</span>
+        </div>
+        <span class="sep" aria-hidden="true">:</span>
+        <div class="unit">
+          <span class="value" id="seconds">00</span>
+          <span class="label">Seconds</span>
+        </div>
+      </div>
 
-        <!-- Designs Section -->
-        <section id="hero">
-            <article class="anim2" id="sustain">
-                <h2>Energy Through Innovation.</h2>
-                <p>drives sustainable and advanced energy solutions</p>
-                <div id="susimagewrapper">
-                    <img  src="img-2.jpeg" alt="img">
-                </div>
-            </article>
-
-            <article class="anim2" id="ephemeral">
-                <div id="headings">
-                    <h1>Energy</h1>
-                    <h1>Optimised</h1>
-                </div>
-                <div id="imagetext" class="serv-main-img">
-                    <img width="3024px" height="4042px" src="img 2.png" alt="">
-                    <p>Committed to sustainability and eco-friendly choices for a better tomorrow.</p>
-                </div>
-            </article>
-
-            <div class="anim2" id="visit">
-                <div id="circlev">
-                    <i class="fa-solid fa-arrow-right" ></i>
-                </div>
-                <h3>visit our services.</h3>
-            </div>
-        </section>
-
-        <!-- Main Motive Section -->
-        <section id="motive">
-            <h3>Our motive</h3>
-            <p>
-                At Hash Labs, we specialize in Electrical Engineering, Power Systems, Computer Science,<span id="onespan"></span> and Artificial Intelligence. Our mission is to develop innovative, sustainable technologies<span id="twospan"></span> that address challenges in power generation, transmission, and distribution. By integrating advanced power systems<span id="threespan"></span> with intelligent technologies, we deliver reliable, scalable, and energy-efficient solutions for a smarter, connected future.
-            </p>
-        </section>
-
-        <!-- Banner Section -->
-        <section class="cta">
-            <div class="container">
-                <h2>Ready to Innovate with Us?</h2>
-                <p>Join HashLabs in shaping the future of technology</p>
-                <a href="contact.html" class="cta-button">Contact Us Today</a>
-            </div>
-        </section>
-
-        <!-- Services Section -->
-        <section class="page4">
-            <div class="services-heading">
-                <h1> Our Services <span class="services-img"><img src="Services.jpg" alt=""></span></h1>
-            </div>
-            <div class="elem">
-                <img src="img-ser 1.png"
-                    alt="">
-                <div class="text-div">
-                    <h1>Computer Science</h1>
-                    <h1>Computer Science</h1>
-                </div>
-                <img src="img-ser 1s.png"
-                    alt="">
-            </div>
-            <div class="elem">
-                <img src="img-ser 2.png"
-                    alt="">
-                <div class="text-div">
-                    <h1>Electrical Engineering</h1>
-                    <h1>Electrical Engineering</h1>
-                </div>
-                <img src="img-ser 2s.png"
-                    alt="">
-            </div>
-            <div class="elem">
-                <img src="img-ser 3.png"
-                    alt="">
-                <div class="text-div">
-                    <h1>Innovation Lab</h1>
-                    <h1>Innovation Lab</h1>
-                </div>
-                <img src="https://d33wubrfki0l68.cloudfront.net/188bb09da2a445d08ac5b4f706711772e50e8a17/e100a/assets/home/home-experience-2.webp"
-                    alt="">
-            </div>
-
-        </section>
-
-        <!-- Footer Section -->
-        <footer>
-            <div class="footer-row">
-                <div class="footer-col">
-                    <img src="logo.png" class="footer-logo">
-                    <p>Innovating in Electrical Engineering and Computer Science.</p>
-                </div>
-                <div class="footer-col">
-                    <h3>Contact Us<div class="footer-underline"><span></span></div> </h3>
-                    <p class="footer-location"><b>Location:</b> 80 CCA, DHA Phase 5 <br>Lahore, Punjab, Pakistan</p>
-                    <p class="footer-email-id"><b>Mail:</b> hr@thehashlabs.com</p>
-                    <p class="footer-contact"><b>Phone No:</b> +92 306 0429099</p>
-                </div>
-                <div class="footer-col">
-                        <h3>Our Services<div class="footer-underline"><span></span></div></h3>
-                    <ul class="footer-links">
-                        <li><a>Electrical Engineering</a></li>
-                        <li><a>Computer Science</a></li>
-                        <li><a>Innovation Lab</a></li>
-                        <li><a>Tech Consulting</a></li>
-                        <li><a>Chemical Engineering</a></li>
-                    </ul>
-                </div>
-                <div class="footer-col">
-                        <h3>Newsletter <div class="footer-underline"><span></span></div></h3>
-                    <form class="footer-form">
-                        <i class="fas fa-envelope"></i>
-                        <input type="email" placeholder="Enter your email id" required>
-                        <button type="submit"><i class="fa-solid fa-arrow-right"></i></button>
-                    </form>
-                    <div class="footer-social-icon">
-                        <a href="https://www.facebook.com/profile.php?id=61572640497686" target="_blank">
-                            <i class="fab fa-facebook"></i>
-                        </a>
-                        <a href="https://api.whatsapp.com/send?phone=923060429099" target="_blank">
-                            <i class="fab fa-whatsapp"></i>
-                        </a>
-                        <a href="https://www.linkedin.com/company/the-hash-labs/posts/?feedView=all" target="_blank">
-                            <i class="fab fa-linkedin"></i>
-                        </a>
-                    </div>                                       
-                </div>
-            </div>
-            <div>
-                <hr class="footer-hr">
-                <p class="footer-copyright" >&copy; 2025 The Hash Labs - All Rights Reserved</p>
-            </div>
-        </footer>
-        
+      <a class="cta" href="mailto:hr@thehashlabs.com">
+        GET IN TOUCH
+        <span class="cta-arrow" aria-hidden="true">→</span>
+      </a>
     </main>
 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/0.155.0/three.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/gh/automat/controlkit.js@master/bin/controlKit.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/locomotive-scroll@3.5.4/dist/locomotive-scroll.min.js"></script>
-    <script src="https://unpkg.com/sheryjs/dist/Shery.js"></script>
-    <script src="https://unpkg.com/lucide@latest"></script>
-    <!-- Google tag (gtag.js) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-TM8WH2BKZ2"></script>
-    <script>
-        window.dataLayer = window.dataLayer || [];
-        function gtag(){dataLayer.push(arguments);}
-        gtag('js', new Date());
-
-        gtag('config', 'G-TM8WH2BKZ2');
-    </script>
-    <script src="script.js"></script>
+    <footer class="site-footer">
+      <div class="socials">
+        <a href="https://www.facebook.com/profile.php?id=61572640497686" target="_blank" rel="noopener noreferrer">Facebook</a>
+        <a href="https://www.linkedin.com/company/the-hash-labs/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+        <a href="https://api.whatsapp.com/send?phone=923060429099" target="_blank" rel="noopener noreferrer">WhatsApp</a>
+      </div>
+      <a class="email" href="mailto:hr@thehashlabs.com">hr@thehashlabs.com</a>
+    </footer>
+  </div>
+  <script src="script.js"></script>
 </body>
 </html>
