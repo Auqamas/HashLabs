@@ -1,7 +1,4 @@
 (function () {
-  const STORAGE_KEY = "hashlabs_countdown_end";
-  const DURATION_MS = 24 * 60 * 60 * 1000;
-
   const daysEl = document.getElementById("days");
   const hoursEl = document.getElementById("hours");
   const minutesEl = document.getElementById("minutes");
@@ -9,26 +6,13 @@
   const menuBtn = document.querySelector(".menu-btn");
   const mobilePanel = document.getElementById("mobile-panel");
 
+  let timerId = null;
+
   function pad(n) {
     return String(Math.max(0, n)).padStart(2, "0");
   }
 
-  function getEndTime() {
-    const stored = localStorage.getItem(STORAGE_KEY);
-    if (stored) {
-      const parsed = Number(stored);
-      if (!Number.isNaN(parsed) && parsed > 0) {
-        return parsed;
-      }
-    }
-    const end = Date.now() + DURATION_MS;
-    localStorage.setItem(STORAGE_KEY, String(end));
-    return end;
-  }
-
-  const endTime = getEndTime();
-
-  function update() {
+  function render(endTime) {
     const remaining = Math.max(0, endTime - Date.now());
     const totalSeconds = Math.floor(remaining / 1000);
 
@@ -48,12 +32,40 @@
       if (eyebrow) {
         eyebrow.textContent = "The Next Gen Thing Is Almost Here";
       }
-      clearInterval(timerId);
+      if (timerId !== null) {
+        clearInterval(timerId);
+        timerId = null;
+      }
     }
   }
 
-  update();
-  const timerId = setInterval(update, 1000);
+  function startCountdown(endTime) {
+    render(endTime);
+    timerId = setInterval(function () {
+      render(endTime);
+    }, 1000);
+  }
+
+  fetch("countdown.json", { cache: "no-store" })
+    .then(function (res) {
+      if (!res.ok) {
+        throw new Error("Failed to load countdown");
+      }
+      return res.json();
+    })
+    .then(function (data) {
+      const endTime = Date.parse(data.endTime);
+      if (Number.isNaN(endTime)) {
+        throw new Error("Invalid endTime in countdown.json");
+      }
+      startCountdown(endTime);
+    })
+    .catch(function () {
+      daysEl.textContent = "00";
+      hoursEl.textContent = "00";
+      minutesEl.textContent = "00";
+      secondsEl.textContent = "00";
+    });
 
   if (menuBtn && mobilePanel) {
     menuBtn.addEventListener("click", function () {
