@@ -4,14 +4,14 @@ document.addEventListener('DOMContentLoaded', () => {
     lucide.createIcons();
 
     // Smooth scrolling for navigation links
-    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-        anchor.addEventListener('click', function (e) {
-            e.preventDefault();
-            document.querySelector(this.getAttribute('href')).scrollIntoView({
-                behavior: 'smooth'
-            });
-        });
-    });
+    // document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    //     anchor.addEventListener('click', function (e) {
+    //         e.preventDefault();
+    //         document.querySelector(this.getAttribute('href')).scrollIntoView({
+    //             behavior: 'smooth'
+    //         });
+    //     });
+    // });
 
     // Toggle Mobile Menu
     const hamburger = document.getElementById('hamburger');

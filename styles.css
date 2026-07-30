@@ -29,7 +29,6 @@
 #main {
     width: auto;
     height: auto;
-    scroll-behavior: smooth;
 }
 
 html, body {
@@ -2487,6 +2486,26 @@ footer {
 .any-hollow{
     -webkit-text-stroke: 1.5px rgb(0, 0, 0);
     color: transparent;
+}
+
+/* top Banner setting */
+.top-banner{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.top-banner .banner-content{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.top-banner .banner-content h1{
+    font-family: "Cabin", sans-serif;
+    font-size: 70px;
+    line-height: 1;
 }
 
 @media (max-width: 1700px) {
