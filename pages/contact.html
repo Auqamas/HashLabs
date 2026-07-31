@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>The Hash Labs | Contact</title>
+  <link rel="stylesheet" href="/css/header.css">
+  <link rel="stylesheet" href="/css/footer.css">
+  <link rel="stylesheet" href="/css/loader.css">
+  <link rel="stylesheet" href="/css/pages.css">
+  <link rel="stylesheet" href="https://unpkg.com/sheryjs/dist/Shery.css" />
+  <link rel="shortcut icon" href="/assets/logo/logo t.png" type="image/x-icon">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div id="loader"><h1>The Hash Labs.</h1></div>
+
+  <header id="site-header">
+    <nav>
+      <h2 class="brand-heading" onclick="location.href='/index.html'">
+        <img class="logo" src="/assets/logo/logo t.png" alt="Logo" />
+        The <br> Hash Labs
+      </h2>
+      <ul class="nav-links">
+        <li><a href="/pages/about.html">About</a></li>
+        <li><a href="/pages/services.html">Services</a></li>
+        <li><a href="/pages/team.html">Team</a></li>
+        <li><a href="/pages/work.html">Our Work</a></li>
+      </ul>
+      <a href="/pages/contact.html" class="header-button">Contact Us!</a>
+      <div class="hamburger"><span></span><span></span><span></span></div>
+    </nav>
+    <div class="mobile-menu">
+      <a href="/pages/about.html">About</a>
+      <a href="/pages/services.html">Services</a>
+      <a href="/pages/team.html">Team</a>
+      <a href="/pages/work.html">Our Work</a>
+      <a href="/pages/contact.html" class="header-button">Contact Us!</a>
+    </div>
+  </header>
+
+  <div id="main" class="font-raleway">
+    <section class="page-hero-center">
+      <div class="mx-auto max-w-2xl px-2">
+        <h1 class="shery-text">Say hello — we’ll take it from there</h1>
+        <p>Share a rough brief, a hard deadline, or just a question. A human from Hash Labs will reply — not a ticket bot.</p>
+        <div class="hero-cta">
+          <a class="magnet" href="#contact-form">Write to us</a>
+          <a class="magnet cta-cyan" href="mailto:hr@thehashlabs.com">Email directly</a>
+        </div>
+      </div>
+    </section>
+
+    <section style="transform:rotate(0.08rad);" class="select-none">
+      <div class="relative w-full overflow-hidden animated-gradient py-6">
+        <div id="scroller-wrapper" class="flex w-max">
+          <div id="scroller" class="flex divide-x divide-gray-400 text-lg font-semibold whitespace-nowrap">
+            <span class="px-6">New Builds</span>
+            <span class="px-6">Retainer Care</span>
+            <span class="px-6">R&amp;D Collabs</span>
+            <span class="px-6">Consulting</span>
+            <span class="px-6">Workshops</span>
+            <span class="px-6">Partnerships</span>
+            <span class="px-6">Careers</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section-pad" id="contact-form">
+      <div class="contact-grid" style="max-width:80rem;margin:0 auto;">
+        <div class="reveal-left">
+          <h2 class="section-title">Project intake</h2>
+          <p class="section-sub">The more context you give, the sharper our first reply.</p>
+
+          <form class="contact-form" style="margin-top:1.75rem;" onsubmit="return handleContactSubmit(event)">
+            <div class="name-email" style="display:grid;gap:0;">
+              <div>
+                <label for="name">Name</label>
+                <input id="name" name="name" type="text" placeholder="How should we address you?" required>
+              </div>
+              <div>
+                <label for="email">Email</label>
+                <input id="email" name="email" type="email" placeholder="you@company.com" required>
+              </div>
+            </div>
+
+            <label for="company">Organization</label>
+            <input id="company" name="company" type="text" placeholder="Company, lab, or studio">
+
+            <label for="service">Interest</label>
+            <select id="service" name="service" required>
+              <option value="">Choose one</option>
+              <option>Product / web design</option>
+              <option>Software engineering</option>
+              <option>Electrical / embedded</option>
+              <option>IoT / automation</option>
+              <option>3D / visualization</option>
+              <option>Partnership / other</option>
+            </select>
+
+            <label for="message">Brief</label>
+            <textarea id="message" name="message" placeholder="Timeline, constraints, and what “good” looks like…" required></textarea>
+
+            <button type="submit" class="hl-btn hover-lift magnet" style="border:none;cursor:pointer;">Send to Hash Labs</button>
+            <p id="contactResponse" style="margin-top:1rem;font-weight:600;color:#059669;min-height:1.25rem;"></p>
+          </form>
+        </div>
+
+        <div class="reveal-right">
+          <h2 class="section-title" style="font-size:clamp(1.5rem,3vw,2.1rem);">Reach the studio</h2>
+          <div class="info-card">
+            <h4>Visit</h4>
+            <p>80 CCA, DHA Phase 5<br>Lahore, Punjab, Pakistan</p>
+          </div>
+          <div class="info-card">
+            <h4>Inbox</h4>
+            <a href="mailto:hr@thehashlabs.com">hr@thehashlabs.com</a>
+          </div>
+          <div class="info-card">
+            <h4>Call</h4>
+            <a href="tel:+923060429099">+92 306 0429099</a>
+          </div>
+          <div class="info-card">
+            <h4>Open hours</h4>
+            <p>Monday – Friday · 10:00 – 18:00 PKT</p>
+          </div>
+
+          <div class="shery-frame reveal-scale" style="margin-top:1.75rem;height:240px;">
+            <img class="shery-img" data-shery-style="4" src="/assets/images/contact-main-image.png" alt="Hash Labs contact">
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="three-section">
+      <div class="three-section-inner">
+        <div class="reveal-left">
+          <p style="color:#0284c7;font-weight:700;font-size:.8rem;letter-spacing:.1em;text-transform:uppercase;margin-bottom:.6rem;">3D hello</p>
+          <h2 class="section-title">Even the contact page gets depth</h2>
+          <p class="section-sub">A lightweight Three.js scene + Shery image distortion — small moments that make the brand feel alive while you write.</p>
+        </div>
+        <div id="three-stage" class="reveal-right" aria-label="Interactive 3D canvas"></div>
+      </div>
+    </section>
+
+    <style>
+      @media(min-width:640px){
+        .name-email{grid-template-columns:1fr 1fr!important;gap:1rem!important;}
+      }
+    </style>
+
+    <section class="section-pad" style="background:#f8fafc;">
+      <div style="max-width:80rem;margin:0 auto;">
+        <div class="reveal" style="text-align:center;margin-bottom:2rem;">
+          <h2 class="section-title">Meanwhile, explore</h2>
+        </div>
+        <div class="value-grid" data-stagger>
+          <div class="value-item">
+            <div class="num">ABOUT</div>
+            <h3>Studio story</h3>
+            <p>How we think, collaborate, and decide what to build.</p>
+            <a class="link-underline" href="/pages/about.html" style="margin-top:1rem;display:inline-block;font-weight:700;color:rgb(0,149,255);text-decoration:none;">Read about →</a>
+          </div>
+          <div class="value-item">
+            <div class="num">SERVICES</div>
+            <h3>Capability map</h3>
+            <p>Digital, electrical, embedded, and visualization offerings.</p>
+            <a class="link-underline" href="/pages/services.html" style="margin-top:1rem;display:inline-block;font-weight:700;color:rgb(0,149,255);text-decoration:none;">View services →</a>
+          </div>
+          <div class="value-item">
+            <div class="num">WORK</div>
+            <h3>Recent builds</h3>
+            <p>Selected projects across product and physical space.</p>
+            <a class="link-underline" href="/pages/work.html" style="margin-top:1rem;display:inline-block;font-weight:700;color:rgb(0,149,255);text-decoration:none;">See work →</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section-pad">
+      <div style="max-width:42rem;margin:0 auto;" class="reveal">
+        <h2 class="section-title" style="text-align:center;">Before you write</h2>
+        <details style="border-bottom:1px solid #e5e7eb;padding:1rem 0;margin-top:1.5rem;">
+          <summary style="cursor:pointer;font-weight:700;">What should my first email include?</summary>
+          <p style="margin-top:.7rem;color:#4b5563;line-height:1.5;">Goal, audience, deadline, rough budget band, and any must-have tech or compliance constraints.</p>
+        </details>
+        <details style="border-bottom:1px solid #e5e7eb;padding:1rem 0;">
+          <summary style="cursor:pointer;font-weight:700;">How fast do you respond?</summary>
+          <p style="margin-top:.7rem;color:#4b5563;line-height:1.5;">Usually within one business day. Urgent launches can be flagged in the subject line.</p>
+        </details>
+        <details style="border-bottom:1px solid #e5e7eb;padding:1rem 0;">
+          <summary style="cursor:pointer;font-weight:700;">Do you sign NDAs?</summary>
+          <p style="margin-top:.7rem;color:#4b5563;line-height:1.5;">Yes — send yours or ask for ours before sharing sensitive material.</p>
+        </details>
+      </div>
+    </section>
+
+    <footer class="footer">
+      <div class="footer-container">
+        <div class="footer-grid">
+          <div class="footer-col">
+            <div class="footer-title">
+              <img class="logo" src="/assets/logo/logo t.png" alt="logo">
+              <h1 class="logo-text">The<br>Hash Labs</h1>
+            </div>
+            <p class="footer-text">Welcome to The Hash Labs, a hub of innovation and expertise in software engineering, electrical engineering, and advanced modeling technologies.</p>
+          </div>
+          <div class="footer-col">
+            <h4 class="footer-title">Quick Links</h4>
+            <ul class="footer-links">
+              <li><a href="/index.html">Home</a></li>
+              <li><a href="/pages/about.html">About</a></li>
+              <li><a href="/pages/services.html">Services</a></li>
+              <li><a href="/pages/team.html">Team</a></li>
+              <li><a href="/pages/contact.html">Contact</a></li>
+            </ul>
+          </div>
+          <div class="footer-col">
+            <h4 class="footer-title">Resources</h4>
+            <ul class="footer-links">
+              <li><a href="#">Documentation</a></li>
+              <li><a href="#">API</a></li>
+              <li><a href="#">Community</a></li>
+              <li><a href="#">Support</a></li>
+            </ul>
+          </div>
+          <div class="footer-col">
+            <h4 class="footer-title">Contact Us</h4>
+            <ul class="footer-contact">
+              <li><a><b>Location:</b> 80 CCA, DHA Phase 5 Lahore, Punjab, Pakistan</a></li>
+              <li><a><b>Mail:</b> hr@thehashlabs.com</a></li>
+              <li><a><b>Phone No:</b> +92 306 0429099</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="footer-bottom">
+          <div><p>© 2025 TheHashLabs. All rights reserved.</p></div>
+          <div class="footer-terms"><h4>Privacy Policy</h4><h4>Terms of Service</h4><h4>Cookie Policy</h4></div>
+        </div>
+      </div>
+    </footer>
+  </div>
+
+  <script>
+    function handleContactSubmit(e) {
+      e.preventDefault();
+      document.getElementById("contactResponse").textContent =
+        "Got it — thanks. We’ll reply from hr@thehashlabs.com.";
+      e.target.reset();
+      return false;
+    }
+  </script>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://cdn.jsdelivr.net/npm/lenis@1.1.18/dist/lenis.min.js"></script>
+  <script src="/js/script.js"></script>
+  <script src="/js/navbar.js"></script>
+  <script src="/js/smooth-scroll.js"></script>
+  <script src="/js/scroll.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/0.155.0/three.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/gh/automat/controlkit.js@master/bin/controlKit.min.js"></script>
+  <script src="https://unpkg.com/sheryjs/dist/Shery.js"></script>
+  <script src="/js/page-animations.js"></script>
+  <script src="/js/shery-3d.js"></script>
+</body>
+</html>

@@ -1,0 +1,49 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    /* outline: 1px solid rgba(255, 0, 0, 0.3); */
+}
+body, html {
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden; /* disable scroll until animation is done */
+    font-family: "Lato", sans-serif;
+    -ms-overflow-style: none;     /* IE/Edge */
+    scrollbar-width: none;        /* Firefox */
+}
+
+body::-webkit-scrollbar {
+    display: none;
+}
+
+::selection{
+    color: white;
+    background: rgba(5, 188, 194, 0.76);
+}
+#main {
+    width: 50vw;
+    height: auto;
+    min-height: 50vh;
+    margin: auto;
+    opacity: 0;
+    overflow: visible;
+}
+
+#loader {
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    background: rgb(255, 255, 255);
+    color: rgb(211, 210, 210);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1rem;
+    z-index: 9999;
+}
+#loader h1{
+    font-size: xx-large;
+    letter-spacing: -1px;
+    font-weight: 400;
+}

@@ -1,75 +1,412 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="HashLabs — Developers are currently building the next gen thing. Launching soon.">
-  <title>HashLabs — Coming Soon</title>
-  <link rel="icon" type="image/png" href="logo.png">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="styles.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Hash Labs | Innovations</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/header.css">
+    <link rel="stylesheet" href="css/footer.css">
+    <link rel="stylesheet" href="css/loader.css">
+    <link rel="shortcut icon" href="assets/logo/logo t.png" type="image/x-icon">
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cabin:ital,wght@0,400..700;1,400..700&family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Londrina+Solid:wght@100;300;400;900&family=Megrim&family=Rubik:ital,wght@0,300..900;1,300..900&family=Sulphur+Point:wght@300;400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Anonymous+Pro:ital,wght@0,400;0,700;1,400;1,700&family=Cabin:ital,wght@0,400..700;1,400..700&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=League+Spartan:wght@100..900&family=Londrina+Solid:wght@100;300;400;900&family=Megrim&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap" rel="stylesheet">
 </head>
 <body>
-  <div class="bg-layer" aria-hidden="true">
-    <div class="orb orb-1"></div>
-    <div class="orb orb-2"></div>
-    <div class="orb orb-3"></div>
-    <div class="noise"></div>
-  </div>
 
-  <div class="frame">
-    <header class="site-header">
-      <a href="/" class="brand" aria-label="HashLabs home">
-        <img src="logo.png" alt="HashLabs" class="brand-logo">
-        <span class="brand-text">
-          <span>HASH</span>
-          <span>LABS</span>
-        </span>
-      </a>
+    <div id="loader">
+        <h1>The Hash Labs.</h1>
+    </div>
+
+    <header id="site-header">
+      <nav>
+        <!-- Logo -->
+        <h2 class="brand-heading">
+          <img class="logo" src="assets/logo/logo t.png" alt="Logo" />
+          The <br> Hash Labs
+        </h2>
+    
+        <!-- Navigation Links -->
+        <ul class="nav-links">
+          <li><a href="pages/about.html">About</a></li>
+          <li><a href="pages/services.html">Services</a></li>
+          <li><a href="pages/team.html">Team</a></li>
+          <li><a href="pages/work.html">Our Work</a></li>
+        </ul>
+    
+        <!-- Contact Button -->
+        <a href="pages/contact.html" class="header-button">Contact Us!</a>
+    
+        <!-- Hamburger -->
+        <div class="hamburger">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+      </nav>
+    
+      <!-- Mobile Menu -->
+      <div class="mobile-menu">
+        <a href="pages/about.html">About</a>
+        <a href="pages/services.html">Services</a>
+        <a href="pages/team.html">Team</a>
+        <a href="pages/work.html">Our Work</a>
+        <a href="pages/contact.html" class="header-button">Contact Us!</a>
+      </div>
     </header>
 
-    <main class="hero">
-      <p class="eyebrow">Developers are Currently Building the Next Gen Thing</p>
+    <div id="main">
 
-      <div class="countdown" id="countdown" role="timer" aria-live="polite" aria-atomic="true">
-        <div class="unit">
-          <span class="value" id="days">00</span>
-          <span class="label">Days</span>
-        </div>
-        <span class="sep" aria-hidden="true">:</span>
-        <div class="unit">
-          <span class="value" id="hours">00</span>
-          <span class="label">Hours</span>
-        </div>
-        <span class="sep" aria-hidden="true">:</span>
-        <div class="unit">
-          <span class="value" id="minutes">00</span>
-          <span class="label">Minutes</span>
-        </div>
-        <span class="sep" aria-hidden="true">:</span>
-        <div class="unit">
-          <span class="value" id="seconds">00</span>
-          <span class="label">Seconds</span>
-        </div>
-      </div>
+        <section class="page1">
+            <div class="page-content">
+                <img width="70px" src="assets/logo/logo t.png" alt="">
+                <h1>Think, plan and track <br> <span class="color-g">all in one place</span></h1>
+                <p>Efficiently manage your tasks and boost productivity</p>
+                <div class="buttons">
+                    <button>View Social !</button>
+                    <button>Join Our Team</button>
+                </div>
+            </div>
+        </section>
 
-      <a class="cta" href="mailto:hr@thehashlabs.com">
-        GET IN TOUCH
-        <span class="cta-arrow" aria-hidden="true">→</span>
-      </a>
-    </main>
+        <div class="hash-video">
+            <video autoplay muted loop src="assets/images/About-us HAshlabs.mp4"></video>
+        </div>
 
-    <footer class="site-footer">
-      <div class="socials">
-        <a href="https://www.facebook.com/profile.php?id=61572640497686" target="_blank" rel="noopener noreferrer">Facebook</a>
-        <a href="https://www.linkedin.com/company/the-hash-labs/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
-        <a href="https://api.whatsapp.com/send?phone=923060429099" target="_blank" rel="noopener noreferrer">WhatsApp</a>
-      </div>
-      <a class="email" href="mailto:hr@thehashlabs.com">hr@thehashlabs.com</a>
-    </footer>
-  </div>
-  <script src="script.js"></script>
+        <section id="working" class="working">
+            <div class="heading infinite-scroll">
+              <h1 class="scroll-text">Meet Our Trusted <span class="gradient-text"> Collaborators</span></h1>
+            </div>
+          
+            <div class="swiper partnersSwiper">
+              <div class="swiper-wrapper">
+                
+                <div class="swiper-slide card">
+                  <img src="https://iconape.com/wp-content/files/cc/150057/svg/150057.svg" alt="Pel" class="partner-logo"/>
+                  <p class="partner-description">
+                    PEL partners with our company to deliver innovative energy and appliance solutions. Together, we focus on providing high-quality products and customized services, ensuring seamless project execution from concept to completion. Our collaboration is built on shared values of innovation, precision, and excellence.
+                  </p>
+                </div>
+          
+                <div class="swiper-slide card">
+                  <img src="https://xelpr.com/xelpr.png" alt="Xelpr" class="partner-logo" />
+                  <p class="partner-description">
+                    Creative Concepting, Design, Design Management, Project Management, and execution of work from concept to installation across the Country. Cross functional communication and management of third party partners.
+                  </p>
+                </div>
+
+                <div class="swiper-slide card">
+                  <img src="assets/logo/shopify.png" alt="Shopify" class="partner-logo" />
+                  <p class="partner-description">
+                    Shopify supports our digital storefront infrastructure, enabling us to deliver seamless e-commerce experiences. Their tools help us manage product catalogs, payments, and analytics with unmatched scalability and ease.
+                  </p>
+                </div>
+
+                <div class="swiper-slide card">
+                  <img src="https://cdn.cookielaw.org/logos/b1b489e9-8eec-4ba4-a5b9-841ee74d892f/f7cc7eda-2233-4b22-b085-713860d8a50e/2dff02ad-bd57-492c-8a81-8964d12c78d4/Lattice_Logo_Color_TransparentBG.png" alt="lattice semiconductor" class="partner-logo" />
+                  <p class="partner-description">
+                    Lattice works with us to develop efficient, low-power hardware solutions. Their compact FPGAs power many of our embedded systems. They help us balance performance with size and energy use. Together, we build smarter, scalable tech for modern applications.
+                  </p>
+                </div>
+          
+                <div class="swiper-slide card">
+                  <img src="https://chipconfig.com/Logo%202.png" alt="Chip Config" class="partner-logo" />
+                  <p class="partner-description">
+                    Chip-Config works with us to design and optimize hardware-level configurations. Their expertise in embedded systems ensures our products maintain high performance, precision, and reliability.
+                  </p>
+                </div>
+
+                <div class="swiper-slide card">
+                  <img src="assets/logo/flytech.png" alt="flytech" class="partner-logo" />
+                  <p class="partner-description">
+                    FlyTech collaborates with us on custom drone integrations and real-time data solutions. Their innovation in aerial tech enhances our capabilities in surveillance, logistics, and smart mobility projects.
+                  </p>
+                </div>
+
+                <div class="swiper-slide card">
+                  <img src="https://images.squarespace-cdn.com/content/v1/5e0a89e54bef9c024b7be6b9/1583902701309-GW6D8DU7Y6IREUB9FJH9/th-wide.png?format=2500w" alt="tech Hive" class="partner-logo" />
+                  <p class="partner-description">
+                    Tech Hive collaborates with us on IoT and smart systems. They help connect devices, cloud platforms, and users. Their innovation boosts automation and data flow. We build intelligent ecosystems together.
+                  </p>
+                </div>
+          
+              </div>
+            </div>
+        </section>
+
+        <section class="work-section">
+          <div class="content-box">
+            <div class="left">
+              <div class="tabs">
+                <h1 class="tab active" data-tab="design">Design</h1>
+                <h1 class="tab" data-tab="project">Project</h1>
+                <h1 class="tab" data-tab="execution">Execution</h1>
+              </div>
+              <p class="tab-text">Our team works with our clients to refine an idea and concept into an executable design. We create a final design that encompasses the brand narrative to bring stories to life and provide end-to-end design solutions from concept, design, and architectural drawings to your thoughts.</p>
+            </div>
+            <div class="right">
+              <img id="tab-image" src="assets/images/V1.png" alt="Work Image">
+            </div>
+          </div>
+        </section>
+        
+        <section class="company-data">
+          <div class="data-wrapper">
+            <div class="data-text">
+              <p>The Hash Labs is a tech firm specializing in software, AI, engineering, and academic support, creating smart solutions for businesses and students.</p>
+            </div>
+          </div>
+        </section>
+
+        <section class="newsletter">
+          <div class="letter-heading">
+            <h1>I'm ready.</h1>
+            <h1>Join HashLabs.</h1>
+          </div>
+          <form class="letter-mail" id="newsletterForm">
+            <input type="email" id="emailInput" placeholder="Enter your email" required />
+            <button type="submit" class="subscribe-btn">Subscribe</button>
+          </form>
+          <p id="responseMessage" class="response-message"></p>
+        </section> 
+        
+        <section class="faq-section">
+          <h2>Frequent Ask <br><span class="color-g"> Questions</span></h2>
+
+          <div class="faq-wrapper">
+            <div class="faq-item">
+              <button class="faq-question">
+                <span>What is The Hash Labs?</span>
+                <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"/>
+                </svg>
+              </button>
+              <div class="faq-answer">
+                The Hash Labs is a creative technology studio focused on developing innovative digital experiences. We specialize in interactive design, web development, and cutting-edge animations to create memorable online experiences for our clients.
+              </div>
+            </div>
+      
+            <div class="faq-item">
+              <button class="faq-question">
+                <span>What services do you offer?</span>
+                <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"/>
+                </svg>
+              </button>
+              <div class="faq-answer">
+                We offer a variety of services, including: <br><br>
+
+                &nbsp;  1. Web design and development  <br>
+                &nbsp;  2. Custom animations and interactions  <br>
+                &nbsp;  3. Branding and UI/UX design  <br>
+                &nbsp;  4. Front-end development with advanced technologies like GSAP and Locomotive Scroll  <br>
+                &nbsp;  5. Full-stack development  <br>
+                &nbsp;  6. Electrical systems design and analysis  <br>
+                &nbsp;  7. Embedded systems development  <br>
+                &nbsp;  8. Automation solutions  <br>
+                &nbsp;  9. IoT (Internet of Things) solutions  <br>
+                &nbsp;  10. Research and development in CS and Electrical Engineering  <br>
+              </div>
+            </div>
+      
+            <div class="faq-item">
+              <button class="faq-question">
+                <span>How long does a typical project take?</span>
+                <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"/>
+                </svg>
+              </button>
+              <div class="faq-answer">
+                To get started, simply reach out to us through our contact page or send an email to hr@thehashlabs.com. We'll discuss your ideas, goals, and vision before providing a tailored plan for your project.
+              </div>
+            </div>
+      
+            <div class="faq-item">
+              <button class="faq-question">
+                <span>Do you provide ongoing support after the project is completed?</span>
+                <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"/>
+                </svg>
+              </button>
+              <div class="faq-answer">
+                Yes, we provide ongoing support and maintenance across all our services. Whether it’s software updates, system optimizations, or electrical maintenance, we are available for continued assistance to ensure everything runs smoothly.
+              </div>
+            </div>
+      
+            <div class="faq-item">
+              <button class="faq-question">
+                <span>What technologies do you use?</span>
+                <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"/>
+                </svg>
+              </button>
+              <div class="faq-answer">
+                We leverage a variety of technologies depending on the project’s requirements. For software and web development, we use modern programming languages like Python, JavaScript, and PHP, along with advanced frameworks and tools. For electrical projects, we use cutting-edge tools for circuit design, simulation, and embedded system development.
+              </div>
+            </div>
+      
+            <div class="faq-item">
+              <button class="faq-question">
+                <span>Is Hash Labs suitable for long-term projects?</span>
+                <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"/>
+                </svg>
+              </button>
+              <div class="faq-answer">
+                Yes, we handle both short-term sprints and long-term collaborations. We adjust our workflow depending on your project's timeline.
+              </div>
+            </div>
+          </div>
+        </section>
+        
+        <footer class="footer">
+          <div class="footer-container">
+            <div class="footer-grid">
+              <div class="footer-col">
+                <div class="footer-title">
+                  <img class="logo" src="assets/logo/logo t.png" alt="logo">
+                  <h1 class="logo-text">The<br>Hash Labs</h1>
+                </div>
+                <p class="footer-text">Welcome to The Hash Labs, a hub of innovation and expertise in software engineering, electrical engineering, and advanced modeling technologies.</p>
+                <div class="footer-col">
+                  <div class="footer-icons">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                         stroke-linecap="round" stroke-linejoin="round">
+                      <path d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5.08-1.25-.27-2.48-1-3.5.28-1.15.28-2.35 0-3.5 0 0-1 0-3 1.5-2.64-.5-5.36-.5-8 0C6 2 5 2 5 2c-.3 1.15-.3 2.35 0 3.5A5.403 5.403 0 0 0 4 9c0 3.5 3 5.5 6 5.5-.39.49-.68 1.05-.85 1.65-.17.6-.22 1.23-.15 1.85v4"/><path d="M9 18c-4.51 2-5-2-7-2"/>
+                    </svg>
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                         stroke-linecap="round" stroke-linejoin="round">
+                      <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/>
+                    </svg>
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                         stroke-linecap="round" stroke-linejoin="round">
+                      <path d="M22 4s-.7 2.1-2 3.4c1.6 10-9.4 17.3-18 11.6 2.2.1 4.4-.6 6-2C3 15.5.5 9.6 3 5c2.2 2.6 5.6 4.1 9 4-.9-4.2 4-6.6 7-3.8 1.1 0 3-1.2 3-1.2z"/>
+                    </svg>
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                         stroke-linecap="round" stroke-linejoin="round">
+                      <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/>
+                      <rect width="4" height="12" x="2" y="9"/>
+                      <circle cx="4" cy="4" r="2"/>
+                    </svg>
+                  </div>              
+                </div>
+              </div>
+              <div class="footer-col">
+                <h4 class="footer-title">Quick Links</h4>
+                <ul class="footer-links">
+                  <li><a href="index.html">Home</a></li>
+                  <li><a href="pages/about.html">About</a></li>
+                  <li><a href="pages/services.html">Services</a></li>
+                  <li><a href="pages/team.html">Team</a></li>
+                  <li><a href="pages/contact.html">Contact</a></li>
+                </ul>
+              </div>
+              <div class="footer-col">
+                <h4 class="footer-title">Resources</h4>
+                <ul class="footer-links">
+                  <li><a href="#">Documentation</a></li>
+                  <li><a href="#">API</a></li>
+                  <li><a href="#">Community</a></li>
+                  <li><a href="#">Support</a></li>
+                </ul>
+              </div>
+              <div class="footer-col">
+                <h4 class="footer-title">Contact Us</h4>
+                <ul class="footer-contact">
+                  <li><a><b>Location:</b> 80 CCA, DHA Phase 5 Lahore, Punjab, Pakistan</a></li>
+                  <li><a><b>Mail:</b> hr@thehashlabs.com</a></li>
+                  <li><a><b>Phone No:</b> +92 306 0429099</a></li>
+                </ul>
+              </div>
+            </div>
+    
+            <div class="footer-bottom">
+              <div>
+                <p>© 2025 TheHashLabs. All rights reserved.</p>
+              </div>
+              <div class="footer-terms">
+                <h4>Privacy Policy</h4>
+                <h4>Terms of Service</h4>
+                <h4>Cookie Policy</h4>
+              </div>
+            </div>
+          </div>
+        </footer>
+
+    </div>
+
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/lenis@1.1.18/dist/lenis.min.js"></script>
+    <script src="https://kit.fontawesome.com/236b5f9539.js" crossorigin="anonymous"></script>
+    <script>
+      const faqButtons = document.querySelectorAll(".faq-question");
+  
+      faqButtons.forEach((btn) => {
+        btn.addEventListener("click", () => {
+          const content = btn.nextElementSibling;
+          const icon = btn.querySelector("svg");
+  
+          document.querySelectorAll(".faq-answer").forEach(a => {
+            if (a !== content) {
+              a.classList.remove("open");
+            }
+          });
+  
+          document.querySelectorAll(".faq-question svg").forEach(i => {
+            if (i !== icon) {
+              i.classList.remove("rotate-180");
+            }
+          });
+  
+          content.classList.toggle("open");
+          icon.classList.toggle("rotate-180");
+        });
+      });
+    </script>
+    <script src="js/navbar.js"></script>
+    <script src="js/home-smooth-scroll.js"></script>
+
 </body>
+
+    <script>
+        const swiper = new Swiper('.partnersSwiper', {
+            loop: true,
+            autoplay: {
+            delay: 3000,
+            disableOnInteraction: false,
+            },
+            spaceBetween: 30,
+            speed: 1000,
+            grabCursor: true,
+            slidesPerView: 1,
+
+            breakpoints: {
+            640: {
+                slidesPerView: 1.2,
+            },
+            768: {
+                slidesPerView: 2,
+            },
+            1024: {
+                slidesPerView: 3,
+            },
+            1280: {
+                slidesPerView: 4,
+            }
+            },
+
+            pagination: false,
+        });
+
+        function scrollToWorking() {
+          document.getElementById("working").scrollIntoView({ behavior: "smooth" });
+        }
+    </script>
+    <script src="js/script.js"></script>
+
 </html>

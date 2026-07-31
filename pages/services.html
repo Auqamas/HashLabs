@@ -1,0 +1,374 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>The Hash Labs | Services</title>
+  <link rel="stylesheet" href="/css/header.css">
+  <link rel="stylesheet" href="/css/footer.css">
+  <link rel="stylesheet" href="/css/loader.css">
+  <link rel="stylesheet" href="/css/pages.css">
+  <link rel="stylesheet" href="https://unpkg.com/sheryjs/dist/Shery.css" />
+  <link rel="shortcut icon" href="/assets/logo/logo t.png" type="image/x-icon">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div id="loader"><h1>The Hash Labs.</h1></div>
+
+  <header id="site-header">
+    <nav>
+      <h2 class="brand-heading" onclick="location.href='/index.html'">
+        <img class="logo" src="/assets/logo/logo t.png" alt="Logo" />
+        The <br> Hash Labs
+      </h2>
+      <ul class="nav-links">
+        <li><a href="/pages/about.html">About</a></li>
+        <li><a href="/pages/services.html">Services</a></li>
+        <li><a href="/pages/team.html">Team</a></li>
+        <li><a href="/pages/work.html">Our Work</a></li>
+      </ul>
+      <a href="/pages/contact.html" class="header-button">Contact Us!</a>
+      <div class="hamburger"><span></span><span></span><span></span></div>
+    </nav>
+    <div class="mobile-menu">
+      <a href="/pages/about.html">About</a>
+      <a href="/pages/services.html">Services</a>
+      <a href="/pages/team.html">Team</a>
+      <a href="/pages/work.html">Our Work</a>
+      <a href="/pages/contact.html" class="header-button">Contact Us!</a>
+    </div>
+  </header>
+
+  <div id="main" class="font-raleway">
+
+    <section class="page-hero-center">
+      <div class="mx-auto max-w-2xl px-2">
+        <h1 class="shery-text">Capabilities that cover the full stack of reality</h1>
+        <p>From pixels and APIs to circuits and sensors we assemble the right mix for your product, not a one-size catalog.</p>
+        <div class="hero-cta">
+          <a class="magnet" href="/pages/contact.html">Request a proposal</a>
+          <a class="magnet cta-cyan" href="/pages/work.html">Browse projects</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="svc-marquee select-none" style="transform:rotate(0.08rad);">
+      <div class="relative w-full overflow-hidden animated-gradient py-6">
+        <div id="scroller-wrapper" class="flex w-max">
+          <div id="scroller" class="flex divide-x divide-gray-400 text-lg font-semibold whitespace-nowrap">
+            <span class="px-6">UI Systems</span>
+            <span class="px-6">API Platforms</span>
+            <span class="px-6">Firmware</span>
+            <span class="px-6">Power Systems</span>
+            <span class="px-6">Sensor Networks</span>
+            <span class="px-6">Motion Design</span>
+            <span class="px-6">Lab Prototypes</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Scroll: studio intro → red wash → service menu → help stories (from behind) -->
+    <section class="svc-scroll" data-svc-scroll aria-label="Service menu">
+      <div class="svc-scroll-pin" data-svc-pin>
+        <!-- Behind layer: hover-text section revealed as service stage lifts -->
+        <section class="help-stories-section help-stories-section--reveal" data-help-reveal aria-hidden="true">
+          <div class="help-stories-container">
+            <div class="client-stories-card">
+              <div class="stories-topline">
+                <div class="stories-progress-track" aria-hidden="true">
+                  <div class="stories-progress-bar" id="story-progress"></div>
+                </div>
+                <div class="stories-nav">
+                  <button type="button" class="story-nav-btn" id="story-prev" aria-label="Previous story">←</button>
+                  <button type="button" class="story-nav-btn" id="story-next" aria-label="Next story">→</button>
+                  <span class="story-counter" id="story-counter">01/04</span>
+                </div>
+              </div>
+
+              <span class="stories-kicker">( REAL CLIENT STORIES )</span>
+
+              <div class="story-content-wrapper">
+                <blockquote class="story-quote" id="story-quote">
+                  "The Hash Labs team delivered an exceptional UI and API platform for our product. Their attention to performance, modern design, and engineering depth is unmatched."
+                </blockquote>
+                <div class="story-author">
+                  <span class="story-avatar-fallback" id="story-avatar" aria-hidden="true">JS</span>
+                  <div class="story-author-info">
+                    <strong id="story-author-name">Jonathon Shannon</strong>
+                    <span id="story-author-role">Creative Director, Supersolid</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="help-list-wrapper">
+              <div class="help-list-header">What we can help with</div>
+
+              <ul class="help-items-list" id="help-items-list">
+                <li class="help-item" data-img="/assets/images/Services-main-image.png">
+                  <span class="help-item-title">UI &amp; Product Design</span>
+                </li>
+                <li class="help-item" data-img="/assets/images/img-ser%201.png">
+                  <span class="help-item-title">Web &amp; API Platforms</span>
+                </li>
+                <li class="help-item" data-img="/assets/images/img-ser%202s.png">
+                  <span class="help-item-title">Electrical Schematics</span>
+                </li>
+                <li class="help-item" data-img="/assets/images/sim%20img.png">
+                  <span class="help-item-title">Embedded Firmware</span>
+                </li>
+                <li class="help-item" data-img="/assets/covers/company-data.png">
+                  <span class="help-item-title">AI &amp; Data Strategy</span>
+                </li>
+                <li class="help-item" data-img="/assets/images/V1.png">
+                  <span class="help-item-title">3D &amp; Spatial Visualization</span>
+                </li>
+                <li class="help-item" data-img="/assets/images/ai_digital_growth.jpg">
+                  <span class="help-item-title">Cloud &amp; DevOps</span>
+                </li>
+                <li class="help-item" data-img="/assets/images/ai_neural_core.jpg">
+                  <span class="help-item-title">Cybersecurity</span>
+                </li>
+              </ul>
+
+              <div class="help-preview-container" id="help-preview-container">
+                <img id="help-preview-img" src="/assets/images/Services-main-image.png" alt="Service preview">
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- Front stage lifts away to reveal help stories -->
+        <div class="svc-front" data-svc-front>
+        <!-- Dark intro (visible on light bg) -->
+        <div class="svc-intro svc-intro--dark" data-svc-intro-dark>
+          <p class="svc-intro-line">
+            <span class="svc-intro-line-inner" data-svc-line>
+              <span class="svc-word">We</span>
+              <span class="svc-intro-thumbs svc-intro-inline" data-svc-collapse="thumbs" aria-hidden="true">
+                <img src="/assets/images/tech_thumb_1.jpg" alt="">
+                <img src="/assets/images/tech_thumb_2.jpg" alt="">
+                <img src="/assets/images/ai_neural_core.jpg" alt="">
+              </span>
+              <span class="svc-word">are a creative</span>
+            </span>
+          </p>
+          <p class="svc-intro-line">
+            <span class="svc-intro-line-inner" data-svc-line>
+              <span class="svc-word">studio</span>
+              <span class="svc-intro-arrow svc-intro-inline" data-svc-collapse="arrow" aria-hidden="true">→</span>
+              <span class="svc-word">dedicated</span>
+            </span>
+          </p>
+          <p class="svc-intro-line">
+            <span class="svc-intro-line-inner" data-svc-line>
+              <span class="svc-word">to craft a</span>
+              <a class="svc-intro-cta svc-intro-inline" data-svc-collapse="cta" href="/pages/contact.html">Work with us</a>
+              <span class="svc-word">solution</span>
+            </span>
+          </p>
+        </div>
+
+        <!-- Red wash + light intro (revealed as wash rises) -->
+        <div class="svc-wash" data-svc-wash>
+          <div class="svc-intro svc-intro--light" data-svc-intro-light aria-hidden="true">
+            <p class="svc-intro-line">
+              <span class="svc-intro-line-inner" data-svc-line>
+                <span class="svc-word">We</span>
+                <span class="svc-intro-thumbs svc-intro-inline" data-svc-collapse="thumbs" aria-hidden="true">
+                  <img src="/assets/images/tech_thumb_1.jpg" alt="">
+                  <img src="/assets/images/tech_thumb_2.jpg" alt="">
+                  <img src="/assets/images/ai_neural_core.jpg" alt="">
+                </span>
+                <span class="svc-word">are a creative</span>
+              </span>
+            </p>
+            <p class="svc-intro-line">
+              <span class="svc-intro-line-inner" data-svc-line>
+                <span class="svc-word">studio</span>
+                <span class="svc-intro-arrow svc-intro-inline" data-svc-collapse="arrow" aria-hidden="true">→</span>
+                <span class="svc-word">dedicated</span>
+              </span>
+            </p>
+            <p class="svc-intro-line">
+              <span class="svc-intro-line-inner" data-svc-line>
+                <span class="svc-word">to craft a</span>
+                <a class="svc-intro-cta svc-intro-cta--on-red svc-intro-inline" data-svc-collapse="cta" href="/pages/contact.html" tabindex="-1">Work with us</a>
+                <span class="svc-word">solution</span>
+              </span>
+            </p>
+          </div>
+        </div>
+
+        <!-- Service menu (appears after intro exits) -->
+        <div class="svc-menu" data-svc-menu aria-hidden="true">
+          <div class="svc-menu-copy">
+            <h2 class="svc-menu-title">
+              We introduce <br> methodologies, processes, and learnings to drive digital innovation projects.
+            </h2>
+            <p class="svc-menu-sub">Ensuring impactful experiences that drive growth and success.</p>
+          </div>
+
+          <div class="svc-deck" data-svc-deck>
+            <article class="svc-deck-card is-front" data-svc-card style="--i:0">
+              <span class="svc-deck-num">01.</span>
+              <h3 class="svc-deck-title">Design</h3>
+              <p class="svc-deck-body">Research-backed UX, component systems, and motion that guides attention instead of decorating it.</p>
+              <div class="svc-deck-media">
+                <img src="/assets/images/Services-main-image.png" alt="Product and interface design">
+              </div>
+            </article>
+            <article class="svc-deck-card" data-svc-card style="--i:1">
+              <span class="svc-deck-num">02.</span>
+              <h3 class="svc-deck-title">Engineering</h3>
+              <p class="svc-deck-body">Responsive sites, dashboards, and full-stack apps with clean APIs and maintainable codebases.</p>
+              <div class="svc-deck-media">
+                <img src="/assets/images/img-ser%201.png" alt="Web and application engineering">
+              </div>
+            </article>
+            <article class="svc-deck-card" data-svc-card style="--i:2">
+              <span class="svc-deck-num">03.</span>
+              <h3 class="svc-deck-title">Electrical</h3>
+              <p class="svc-deck-body">Schematics, simulation, and documentation for commercial installs and research hardware.</p>
+              <div class="svc-deck-media">
+                <img src="/assets/images/img-ser%202s.png" alt="Electrical design and analysis">
+              </div>
+            </article>
+            <article class="svc-deck-card" data-svc-card style="--i:3">
+              <span class="svc-deck-num">04.</span>
+              <h3 class="svc-deck-title">Embedded</h3>
+              <p class="svc-deck-body">MCU platforms, drivers, and reliable firmware that lives next to the metal.</p>
+              <div class="svc-deck-media">
+                <img src="/assets/images/V4.png" alt="Embedded and firmware">
+              </div>
+            </article>
+          </div>
+
+          <div class="svc-menu-tools" aria-hidden="true">
+            <button type="button" class="svc-tool-btn" data-svc-prev title="Previous service">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" aria-hidden="true"><path d="M15 18l-6-6 6-6"/></svg>
+            </button>
+            <button type="button" class="svc-tool-btn svc-tool-btn--dark" data-svc-next title="Next service">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" aria-hidden="true"><path d="M9 18l6-6-6-6"/></svg>
+            </button>
+          </div>
+        </div>
+        </div><!-- /.svc-front -->
+      </div>
+    </section>
+
+    <section class="studio-statement" data-studio-statement aria-labelledby="studio-statement-title">
+      <div class="studio-statement-label" data-statement-label>ABOUT THE HASH LABS</div>
+
+      <div class="studio-statement-grid">
+        <h2 class="studio-statement-title" id="studio-statement-title" aria-label="An experience where ideas, technology and people unite">
+          <span class="studio-statement-line"><span>AN <span class="text-indigo-500">EXPERIENCE</span></span></span>
+          <span class="studio-statement-line studio-statement-line--indent"><span>WHERE <span class="text-indigo-500">IDEAS</span>,</span></span>
+          <span class="studio-statement-line"><span><span class="text-indigo-500">TECHNOLOGY</span> AND</span></span>
+          <span class="studio-statement-line"><span><span class="text-indigo-500">PEOPLE</span> UNITE</span></span>
+        </h2>
+
+        <div class="studio-statement-copy mt-[28vh]">
+          <p data-statement-copy>
+            THE HASH LABS IS AN INDEPENDENT TECHNOLOGY AND DESIGN STUDIO THAT BUILDS DIGITAL PRODUCTS, INTELLIGENT SYSTEMS AND CONNECTED EXPERIENCES FOR AMBITIOUS IDEAS.
+          </p>
+          <p data-statement-copy>
+            DESIGNERS, SOFTWARE ENGINEERS, ELECTRICAL ENGINEERS AND 3D ARTISTS WORK AS ONE TEAM—TURNING COMPLEX PROBLEMS INTO USEFUL, MEMORABLE PRODUCTS.
+          </p>
+          <!-- <a class="studio-statement-link" href="/pages/about.html" data-statement-link>
+            MORE ABOUT US <span aria-hidden="true">↳</span>
+          </a> -->
+        </div>
+
+      </div>
+    </section>
+
+    <!-- <section class="section-pad" style="background:#f8fafc;">
+      <div style="max-width:80rem;margin:0 auto;">
+        <div class="reveal" style="margin-bottom:2rem;">
+          <h2 class="section-title">Ways to engage</h2>
+          <p class="section-sub">Structure that respects your stage — discovery, build, or ongoing velocity.</p>
+        </div>
+        <div class="value-grid" data-stagger>
+          <div class="value-item"><div class="num">SPRINT</div><h3>Discovery sprint</h3><p>1–2 weeks to clarify scope, risks, and a recommended architecture with a clear estimate.</p></div>
+          <div class="value-item"><div class="num">BUILD</div><h3>Delivery program</h3><p>Milestone-based build with demos, QA gates, and a defined launch checklist.</p></div>
+          <div class="value-item"><div class="num">CARE</div><h3>Care retainer</h3><p>Monthly hours for iteration, monitoring, electrical upkeep, and feature follow-through.</p></div>
+        </div>
+      </div>
+    </section> -->
+
+    <section class="section-pad">
+      <div class="reveal-scale" style="max-width:80rem;margin:0 auto;">
+        <div class="cta-band">
+          <h2>Tell us what you’re trying to ship</h2>
+          <p>We’ll reply with the leanest path — team shape, timeline, and what we need from you.</p>
+          <a class="hl-btn magnet" href="/pages/contact.html">Book a scoping call</a>
+        </div>
+      </div>
+    </section>
+
+    <footer class="footer">
+      <div class="footer-container">
+        <div class="footer-grid">
+          <div class="footer-col">
+            <div class="footer-title">
+              <img class="logo" src="/assets/logo/logo t.png" alt="logo">
+              <h1 class="logo-text">The<br>Hash Labs</h1>
+            </div>
+            <p class="footer-text">Welcome to The Hash Labs, a hub of innovation and expertise in software engineering, electrical engineering, and advanced modeling technologies.</p>
+          </div>
+          <div class="footer-col">
+            <h4 class="footer-title">Quick Links</h4>
+            <ul class="footer-links">
+              <li><a href="/index.html">Home</a></li>
+              <li><a href="/pages/about.html">About</a></li>
+              <li><a href="/pages/services.html">Services</a></li>
+              <li><a href="/pages/team.html">Team</a></li>
+              <li><a href="/pages/contact.html">Contact</a></li>
+            </ul>
+          </div>
+          <div class="footer-col">
+            <h4 class="footer-title">Resources</h4>
+            <ul class="footer-links">
+              <li><a href="#">Documentation</a></li>
+              <li><a href="#">API</a></li>
+              <li><a href="#">Community</a></li>
+              <li><a href="#">Support</a></li>
+            </ul>
+          </div>
+          <div class="footer-col">
+            <h4 class="footer-title">Contact Us</h4>
+            <ul class="footer-contact">
+              <li><a><b>Location:</b> 80 CCA, DHA Phase 5 Lahore, Punjab, Pakistan</a></li>
+              <li><a><b>Mail:</b> hr@thehashlabs.com</a></li>
+              <li><a><b>Phone No:</b> +92 306 0429099</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="footer-bottom">
+          <div><p>© 2025 TheHashLabs. All rights reserved.</p></div>
+          <div class="footer-terms"><h4>Privacy Policy</h4><h4>Terms of Service</h4><h4>Cookie Policy</h4></div>
+        </div>
+      </div>
+    </footer>
+  </div>
+
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://cdn.jsdelivr.net/npm/lenis@1.1.18/dist/lenis.min.js"></script>
+  <script src="/js/script.js"></script>
+  <script src="/js/navbar.js"></script>
+  <script src="/js/smooth-scroll.js"></script>
+  <script src="/js/scroll.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/0.155.0/three.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/gh/automat/controlkit.js@master/bin/controlKit.min.js"></script>
+  <script src="https://unpkg.com/sheryjs/dist/Shery.js"></script>
+  <script src="/js/page-animations.js"></script>
+  <script src="/js/shery-3d.js"></script>
+</body>
+</html>

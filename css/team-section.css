@@ -1,0 +1,106 @@
+/* Animated gradient border */
+.gradient-border {
+  position: relative;
+  border-radius: 0.75rem; /* same as Tailwind rounded-xl */
+  padding: 2px; /* border thickness */
+  background: linear-gradient(90deg, #2563eb, transparent, #7c3aed, #2563eb);
+  background-size: 300% 300%;
+  animation: borderFlow 6s linear infinite;
+}
+
+.gradient-border svg {
+  position: relative;
+  z-index: 1;
+}
+
+.gradient-border::before {
+  content: "";
+  position: absolute;
+  inset: 2px; /* keeps inner black background */
+  border-radius: inherit;
+  background: #000;
+  z-index: 0;
+}
+
+@keyframes borderFlow {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+
+/* Swiper */
+/* Gradient Border Animation */
+.gradient-border {
+  position: relative;
+  border-radius: 0.75rem;
+  padding: 2px;
+  background: linear-gradient(90deg, #2563eb, transparent, #7c3aed, #2563eb);
+  background-size: 300% 300%;
+  animation: borderFlow 6s linear infinite;
+}
+.gradient-border svg {
+  position: relative;
+  z-index: 1;
+}
+.gradient-border::before {
+  content: "";
+  position: absolute;
+  inset: 2px;
+  border-radius: inherit;
+  background: #000;
+  z-index: 0;
+}
+@keyframes borderFlow {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+/* Pagination Dots */
+.swiper-pagination-bullet {
+  width: 10px;
+  height: 10px;
+  background: #555;
+  opacity: 1;
+  border-radius: 50%;
+  margin: 0 5px !important;
+  position: relative;
+  overflow: hidden;
+}
+
+.swiper-pagination-bullet-active {
+  width: 30px; /* extended */
+  border-radius: 10px;
+  background: #777;
+}
+
+.swiper-pagination-bullet-active::after {
+  content: "";
+  position: absolute;
+  top: 0; left: 0;
+  height: 100%;
+  width: 0%;
+  background: linear-gradient(to right, #aaa, #555);
+  animation: progressFill 2s linear forwards;
+}
+
+@keyframes progressFill {
+  from { width: 0%; }
+  to { width: 100%; }
+}
+/* Pagition Swiper */
+.mySwiper .swiper-pagination {
+  height: 5px;
+  background: rgba(0,0,0,0.15);
+  border-radius: 3px;
+  overflow: hidden;
+}
+
+/* Filling bar */
+.mySwiper .swiper-pagination-progressbar-fill {
+  background: #ff3b30; /* your color */
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.1s linear; /* smooth extend */
+}

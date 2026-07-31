@@ -1,0 +1,487 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>The Hash Labs | About</title>
+  <link rel="stylesheet" href="/css/header.css">
+  <link rel="stylesheet" href="/css/footer.css">
+  <link rel="stylesheet" href="/css/loader.css">
+  <link rel="stylesheet" href="/css/pages.css">
+  <link rel="stylesheet" href="https://unpkg.com/sheryjs/dist/Shery.css" />
+  <link rel="shortcut icon" href="/assets/logo/logo t.png" type="image/x-icon">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div id="loader"><h1>The Hash Labs.</h1></div>
+
+  <header id="site-header">
+    <nav>
+      <h2 class="brand-heading" onclick="location.href='/index.html'">
+        <img class="logo" src="/assets/logo/logo t.png" alt="Logo" />
+        The <br> Hash Labs
+      </h2>
+      <ul class="nav-links">
+        <li><a href="/pages/about.html">About</a></li>
+        <li><a href="/pages/services.html">Services</a></li>
+        <li><a href="/pages/team.html">Team</a></li>
+        <li><a href="/pages/work.html">Our Work</a></li>
+      </ul>
+      <a href="/pages/contact.html" class="header-button">Contact Us!</a>
+      <div class="hamburger"><span></span><span></span><span></span></div>
+    </nav>
+    <div class="mobile-menu">
+      <a href="/pages/about.html">About</a>
+      <a href="/pages/services.html">Services</a>
+      <a href="/pages/team.html">Team</a>
+      <a href="/pages/work.html">Our Work</a>
+      <a href="/pages/contact.html" class="header-button">Contact Us!</a>
+    </div>
+  </header>
+
+  <div id="main" class="font-raleway">
+    <!-- Centered hero (Team-page pattern) -->
+    <section class="page-hero-center">
+      <div class="mx-auto max-w-2xl px-2">
+        <h1 class="shery-text">Where engineering meets imagination</h1>
+        <p>The Hash Labs is a multi-discipline studio building software, electrical systems, and immersive digital experiences for teams that care about craft.</p>
+        <div class="hero-cta">
+          <a class="magnet" href="/pages/contact.html">Work with us</a>
+          <a class="magnet cta-cyan" href="/pages/services.html">Our capabilities</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Gradient scroller -->
+    <section class="select-none about-scroller" style="transform:rotate(-0.08rad);">
+      <div class="relative w-full overflow-hidden animated-gradient py-6">
+        <div id="scroller-wrapper" class="flex w-max">
+          <div id="scroller" class="flex divide-x divide-gray-400 text-lg font-semibold whitespace-nowrap">
+            <span class="px-6">About Us</span>
+            <span class="px-6">Our Story</span>
+            <span class="px-6">Studio Culture</span>
+            <span class="px-6">Who We Are</span>
+            <span class="px-6">Craft &amp; Care</span>
+            <span class="px-6">Lahore Roots</span>
+            <span class="px-6">Global Reach</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Story: text on image -->
+    <section class="about-story relative z-[1] p-0 -mt-[calc(4vw+2.5rem)]">
+      <div class="about-story-inner relative w-full">
+        <div class="about-story-media relative w-screen left-1/2 -translate-x-1/2 h-[clamp(900px,74vh,980px)] overflow-hidden bg-slate-900 about-story-drip">
+          <img
+            class="absolute inset-0 h-full w-full object-cover scale-[1.03] opacity-[0.72]"
+            data-shery-style="3"
+            src="/assets/images/team-main-image.png"
+            alt="About Hash Labs"
+          >
+          <div class="about-story-copy absolute bottom-0 right-0 z-[2] flex max-w-xl flex-col items-end justify-end p-6 pb-24 text-right sm:p-10 sm:pb-28 lg:p-14 lg:pb-32">
+            <p class="about-eyebrow mb-2 text-sky-300">Who we are</p>
+            <h2 class="section-title shery-text text-white">A studio built for ambitious briefs</h2>
+            <p class="section-sub mt-3 max-w-md text-white/85">We help founders, brands, and research teams go from sketch to shipped system. Our designers, developers, and engineers sit at the same table — so your product doesn’t get lost between handoffs.</p>
+            <p class="section-sub mt-3 max-w-md text-white/85">Based in Lahore with collaborators worldwide, we work in focused sprints and long partnerships alike.</p>
+          </div>
+
+          <!-- Dripping bottom frame (SVG fills next-section color so image looks like it drips) -->
+          <svg
+            class="pointer-events-none absolute bottom-0 left-0 z-[3] w-full h-[72px] sm:h-[88px] lg:h-[108px]"
+            viewBox="0 0 1440 120"
+            preserveAspectRatio="none"
+            aria-hidden="true"
+          >
+            <path
+              fill="#f8fafc"
+              d="M0,28
+                 C48,28 62,78 110,78
+                 C158,78 172,18 220,18
+                 C268,18 286,92 340,92
+                 C394,92 410,34 462,34
+                 C514,34 528,86 580,86
+                 C632,86 648,22 700,22
+                 C752,22 770,98 830,98
+                 C890,98 906,40 958,40
+                 C1010,40 1028,82 1080,82
+                 C1132,82 1148,26 1200,26
+                 C1252,26 1270,88 1324,88
+                 C1378,88 1394,28 1440,28
+                 L1440,120 L0,120 Z"
+            />
+            <!-- small hanging drips for framing detail -->
+            <circle fill="#f8fafc" cx="168" cy="96" r="10" />
+            <circle fill="#f8fafc" cx="402" cy="108" r="8" />
+            <circle fill="#f8fafc" cx="712" cy="104" r="11" />
+            <circle fill="#f8fafc" cx="980" cy="100" r="7" />
+            <circle fill="#f8fafc" cx="1260" cy="106" r="9" />
+          </svg>
+        </div>
+      </div>
+    </section>
+
+    <!-- Detail Section: left heading + horizontal card scroller -->
+    <section class="about-detail relative bg-white from-white via-[#f5f3ff]/40 to-[#e0f2fe]/50 pl-5 sm:pl-8 md:pl-12 lg:pl-20 xl:pl-[180px] lg:pl-[90px] pr-0">
+      <div class="about-detail-inner relative z-[1]">
+        <div class="about-detail-head text-left max-w-4xl pr-4">
+          <h2 class="section-title about-detail-title text-[clamp(1.75rem,4.2vw,3.1rem)] leading-[1.08]">
+            Beliefs that guide every
+            <span class="text-indigo-500">build</span>, every
+            <span class="text-indigo-500">handoff</span>, and every
+            <span class="text-indigo-500">shipped system</span>
+            together.
+          </h2>
+          <p class="section-sub about-detail-sub mt-3 max-w-2xl text-left ml-0">
+            Not slogans — working rules we use on every engagement, from first sketch to the last handoff.
+          </p>
+        </div>
+
+        <div class="about-detail-scroller relative overflow-hidden w-full" data-detail-scroll>
+          <div class="about-detail-track flex gap-7 md:gap-9 w-max pr-6 pt-3 pb-2 will-change-transform" data-detail-track>
+            <article class="detail-card is-active shrink-0">
+              <div class="detail-card-layers" aria-hidden="true">
+                <span class="layer layer-a"></span>
+                <span class="layer layer-b"></span>
+              </div>
+              <div class="detail-card-body bg-white rounded-2xl p-3 sm:p-3.5 shadow-sm relative z-[1]">
+                <div class="detail-card-media relative overflow-hidden rounded-xl">
+                  <img class="h-full w-full object-cover" src="/assets/images/V1.png" alt="Make it understandable">
+                  <a href="/pages/services.html" class="detail-read magnet absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 inline-flex items-center gap-2 rounded-full bg-white/95 pl-1.5 pr-4 py-1.5 text-xs font-bold tracking-wide text-slate-800 shadow-md">
+                    <span class="grid h-8 w-8 place-items-center rounded-full bg-indigo-500 text-white text-sm">↗</span>
+                    READ MORE
+                  </a>
+                </div>
+                <h3 class="mt-4 px-1 text-3xl font-bold text-slate-900">Make it understandable</h3>
+                <p class="mt-1.5 px-1 pb-2 text-md leading-relaxed text-slate-600">If a stakeholder can’t explain the plan in one minute, we sharpen the story until they can.</p>
+              </div>
+            </article>
+
+            <article class="detail-card shrink-0">
+              <div class="detail-card-layers" aria-hidden="true">
+                <span class="layer layer-a"></span>
+                <span class="layer layer-b"></span>
+              </div>
+              <div class="detail-card-body bg-white rounded-2xl p-3 sm:p-3.5 shadow-sm relative z-[1]">
+                <div class="detail-card-media relative overflow-hidden rounded-xl">
+                  <img class="h-full w-full object-cover" src="/assets/images/V3.png" alt="Prototype before polish">
+                  <a href="/pages/services.html" class="detail-read magnet absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 inline-flex items-center gap-2 rounded-full bg-white/95 pl-1.5 pr-4 py-1.5 text-xs font-bold tracking-wide text-slate-800 shadow-md">
+                    <span class="grid h-8 w-8 place-items-center rounded-full bg-indigo-500 text-white text-sm">↗</span>
+                    READ MORE
+                  </a>
+                </div>
+                <h3 class="mt-4 px-1 text-3xl font-bold text-slate-900">Prototype before polish</h3>
+                <p class="mt-1.5 px-1 pb-2 text-md leading-relaxed text-slate-600">We validate interactions, circuits, and flows early — then invest polish where it matters most.</p>
+              </div>
+            </article>
+
+            <article class="detail-card shrink-0">
+              <div class="detail-card-layers" aria-hidden="true">
+                <span class="layer layer-a"></span>
+                <span class="layer layer-b"></span>
+              </div>
+              <div class="detail-card-body bg-white rounded-2xl p-3 sm:p-3.5 shadow-sm relative z-[1]">
+                <div class="detail-card-media relative overflow-hidden rounded-xl">
+                  <img class="h-full w-full object-cover" src="/assets/images/V4.png" alt="Own the seams">
+                  <a href="/pages/services.html" class="detail-read magnet absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 inline-flex items-center gap-2 rounded-full bg-white/95 pl-1.5 pr-4 py-1.5 text-xs font-bold tracking-wide text-slate-800 shadow-md">
+                    <span class="grid h-8 w-8 place-items-center rounded-full bg-indigo-500 text-white text-sm">↗</span>
+                    READ MORE
+                  </a>
+                </div>
+                <h3 class="mt-4 px-1 text-3xl font-bold text-slate-900">Own the seams</h3>
+                <p class="mt-1.5 px-1 pb-2 text-md leading-relaxed text-slate-600">Hardware/software boundaries and design/dev handoffs are where projects fail — we own those seams.</p>
+              </div>
+            </article>
+
+            <article class="detail-card shrink-0">
+              <div class="detail-card-layers" aria-hidden="true">
+                <span class="layer layer-a"></span>
+                <span class="layer layer-b"></span>
+              </div>
+              <div class="detail-card-body bg-white rounded-2xl p-3 sm:p-3.5 shadow-sm relative z-[1]">
+                <div class="detail-card-media relative overflow-hidden rounded-xl">
+                  <img class="h-full w-full object-cover" src="/assets/images/img1.jpg" alt="Ship with a runway">
+                  <a href="/pages/work.html" class="detail-read magnet absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 inline-flex items-center gap-2 rounded-full bg-white/95 pl-1.5 pr-4 py-1.5 text-xs font-bold tracking-wide text-slate-800 shadow-md">
+                    <span class="grid h-8 w-8 place-items-center rounded-full bg-indigo-500 text-white text-sm">↗</span>
+                    READ MORE
+                  </a>
+                </div>
+                <h3 class="mt-4 px-1 text-3xl font-bold text-slate-900">Ship with a runway</h3>
+                <p class="mt-1.5 px-1 pb-2 text-md leading-relaxed text-slate-600">Launch is a milestone, not an ending. We leave docs, training, and a clear next iteration.</p>
+              </div>
+            </article>
+
+            <article class="detail-card shrink-0">
+              <div class="detail-card-layers" aria-hidden="true">
+                <span class="layer layer-a"></span>
+                <span class="layer layer-b"></span>
+              </div>
+              <div class="detail-card-body bg-white rounded-2xl p-3 sm:p-3.5 shadow-sm relative z-[1]">
+                <div class="detail-card-media relative overflow-hidden rounded-xl">
+                  <img class="h-full w-full object-cover" src="/assets/images/Sides-img-1.png" alt="Measure the real thing">
+                  <a href="/pages/work.html" class="detail-read magnet absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 inline-flex items-center gap-2 rounded-full bg-white/95 pl-1.5 pr-4 py-1.5 text-xs font-bold tracking-wide text-slate-800 shadow-md">
+                    <span class="grid h-8 w-8 place-items-center rounded-full bg-indigo-500 text-white text-sm">↗</span>
+                    READ MORE
+                  </a>
+                </div>
+                <h3 class="mt-4 px-1 text-3xl font-bold text-slate-900">Measure the real thing</h3>
+                <p class="mt-1.5 px-1 pb-2 text-md leading-relaxed text-slate-600">We define success with you — speed, reliability, conversion, or research outcomes.</p>
+              </div>
+            </article>
+
+            <article class="detail-card shrink-0">
+              <div class="detail-card-layers" aria-hidden="true">
+                <span class="layer layer-a"></span>
+                <span class="layer layer-b"></span>
+              </div>
+              <div class="detail-card-body bg-white rounded-2xl p-3 sm:p-3.5 shadow-sm relative z-[1]">
+                <div class="detail-card-media relative overflow-hidden rounded-xl">
+                  <img class="h-full w-full object-cover" src="/assets/images/Services-main-image.png" alt="Stay curious">
+                  <a href="/pages/contact.html" class="detail-read magnet absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 inline-flex items-center gap-2 rounded-full bg-white/95 pl-1.5 pr-4 py-1.5 text-xs font-bold tracking-wide text-slate-800 shadow-md">
+                    <span class="grid h-8 w-8 place-items-center rounded-full bg-indigo-500 text-white text-sm">↗</span>
+                    READ MORE
+                  </a>
+                </div>
+                <h3 class="mt-4 px-1 text-3xl font-bold text-slate-900">Stay curious</h3>
+                <p class="mt-1.5 px-1 pb-2 text-md leading-relaxed text-slate-600">New tools only earn a place when they reduce risk or unlock a better experience.</p>
+              </div>
+            </article>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Straight marquee (not rotated) -->
+    <section class="select-none about-marquee-straight">
+      <div class="about-marquee-band relative w-full overflow-hidden py-6 md:py-4">
+        <div class="flex w-max" data-marquee-wrapper data-speed="55">
+          <div class="about-marquee-track flex items-center divide-x divide-white/25 whitespace-nowrap" data-marquee-track>
+            <span class="about-marquee-item">Hash Labs</span>
+            <span class="about-marquee-item">Build Ship</span>
+            <span class="about-marquee-item">Design Code</span>
+            <span class="about-marquee-item">Soft Hardware</span>
+            <span class="about-marquee-item">Craft Care</span>
+            <span class="about-marquee-item">Think Make</span>
+            <span class="about-marquee-item">Learn Iterate</span>
+            <span class="about-marquee-item">Real Impact</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Impact manifesto + stats -->
+    <section class="about-impact bg-white">
+      <div class="about-impact-pin max-w-5xl mx-auto px-5 sm:px-8 text-center">
+        <p class="about-impact-line" data-impact-line>
+          By combining creativity with strategic thinking, we transform ideas into impactful solutions.
+        </p>
+      </div>
+
+      <div class="about-impact-stats max-w-5xl mx-auto px-5 sm:px-8">
+        <div class="about-impact-rule" aria-hidden="true"></div>
+        <div class="grid grid-cols-1 sm:grid-cols-3 gap-10 sm:gap-6 py-12 md:py-16 text-center">
+          <div class="about-stat">
+            <div class="about-stat-value font-bold tracking-tight text-slate-900">
+              <span data-counter data-target="2490" data-suffix="+">0</span>
+            </div>
+            <p class="mt-2 text-sm md:text-base text-slate-800">Project Delivered</p>
+          </div>
+          <div class="about-stat">
+            <div class="about-stat-value font-bold tracking-tight text-slate-900">
+              <span data-counter data-target="98" data-suffix="%">0</span>
+            </div>
+            <p class="mt-2 text-sm md:text-base text-slate-800">Customer Happy</p>
+          </div>
+          <div class="about-stat">
+            <div class="about-stat-value font-bold tracking-tight text-slate-900">
+              <span data-counter data-target="8" data-suffix="+">0</span>
+            </div>
+            <p class="mt-2 text-sm md:text-base text-slate-800">Years of Creative</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Engagement: premium peel / flip stacked cards -->
+    <section class="about-engage" data-engage-stack>
+      <!-- Screen-left timeline (not attached to cards) -->
+      <aside class="about-engage-rail" aria-hidden="true" data-engage-rail>
+        <div class="about-engage-rail-inner">
+          <div class="about-engage-rail-line"></div>
+          <div class="about-engage-rail-dot" data-engage-dot></div>
+        </div>
+      </aside>
+
+      <!-- Gradient scroller — opposite tilt + reverse scroll from the top one -->
+      <section class="select-none about-scroller about-engage-scroller pt-0 md:pt-20 pb-8 md:pb-10" style="transform:rotate(0.08rad);">
+        <div class="relative w-full overflow-hidden animated-gradient py-6">
+          <div class="flex w-max" data-marquee-wrapper data-speed="60" data-direction="reverse">
+            <div class="flex divide-x divide-gray-400 text-lg font-semibold whitespace-nowrap" data-marquee-track>
+              <span class="px-6">Engagement</span>
+              <span class="px-6">Discovery</span>
+              <span class="px-6">Design Systems</span>
+              <span class="px-6">Build &amp; Ship</span>
+              <span class="px-6">Weekly Proof</span>
+              <span class="px-6">Launch Care</span>
+              <span class="px-6">Partnership</span>
+              <span class="px-6">Real Momentum</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <div class="about-engage-pin" data-engage-pin>
+        <div class="about-engage-stage">
+          <div class="engage-stack" data-engage-cards>
+            <article class="engage-card engage-card--orange" data-engage-card style="--i:0; --engage-z:3;">
+              <div class="engage-card-face">
+                <div class="engage-card-inner">
+                  <div class="engage-card-top">
+                    <h3 class="engage-card-title">We listen &amp; map the real problem</h3>
+                    <p class="engage-card-body">We unpack constraints, users, and technical debt then propose a path you can approve with confidence before a single pixel or circuit is locked.</p>
+                  </div>
+                  <div class="engage-card-bottom">
+                    <div class="engage-pills">
+                      <span>Discovery</span>
+                      <span>Scope Mapping</span>
+                      <span>Risk Audit</span>
+                    </div>
+                    <div class="engage-gallery" aria-hidden="true">
+                      <div class="engage-gallery-track" data-engage-gallery>
+                        <img src="/assets/images/V1.png" alt="">
+                        <img src="/assets/images/V3.png" alt="">
+                        <img src="/assets/images/img1.jpg" alt="">
+                        <img src="/assets/images/V1.png" alt="">
+                        <img src="/assets/images/V3.png" alt="">
+                        <img src="/assets/images/img1.jpg" alt="">
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </article>
+
+            <article class="engage-card engage-card--red" data-engage-card style="--i:1; --engage-z:2;">
+              <div class="engage-card-face">
+                <div class="engage-card-inner">
+                  <div class="engage-card-top">
+                    <h3 class="engage-card-title">We design systems that hold together</h3>
+                    <p class="engage-card-body">Interfaces, architecture, and electrical diagrams evolve together so nothing is designed in isolation and handoffs don’t become black holes.</p>
+                  </div>
+                  <div class="engage-card-bottom">
+                    <div class="engage-pills">
+                      <span>UI Systems</span>
+                      <span>Architecture</span>
+                      <span>Prototypes</span>
+                    </div>
+                    <div class="engage-gallery" aria-hidden="true">
+                      <div class="engage-gallery-track" data-engage-gallery>
+                        <img src="/assets/images/V4.png" alt="">
+                        <img src="/assets/images/img2.jpg" alt="">
+                        <img src="/assets/images/Services-main-image.png" alt="">
+                        <img src="/assets/images/V4.png" alt="">
+                        <img src="/assets/images/img2.jpg" alt="">
+                        <img src="/assets/images/Services-main-image.png" alt="">
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </article>
+
+            <article class="engage-card engage-card--purple" data-engage-card style="--i:2; --engage-z:1;">
+              <div class="engage-card-face">
+                <div class="engage-card-inner">
+                  <div class="engage-card-top">
+                    <h3 class="engage-card-title">We build &amp; prove in the open</h3>
+                    <p class="engage-card-body">Working slices land weekly. You see progress early not a big reveal at the end with a runway for what comes after launch.</p>
+                  </div>
+                  <div class="engage-card-bottom">
+                    <div class="engage-pills">
+                      <span>Weekly Builds</span>
+                      <span>QA &amp; Proof</span>
+                      <span>Launch Care</span>
+                    </div>
+                    <div class="engage-gallery" aria-hidden="true">
+                      <div class="engage-gallery-track" data-engage-gallery>
+                        <img src="/assets/images/img3.jpg" alt="">
+                        <img src="/assets/images/Sides-img-1.png" alt="">
+                        <img src="/assets/images/para-image-1.png" alt="">
+                        <img src="/assets/images/img3.jpg" alt="">
+                        <img src="/assets/images/Sides-img-1.png" alt="">
+                        <img src="/assets/images/para-image-1.png" alt="">
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </article>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer class="footer">
+      <div class="footer-container">
+        <div class="footer-grid">
+          <div class="footer-col">
+            <div class="footer-title">
+              <img class="logo" src="/assets/logo/logo t.png" alt="logo">
+              <h1 class="logo-text">The<br>Hash Labs</h1>
+            </div>
+            <p class="footer-text">Welcome to The Hash Labs, a hub of innovation and expertise in software engineering, electrical engineering, and advanced modeling technologies.</p>
+          </div>
+          <div class="footer-col">
+            <h4 class="footer-title">Quick Links</h4>
+            <ul class="footer-links">
+              <li><a href="/index.html">Home</a></li>
+              <li><a href="/pages/about.html">About</a></li>
+              <li><a href="/pages/services.html">Services</a></li>
+              <li><a href="/pages/team.html">Team</a></li>
+              <li><a href="/pages/contact.html">Contact</a></li>
+            </ul>
+          </div>
+          <div class="footer-col">
+            <h4 class="footer-title">Resources</h4>
+            <ul class="footer-links">
+              <li><a href="#">Documentation</a></li>
+              <li><a href="#">API</a></li>
+              <li><a href="#">Community</a></li>
+              <li><a href="#">Support</a></li>
+            </ul>
+          </div>
+          <div class="footer-col">
+            <h4 class="footer-title">Contact Us</h4>
+            <ul class="footer-contact">
+              <li><a><b>Location:</b> 80 CCA, DHA Phase 5 Lahore, Punjab, Pakistan</a></li>
+              <li><a><b>Mail:</b> hr@thehashlabs.com</a></li>
+              <li><a><b>Phone No:</b> +92 306 0429099</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="footer-bottom">
+          <div><p>© 2025 TheHashLabs. All rights reserved.</p></div>
+          <div class="footer-terms"><h4>Privacy Policy</h4><h4>Terms of Service</h4><h4>Cookie Policy</h4></div>
+        </div>
+      </div>
+    </footer>
+  </div>
+
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://cdn.jsdelivr.net/npm/lenis@1.1.18/dist/lenis.min.js"></script>
+  <script src="/js/script.js"></script>
+  <script src="/js/navbar.js"></script>
+  <script src="/js/smooth-scroll.js"></script>
+  <script src="/js/scroll.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/0.155.0/three.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/gh/automat/controlkit.js@master/bin/controlKit.min.js"></script>
+  <script src="https://unpkg.com/sheryjs/dist/Shery.js"></script>
+  <script src="/js/page-animations.js"></script>
+  <script src="/js/shery-3d.js"></script>
+</body>
+</html>
