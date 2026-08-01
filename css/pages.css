@@ -23,11 +23,11 @@
   align-items: center;
   justify-content: center;
   text-align: center;
-  padding: 5rem 1.5rem 3rem;
+  padding: 7.25rem 1.5rem 3rem;
 }
 
 @media (min-width: 1024px) {
-  .page-hero-center { padding: 5.5rem 2rem 3.5rem; }
+  .page-hero-center { padding: 7.75rem 2rem 3.5rem; }
 }
 
 .page-hero-center h1 {

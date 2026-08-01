@@ -100,7 +100,7 @@
   <header id="site-header">
     <nav>
       <!-- Logo -->
-      <h2 class="brand-heading">
+      <h2 class="brand-heading" onclick="location.href='/index.html'">
         <img class="logo" src="/assets/logo/logo t.png" alt="Logo" />
         The <br> Hash Labs
       </h2>
@@ -117,20 +117,37 @@
       <a href="/pages/contact.html" class="header-button">Contact Us!</a>
 
       <!-- Hamburger -->
-      <div class="hamburger">
-        <span></span>
-        <span></span>
-        <span></span>
-      </div>
+      <button type="button" class="hamburger" aria-label="Open menu"><span></span><span></span><span></span></button>
     </nav>
 
     <!-- Mobile Menu -->
     <div class="mobile-menu">
-      <a href="/pages/about.html">About</a>
-      <a href="/pages/services.html">Services</a>
-      <a href="/pages/team.html">Team</a>
-      <a href="/pages/work.html">Our Work</a>
-      <a href="/pages/contact.html" class="header-button">Contact Us!</a>
+      <div class="mobile-menu-inner">
+        <div class="mobile-menu-links">
+          <a href="/pages/about.html">About</a>
+          <a href="/pages/services.html">Services</a>
+          <a href="/pages/team.html">Team</a>
+          <a href="/pages/work.html">Our Work</a>
+        </div>
+        <a href="/pages/contact.html" class="header-button">Contact Us!</a>
+        <div class="mobile-socials">
+          <span class="mobile-socials-label">Follow us</span>
+          <div class="mobile-socials-row">
+            <!-- <a href="#" aria-label="GitHub">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5.08-1.25-.27-2.48-1-3.5.28-1.15.28-2.35 0-3.5 0 0-1 0-3 1.5-2.64-.5-5.36-.5-8 0C6 2 5 2 5 2c-.3 1.15-.3 2.35 0 3.5A5.403 5.403 0 0 0 4 9c0 3.5 3 5.5 6 5.5-.39.49-.68 1.05-.85 1.65-.17.6-.22 1.23-.15 1.85v4"/><path d="M9 18c-4.51 2-5-2-7-2"/></svg>
+            </a> -->
+            <a href="#" aria-label="Facebook">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
+            </a>
+            <a href="#" aria-label="X">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 4s-.7 2.1-2 3.4c1.6 10-9.4 17.3-18 11.6 2.2.1 4.4-.6 6-2C3 15.5.5 9.6 3 5c2.2 2.6 5.6 4.1 9 4-.9-4.2 4-6.6 7-3.8 1.1 0 3-1.2 3-1.2z"/></svg>
+            </a>
+            <a href="#" aria-label="LinkedIn">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect width="4" height="12" x="2" y="9"/><circle cx="4" cy="4" r="2"/></svg>
+            </a>
+          </div>
+        </div>
+      </div>
     </div>
   </header>
 
@@ -143,9 +160,8 @@
         <div class="text-center">
           <h1
             class="text-6xl font-semibold tracking-tight leading-[0.9] text-balance text-gray-900 sm:text-7xl md:text-7xl">
-            Data to enrich your online business</h1>
-          <p class="mt-2 text-lg font-medium text-pretty text-gray-500 sm:text-xl">Anim aute id magna aliqua ad ad non
-            deserunt sunt. Qui irure qui lorem cupidatat commodo. Elit sunt amet fugiat veniam occaecat.</p>
+            Engineers who ship reliable software</h1>
+          <p class="mt-2 text-lg font-medium text-pretty text-gray-500 sm:text-xl">Meet the IT and computer science talent behind The Hash Labs — builders, researchers, and problem solvers focused on products that scale.</p>
         </div>
         <div class="mt-5 flex items-center justify-center gap-x-2">
           <!-- Primary Button -->
@@ -167,13 +183,13 @@
       <div class="relative w-full overflow-hidden animated-gradient py-6">
         <div id="scroller-wrapper" class="flex w-max">
           <div id="scroller" class="flex divide-x divide-gray-400 font-raleway text-lg font-semibold whitespace-nowrap">
-            <span class="px-6">Top Engineer's</span>
-            <span class="px-6">International Network</span>
-            <span class="px-6">High-Quality Results</span>
-            <span class="px-6">Design to Dev</span>
-            <span class="px-6">Innovation's</span>
-            <span class="px-6">Cutting-Edge Solutions</span>
-            <span class="px-6">Client-Centric Approach</span>
+            <span class="px-6">Software Engineers</span>
+            <span class="px-6">Global Delivery</span>
+            <span class="px-6">Production-Ready Code</span>
+            <span class="px-6">Design to Deploy</span>
+            <span class="px-6">AI &amp; Cloud</span>
+            <span class="px-6">Modern Tech Stacks</span>
+            <span class="px-6">Client-Focused Teams</span>
           </div>
         </div>
       </div>
@@ -184,12 +200,10 @@
     <section class="bg-white font-raleway">
       <div class="gap-16 items-center py-8 px-4 mx-auto max-w-screen-xl lg:grid lg:grid-cols-2 lg:py-16 lg:px-6">
         <div class="text-gray-500 sm:text-lg">
-          <h2 class="text-7xl tracking-tight font-semibold text-gray-900">We didn't reinvent the wheel</h2>
-          <p class="mb-4 text-gray-600 text-pretty">We are strategists, designers and developers. Innovators and problem solvers.
-            Small enough to be simple and quick, but big enough to deliver the scope you want at the pace you need.
-            Small enough to be simple and quick, but big enough to deliver the scope you want at the pace you need.</p>
-          <p>We are strategists, designers and developers. Innovators and problem solvers. Small enough to be simple and
-            quick.</p>
+          <h2 class="text-7xl tracking-tight font-semibold text-gray-900">We build what businesses actually need</h2>
+          <p class="mb-4 text-gray-600 text-pretty">We are software engineers, architects, and computer scientists — innovators who solve real IT problems.
+            Small enough to move fast, large enough to deliver complex systems with clear ownership and disciplined engineering.</p>
+          <p>From product discovery to production support, our team pairs technical depth with practical delivery.</p>
         </div>
         <div class="grid grid-cols-2 gap-4 mt-8">
           <img class="w-full rounded-lg"
@@ -222,8 +236,8 @@
                   </svg>
                 </div>
                 <div class="mt-5 text-center">
-                  <h3 class="text-lg font-semibold text-white">Responsive</h3>
-                  <p class="mt-1 text-gray-300">Responsive, and mobile-first project on the web</p>
+                  <h3 class="text-lg font-semibold text-white">Full-Stack</h3>
+                  <p class="mt-1 text-gray-300">End-to-end web and app engineering</p>
                 </div>
               </div>
             </div>
@@ -239,8 +253,8 @@
                 " stroke-linejoin="round"><path d="M20 7h-9"/><path d="M14 17H5"/><circle cx="17" cy="17" r="3"/><circle cx="7" cy="7" r="3"/></svg>
                 </div>
                 <div class="mt-5 text-center">
-                  <h3 class="text-lg font-semibold text-white">Customizable</h3>
-                  <p class="mt-1 text-gray-300">Components are easily customized</p>
+                  <h3 class="text-lg font-semibold text-white">Cloud-Ready</h3>
+                  <p class="mt-1 text-gray-300">Scalable cloud and DevOps pipelines</p>
                 </div>
               </div>
             </div>
@@ -251,8 +265,8 @@
                   <svg class="shrink-0 size-6 text-blue-600" xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg>
                 </div>
                 <div class="mt-5 text-center">
-                  <h3 class="text-lg font-semibold text-white">Documentation</h3>
-                  <p class="mt-1 text-gray-300">Well documented components</p>
+                  <h3 class="text-lg font-semibold text-white">Clean Docs</h3>
+                  <p class="mt-1 text-gray-300">Clear technical documentation for every build</p>
                 </div>
               </div>
             </div>
@@ -263,8 +277,8 @@
                   <svg class="shrink-0 size-6 text-blue-600" xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 9a2 2 0 0 1-2 2H6l-4 4V4c0-1.1.9-2 2-2h8a2 2 0 0 1 2 2v5Z"/><path d="M18 9h2a2 2 0 0 1 2 2v11l-4-4h-6a2 2 0 0 1-2-2v-1"/></svg>
                 </div>
                 <div class="mt-5 text-center">
-                  <h3 class="text-lg font-semibold text-white">24/7 Support</h3>
-                  <p class="mt-1 text-gray-300">We’re here any time</p>
+                  <h3 class="text-lg font-semibold text-white">AI Systems</h3>
+                  <p class="mt-1 text-gray-300">Practical AI and data-driven features</p>
                 </div>
               </div>
             </div>
@@ -275,8 +289,8 @@
                   <svg class="shrink-0 size-6 text-blue-600" xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 9a2 2 0 0 1-2 2H6l-4 4V4c0-1.1.9-2 2-2h8a2 2 0 0 1 2 2v5Z"/><path d="M18 9h2a2 2 0 0 1 2 2v11l-4-4h-6a2 2 0 0 1-2-2v-1"/></svg>
                 </div>
                 <div class="mt-5 text-center">
-                  <h3 class="text-lg font-semibold text-white">24/7 Support</h3>
-                  <p class="mt-1 text-gray-300">We’re here any time</p>
+                  <h3 class="text-lg font-semibold text-white">Always On</h3>
+                  <p class="mt-1 text-gray-300">Ongoing support for production systems</p>
                 </div>
               </div>
             </div>
@@ -319,7 +333,7 @@
           </div>
           <!-- Name Label -->
           <div class="relative bottom-2 left-1/2 -translate-x-1/3 bg-red-500 text-white text-base px-3 py-2 rounded-full shadow font-medium">
-            Professtional Team
+            Engineering Team
           </div>
         </div>
     
@@ -327,11 +341,10 @@
         <div class="mt-8 relative z-10">
           <p class="text-blue-600 font-bold text-2xl">Meet Our Team</p>
           <h2 class="text-5xl md:text-7xl tracking-tight font-semibold text-gray-900">
-            Bringing Passion and <br> Expertise Together
+            Passion meets <br> computer science
           </h2>
           <p class="mt-2 text-lg font-medium max-w-3xl mx-auto text-gray-500 sm:text-xl">
-            Welcome to our team page, where you get a glimpse into the heart and soul of our organization. 
-            We are a diverse group of individuals, each bringing unique talents, perspectives, and passions to the table.
+            Our team brings together software engineers, designers, and computer scientists who care about clean code, clear communication, and products that perform in the real world.
           </p>
         </div>
       </div>    
@@ -346,7 +359,7 @@
           <img src="/assets/team/team-member-7.jpg" alt="Team Member" class="team-member">
           <img src="/assets/team/team-member-4.jpg" alt="Team Member" class="team-member">
           <img src="/assets/team/team-member-6.jpg" alt="Team Member" class="team-member">
-          <img src="/assets/team/team-member-13.jpg" alt="Team Member" class="team-member">
+          <!-- <img src="/assets/team/team-member-13.jpg" alt="Team Member" class="team-member"> -->
         </div>
       </div>
     </section>
@@ -407,10 +420,6 @@
         .team-member:nth-child(5) { transform: translateY(1.25rem); }
         .team-member:nth-child(6) { transform: translateY(-1.25rem); }
         .team-member:nth-child(7) { transform: translateY(1.25rem); }
-        .team-member:nth-child(8) { transform: translateY(-1.25rem); }
-        .team-member:nth-child(9) { transform: translateY(1.25rem); }
-        .team-member:nth-child(10) { transform: translateY(-1.25rem); }
-        .team-member:nth-child(11) { transform: translateY(1.25rem); }
 
         .team-member:nth-child(odd):hover { transform: translateY(1.25rem) scale(1.05); }
         .team-member:nth-child(even):hover { transform: translateY(-1.25rem) scale(1.05); }
@@ -449,9 +458,7 @@
             <h1 class="text-xl sm:text-2xl md:text-3xl font-black leading-none">CEO</h1>
             <h2 class="text-lg sm:text-xl md:text-2xl font-semibold leading-none">Farhan Maqsood</h2>
             <p class="text-xs sm:text-sm md:text-base leading-tight">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. 
-              Dolore, officia unde. Rerum excepturi, quasi pariatur blanditiis 
-              harum amet in impedit repudiandae. Explicabo veniam esse voluptatum.
+              Leading The Hash Labs with a focus on software excellence, practical AI, and IT systems that help clients grow with confidence.
             </p>
           </div>
 
@@ -493,14 +500,14 @@
 
         <!-- ================= TOP HEADING ================= -->
         <h1 class="ceo-stats-heading text-3xl sm:text-4xl md:text-6xl lg:text-7xl tracking-tight font-semibold text-gray-900 mb-10 sm:mb-14 md:mb-24 max-w-5xl leading-[1.15]">
-          We're Building An
+          We're Building
           <span class="inline-flex items-center align-middle mx-1">
             <img src="/assets/images/sim img.png" alt="" class="w-10 h-8 sm:w-14 sm:h-10 md:w-24 md:h-12 rounded-full object-cover">
           </span>
           <span class="font-extralight font-dm tracking-tight">
-            Computer Infastructor
+            Computer Infrastructure
           </span>
-          With a Strong Skill In Both <span class="font-extralight font-dm tracking-tight">Commercial</span> And <span class="font-extralight font-dm tracking-tight">Living Space</span>. Avaliable Worldwide
+          With Strong Skills In Both <span class="font-extralight font-dm tracking-tight">Software</span> And <span class="font-extralight font-dm tracking-tight">Cloud Systems</span>. Available Worldwide
         </h1>
 
         <!-- ================= MAIN GRID ================= -->
@@ -546,32 +553,31 @@
           <div class="space-y-8 sm:space-y-10 w-full min-w-0">
 
             <p class="text-sm sm:text-base md:text-lg leading-relaxed max-w-md opacity-80">
-              We have multiple models of engagement: We can work directly
-              with individuals for private residences, partner with builders
-              and contractors on corporate projects & simple way
+              Flexible engagement models: dedicated engineering squads, fixed-scope builds,
+              or long-term product partnerships — matched to startups, enterprises, and research teams.
             </p>
 
             <div class="space-y-4 sm:space-y-5">
 
               <div class="flex justify-between items-start gap-4 border-b pb-3 sm:pb-4 group cursor-pointer transition-all duration-300 hover:pl-2">
                 <span class="text-xs sm:text-sm md:text-base transition-all duration-300 group-hover:tracking-wider">
-                  AUTOMATIC ROOF
+                  CUSTOM SOFTWARE
                 </span>
                 <span class="shrink-0 transition-transform duration-300 group-hover:translate-x-1">↗</span>
               </div>
 
               <div class="flex justify-between items-start gap-4 border-b pb-3 sm:pb-4 group cursor-pointer transition-all duration-300 hover:pl-2">
-                <span class="text-xs sm:text-sm md:text-base">FLOOR-TO-CEILING WINDOWS</span>
+                <span class="text-xs sm:text-sm md:text-base">CLOUD &amp; DEVOPS</span>
                 <span class="shrink-0 transition-transform duration-300 group-hover:translate-x-1">↗</span>
               </div>
 
               <div class="flex justify-between items-start gap-4 border-b pb-3 sm:pb-4 group cursor-pointer transition-all duration-300 hover:pl-2">
-                <span class="text-xs sm:text-sm md:text-base">TURNKEY PREMIUM</span>
+                <span class="text-xs sm:text-sm md:text-base">AI &amp; DATA PLATFORMS</span>
                 <span class="shrink-0 transition-transform duration-300 group-hover:translate-x-1">↗</span>
               </div>
 
               <div class="flex justify-between items-start gap-4 border-b pb-3 sm:pb-4 group cursor-pointer transition-all duration-300 hover:pl-2">
-                <span class="text-xs sm:text-sm md:text-base">DURABLE THICK ALUMINIUM FRAME</span>
+                <span class="text-xs sm:text-sm md:text-base">SECURE IT SYSTEMS</span>
                 <span class="shrink-0 transition-transform duration-300 group-hover:translate-x-1">↗</span>
               </div>
 
@@ -611,8 +617,8 @@
               <img class="logo" src="/assets/logo/logo t.png" alt="logo">
               <h1 class="logo-text">The<br>Hash Labs</h1>
             </div>
-            <p class="footer-text">Welcome to The Hash Labs, a hub of innovation and expertise in software engineering,
-              electrical engineering, and advanced modeling technologies.</p>
+            <p class="footer-text">Welcome to The Hash Labs — an IT and computer science company building software, cloud platforms,
+              AI systems, and digital products for modern businesses.</p>
             <div class="footer-col">
               <div class="footer-icons flex">
                 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"

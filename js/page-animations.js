@@ -929,9 +929,9 @@
       const storyData = [
         {
           quote:
-            '"The Hash Labs team delivered an exceptional UI and API platform for our product. Their attention to performance, modern design, and engineering depth is unmatched."',
+            '"The Hash Labs team delivered an exceptional software and API platform for our product. Their attention to performance, clean architecture, and engineering depth is unmatched."',
           name: "Jonathon Shannon",
-          role: "Creative Director, Supersolid",
+          role: "CTO, Supersolid",
           initials: "JS",
         },
         {
@@ -950,7 +950,7 @@
         },
         {
           quote:
-            '"A rare team that can move comfortably between strategy, design, software, and hardware—and make the entire collaboration feel simple."',
+            '"A rare IT team that can move comfortably between strategy, design, software, and cloud—and make the entire collaboration feel simple."',
           name: "Sarah Malik",
           role: "Innovation Director, Forma",
           initials: "SM",

@@ -33,22 +33,43 @@
         <li><a href="/pages/work.html">Our Work</a></li>
       </ul>
       <a href="/pages/contact.html" class="header-button">Contact Us!</a>
-      <div class="hamburger"><span></span><span></span><span></span></div>
+      <button type="button" class="hamburger" aria-label="Open menu"><span></span><span></span><span></span></button>
     </nav>
     <div class="mobile-menu">
-      <a href="/pages/about.html">About</a>
-      <a href="/pages/services.html">Services</a>
-      <a href="/pages/team.html">Team</a>
-      <a href="/pages/work.html">Our Work</a>
-      <a href="/pages/contact.html" class="header-button">Contact Us!</a>
+      <div class="mobile-menu-inner">
+        <div class="mobile-menu-links">
+          <a href="/pages/about.html">About</a>
+          <a href="/pages/services.html">Services</a>
+          <a href="/pages/team.html">Team</a>
+          <a href="/pages/work.html">Our Work</a>
+        </div>
+        <a href="/pages/contact.html" class="header-button">Contact Us!</a>
+        <div class="mobile-socials">
+          <span class="mobile-socials-label">Follow us</span>
+          <div class="mobile-socials-row">
+            <!-- <a href="#" aria-label="GitHub">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5.08-1.25-.27-2.48-1-3.5.28-1.15.28-2.35 0-3.5 0 0-1 0-3 1.5-2.64-.5-5.36-.5-8 0C6 2 5 2 5 2c-.3 1.15-.3 2.35 0 3.5A5.403 5.403 0 0 0 4 9c0 3.5 3 5.5 6 5.5-.39.49-.68 1.05-.85 1.65-.17.6-.22 1.23-.15 1.85v4"/><path d="M9 18c-4.51 2-5-2-7-2"/></svg>
+            </a> -->
+            <a href="#" aria-label="Facebook">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
+            </a>
+            <a href="#" aria-label="X">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 4s-.7 2.1-2 3.4c1.6 10-9.4 17.3-18 11.6 2.2.1 4.4-.6 6-2C3 15.5.5 9.6 3 5c2.2 2.6 5.6 4.1 9 4-.9-4.2 4-6.6 7-3.8 1.1 0 3-1.2 3-1.2z"/></svg>
+            </a>
+            <a href="#" aria-label="LinkedIn">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect width="4" height="12" x="2" y="9"/><circle cx="4" cy="4" r="2"/></svg>
+            </a>
+          </div>
+        </div>
+      </div>
     </div>
   </header>
 
   <div id="main" class="font-raleway">
     <section class="page-hero-center">
       <div class="mx-auto max-w-2xl px-2">
-        <h1 class="shery-text">Say hello — we’ll take it from there</h1>
-        <p>Share a rough brief, a hard deadline, or just a question. A human from Hash Labs will reply — not a ticket bot.</p>
+        <h1 class="shery-text">Let’s talk about your next build</h1>
+        <p>Share a product idea, a hard deadline, or a technical question. An engineer from Hash Labs will reply — not a ticket bot.</p>
         <div class="hero-cta">
           <a class="magnet" href="#contact-form">Write to us</a>
           <a class="magnet cta-cyan" href="mailto:hr@thehashlabs.com">Email directly</a>
@@ -60,11 +81,11 @@
       <div class="relative w-full overflow-hidden animated-gradient py-6">
         <div id="scroller-wrapper" class="flex w-max">
           <div id="scroller" class="flex divide-x divide-gray-400 text-lg font-semibold whitespace-nowrap">
-            <span class="px-6">New Builds</span>
-            <span class="px-6">Retainer Care</span>
+            <span class="px-6">Software Builds</span>
+            <span class="px-6">Support Retainers</span>
             <span class="px-6">R&amp;D Collabs</span>
-            <span class="px-6">Consulting</span>
-            <span class="px-6">Workshops</span>
+            <span class="px-6">IT Consulting</span>
+            <span class="px-6">Tech Workshops</span>
             <span class="px-6">Partnerships</span>
             <span class="px-6">Careers</span>
           </div>
@@ -76,7 +97,7 @@
       <div class="contact-grid" style="max-width:80rem;margin:0 auto;">
         <div class="reveal-left">
           <h2 class="section-title">Project intake</h2>
-          <p class="section-sub">The more context you give, the sharper our first reply.</p>
+          <p class="section-sub">The more technical context you give, the sharper our first engineering reply.</p>
 
           <form class="contact-form" style="margin-top:1.75rem;" onsubmit="return handleContactSubmit(event)">
             <div class="name-email" style="display:grid;gap:0;">
@@ -91,21 +112,21 @@
             </div>
 
             <label for="company">Organization</label>
-            <input id="company" name="company" type="text" placeholder="Company, lab, or studio">
+            <input id="company" name="company" type="text" placeholder="Company, startup, or institution">
 
             <label for="service">Interest</label>
             <select id="service" name="service" required>
               <option value="">Choose one</option>
               <option>Product / web design</option>
               <option>Software engineering</option>
-              <option>Electrical / embedded</option>
-              <option>IoT / automation</option>
-              <option>3D / visualization</option>
+              <option>Cloud / DevOps</option>
+              <option>AI / data platforms</option>
+              <option>Mobile development</option>
               <option>Partnership / other</option>
             </select>
 
             <label for="message">Brief</label>
-            <textarea id="message" name="message" placeholder="Timeline, constraints, and what “good” looks like…" required></textarea>
+            <textarea id="message" name="message" placeholder="Timeline, tech constraints, and what success looks like…" required></textarea>
 
             <button type="submit" class="hl-btn hover-lift magnet" style="border:none;cursor:pointer;">Send to Hash Labs</button>
             <p id="contactResponse" style="margin-top:1rem;font-weight:600;color:#059669;min-height:1.25rem;"></p>
@@ -113,7 +134,7 @@
         </div>
 
         <div class="reveal-right">
-          <h2 class="section-title" style="font-size:clamp(1.5rem,3vw,2.1rem);">Reach the studio</h2>
+          <h2 class="section-title" style="font-size:clamp(1.5rem,3vw,2.1rem);">Reach the company</h2>
           <div class="info-card">
             <h4>Visit</h4>
             <p>80 CCA, DHA Phase 5<br>Lahore, Punjab, Pakistan</p>
@@ -142,8 +163,8 @@
       <div class="three-section-inner">
         <div class="reveal-left">
           <p style="color:#0284c7;font-weight:700;font-size:.8rem;letter-spacing:.1em;text-transform:uppercase;margin-bottom:.6rem;">3D hello</p>
-          <h2 class="section-title">Even the contact page gets depth</h2>
-          <p class="section-sub">A lightweight Three.js scene + Shery image distortion — small moments that make the brand feel alive while you write.</p>
+          <h2 class="section-title">Even the contact page shows our craft</h2>
+          <p class="section-sub">Interactive web experiences are part of how we work — small technical moments that keep the brand feeling alive while you write.</p>
         </div>
         <div id="three-stage" class="reveal-right" aria-label="Interactive 3D canvas"></div>
       </div>
@@ -163,20 +184,20 @@
         <div class="value-grid" data-stagger>
           <div class="value-item">
             <div class="num">ABOUT</div>
-            <h3>Studio story</h3>
+            <h3>Company story</h3>
             <p>How we think, collaborate, and decide what to build.</p>
             <a class="link-underline" href="/pages/about.html" style="margin-top:1rem;display:inline-block;font-weight:700;color:rgb(0,149,255);text-decoration:none;">Read about →</a>
           </div>
           <div class="value-item">
             <div class="num">SERVICES</div>
             <h3>Capability map</h3>
-            <p>Digital, electrical, embedded, and visualization offerings.</p>
+            <p>Software, cloud, AI, mobile, and cybersecurity offerings.</p>
             <a class="link-underline" href="/pages/services.html" style="margin-top:1rem;display:inline-block;font-weight:700;color:rgb(0,149,255);text-decoration:none;">View services →</a>
           </div>
           <div class="value-item">
             <div class="num">WORK</div>
             <h3>Recent builds</h3>
-            <p>Selected projects across product and physical space.</p>
+            <p>Selected software products and technical case studies.</p>
             <a class="link-underline" href="/pages/work.html" style="margin-top:1rem;display:inline-block;font-weight:700;color:rgb(0,149,255);text-decoration:none;">See work →</a>
           </div>
         </div>
@@ -209,7 +230,7 @@
               <img class="logo" src="/assets/logo/logo t.png" alt="logo">
               <h1 class="logo-text">The<br>Hash Labs</h1>
             </div>
-            <p class="footer-text">Welcome to The Hash Labs, a hub of innovation and expertise in software engineering, electrical engineering, and advanced modeling technologies.</p>
+            <p class="footer-text">Welcome to The Hash Labs — an IT and computer science company building software, cloud platforms, AI systems, and digital products for modern businesses.</p>
           </div>
           <div class="footer-col">
             <h4 class="footer-title">Quick Links</h4>

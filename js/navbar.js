@@ -1,4 +1,5 @@
 document.addEventListener("DOMContentLoaded", () => {
+  const header = document.getElementById("site-header");
   const hamburger = document.querySelector(".hamburger");
   const mobileMenu = document.querySelector(".mobile-menu");
 
@@ -18,14 +19,15 @@ document.addEventListener("DOMContentLoaded", () => {
   let activeKey = "home";
   for (const item of pageKeys) {
     if (item.match.some((m) => path.endsWith(m) || file === m || path.includes(m))) {
-      // Prefer more specific page matches over bare "/"
       if (item.key === "home" && file && file !== "index.html" && file !== "") continue;
       activeKey = item.key;
       if (item.key !== "home") break;
     }
   }
 
-  document.querySelectorAll(".nav-links a, .mobile-menu a").forEach((link) => {
+  document
+    .querySelectorAll(".nav-links a, .mobile-menu-links a, .mobile-menu-inner > .header-button")
+    .forEach((link) => {
     const href = (link.getAttribute("href") || "").toLowerCase();
     const isActive =
       (activeKey === "about" && href.includes("about")) ||
@@ -40,18 +42,67 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   });
 
+  // --- Floating nav scroll state ---
+  const onScroll = () => {
+    if (!header) return;
+    header.classList.toggle("scrolled", window.scrollY > 12);
+  };
+  onScroll();
+  window.addEventListener("scroll", onScroll, { passive: true });
+
   // --- Mobile menu ---
   if (!hamburger || !mobileMenu) return;
 
-  const closeMenu = () => {
-    mobileMenu.classList.remove("active");
-    hamburger.classList.remove("open");
+  // Wrap link text for baseline reveal + right-side arrow
+  mobileMenu
+    .querySelectorAll(".mobile-menu-links a, .mobile-menu-inner > .header-button")
+    .forEach((link) => {
+      if (link.querySelector(".menu-line")) return;
+      const text = link.textContent.trim();
+      link.textContent = "";
+
+      const clip = document.createElement("span");
+      clip.className = "menu-clip";
+
+      const line = document.createElement("span");
+      line.className = "menu-line";
+      line.textContent = text;
+      clip.appendChild(line);
+
+      const arrow = document.createElement("span");
+      arrow.className = "menu-arrow";
+      arrow.setAttribute("aria-hidden", "true");
+      arrow.textContent = "→";
+
+      link.appendChild(clip);
+      link.appendChild(arrow);
+    });
+
+  const setMenuState = (open) => {
+    if (open) {
+      // Restart staggered baseline animation each open
+      mobileMenu.classList.remove("active");
+      void mobileMenu.offsetWidth;
+      mobileMenu.classList.add("active");
+    } else {
+      mobileMenu.classList.remove("active");
+    }
+
+    hamburger.classList.toggle("open", open);
+    document.body.classList.toggle("menu-open", open);
+    hamburger.setAttribute("aria-expanded", open ? "true" : "false");
+    hamburger.setAttribute("aria-label", open ? "Close menu" : "Open menu");
+    mobileMenu.setAttribute("aria-hidden", open ? "false" : "true");
   };
 
-  const toggleMenu = () => {
-    mobileMenu.classList.toggle("active");
-    hamburger.classList.toggle("open");
-  };
+  const closeMenu = () => setMenuState(false);
+  const toggleMenu = () => setMenuState(!mobileMenu.classList.contains("active"));
+
+  hamburger.setAttribute("aria-controls", "mobile-menu");
+  hamburger.setAttribute("aria-expanded", "false");
+  hamburger.setAttribute("aria-label", "Open menu");
+  mobileMenu.setAttribute("id", "mobile-menu");
+  mobileMenu.setAttribute("aria-hidden", "true");
 
   hamburger.addEventListener("click", (e) => {
     e.stopPropagation();
@@ -64,18 +115,11 @@ document.addEventListener("DOMContentLoaded", () => {
     closeMenu();
   });
 
-  document.addEventListener("click", (e) => {
-    if (!mobileMenu.classList.contains("active")) return;
-    const target = e.target;
-    if (hamburger.contains(target) || mobileMenu.contains(target)) return;
-    closeMenu();
-  });
-
   document.addEventListener("keydown", (e) => {
     if (e.key === "Escape") closeMenu();
   });
 
   window.addEventListener("resize", () => {
-    if (window.innerWidth > 768) closeMenu();
+    if (window.innerWidth > 900) closeMenu();
   });
 });
