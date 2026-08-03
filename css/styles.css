@@ -100,13 +100,18 @@ html.lenis body {
     column-gap: 15px;
     margin-top: 40px;
 }
-.buttons button:nth-child(1){
+.buttons a:first-child button,
+.buttons > button:nth-child(1){
     border: 1px;
     border-radius: 6px;
     background-color: rgb(13, 198, 152);
     color: #fff;
     border: 1px solid rgb(79, 170, 147);
     box-shadow: rgba(30, 178, 114, 0.427) 0px 6px 12px -2px, rgba(34, 174, 153, 0.3) 0px 3px 7px -3px;
+}
+.buttons a {
+    text-decoration: none;
+    display: inline-block;
 }
 button{
     font-size: 14px;
@@ -137,6 +142,92 @@ button:hover{
     width: 90%;
     height: 85vh;
     object-fit: cover;
+}
+
+/* Home capabilities */
+.home-capabilities {
+    padding: clamp(4rem, 8vw, 7rem) clamp(1.25rem, 5vw, 5rem);
+    background:
+      radial-gradient(ellipse 80% 60% at 10% 20%, rgba(12, 192, 223, 0.08), transparent 55%),
+      radial-gradient(ellipse 70% 50% at 90% 80%, rgba(0, 149, 255, 0.07), transparent 50%),
+      #f7fafc;
+}
+.home-cap-inner {
+    max-width: 72rem;
+    margin: 0 auto;
+    text-align: center;
+}
+.home-cap-inner h2 {
+    font-family: "Raleway", sans-serif;
+    font-size: clamp(2rem, 4vw, 3.25rem);
+    font-weight: 700;
+    color: #0f172a;
+    letter-spacing: -0.02em;
+    margin: 0 0 0.75rem;
+}
+.home-cap-sub {
+    font-family: "Raleway", sans-serif;
+    font-size: clamp(1rem, 1.5vw, 1.15rem);
+    color: #64748b;
+    max-width: 32rem;
+    margin: 0 auto 2.5rem;
+    line-height: 1.55;
+}
+.home-cap-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1.25rem;
+    text-align: left;
+    margin-bottom: 2rem;
+}
+@media (min-width: 640px) {
+    .home-cap-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+@media (min-width: 1024px) {
+    .home-cap-grid {
+        grid-template-columns: repeat(4, 1fr);
+    }
+}
+.home-cap-grid article {
+    padding: 1.5rem 1.35rem;
+    border-radius: 14px;
+    background: rgba(255, 255, 255, 0.72);
+    border: 1px solid rgba(14, 165, 233, 0.14);
+    box-shadow: 0 8px 28px rgba(15, 23, 42, 0.04);
+    transition: transform 0.25s ease, border-color 0.25s ease, box-shadow 0.25s ease;
+}
+.home-cap-grid article:hover {
+    transform: translateY(-3px);
+    border-color: rgba(13, 198, 152, 0.35);
+    box-shadow: 0 14px 36px rgba(0, 149, 255, 0.1);
+}
+.home-cap-grid h3 {
+    font-family: "Raleway", sans-serif;
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: #0c4a6e;
+    margin: 0 0 0.55rem;
+}
+.home-cap-grid p {
+    font-family: "Raleway", sans-serif;
+    font-size: 0.92rem;
+    color: #64748b;
+    line-height: 1.55;
+    margin: 0;
+}
+.home-cap-link {
+    font-family: "Raleway", sans-serif;
+    display: inline-block;
+    font-weight: 600;
+    font-size: 1rem;
+    color: #0284c7;
+    text-decoration: none;
+    transition: color 0.2s ease, transform 0.2s ease;
+}
+.home-cap-link:hover {
+    color: #0d9488;
 }
 
 /* Swipper Settings */
@@ -282,6 +373,42 @@ button:hover{
     font-weight: 900;
     line-height: 0.95;
     text-align: right;
+}
+.company-data-cta {
+  font-family: "Raleway", sans-serif;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.85rem 1.75rem;
+  border-radius: 8px;
+  background: rgb(0, 149, 255);
+  color: #fff;
+  font-weight: 600;
+  font-size: 0.95rem;
+  text-decoration: none;
+  box-shadow: rgba(0, 166, 255, 0.35) 0 12px 24px;
+  transition: transform 0.2s ease, box-shadow 0.3s ease, background 0.2s ease;
+}
+.company-data-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.85rem;
+  justify-content: center;
+  margin-top: 0.5rem;
+}
+.company-data-cta:hover {
+  transform: scale(1.03);
+  box-shadow: rgba(0, 149, 255, 0.4) 0 18px 36px;
+}
+.company-data-cta--secondary {
+  background: transparent;
+  color: #0284c7;
+  box-shadow: none;
+  border: 1.5px solid rgba(2, 132, 199, 0.35);
+}
+.company-data-cta--secondary:hover {
+  background: rgba(2, 132, 199, 0.06);
+  box-shadow: none;
 }
 .company-data .data-buttons {
   display: flex;

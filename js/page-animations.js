@@ -929,31 +929,31 @@
       const storyData = [
         {
           quote:
-            '"The Hash Labs team delivered an exceptional software and API platform for our product. Their attention to performance, clean architecture, and engineering depth is unmatched."',
-          name: "Jonathon Shannon",
-          role: "CTO, Supersolid",
-          initials: "JS",
+            '"Hash Labs rebuilt our customer portal and API layer in weeks, not months. Performance jumped and our internal team finally understood the architecture."',
+          name: "Ayesha Rahman",
+          role: "Head of Product, Fintech client",
+          initials: "AR",
         },
         {
           quote:
-            '"They turned a difficult technical brief into a clear, elegant product. Every decision felt intentional, and communication stayed sharp from start to launch."',
-          name: "Amelia Hart",
-          role: "Product Lead, Northstar",
-          initials: "AH",
+            '"They treated discovery like engineering — clear risks, clear estimates, and demos every week. We shipped our MVP without drama."',
+          name: "Bilal Hassan",
+          role: "Founder, SaaS startup",
+          initials: "BH",
         },
         {
           quote:
-            '"Their engineers understood both the experience and the system behind it. We shipped faster without compromising the quality of the final product."',
-          name: "Daniel Kim",
-          role: "Founder, Relay Systems",
-          initials: "DK",
+            '"From cloud setup to CI/CD and monitoring, the handoff docs were as strong as the code. Our ops team was productive on day one."',
+          name: "Sara Khan",
+          role: "Engineering Manager, logistics platform",
+          initials: "SK",
         },
         {
           quote:
-            '"A rare IT team that can move comfortably between strategy, design, software, and cloud—and make the entire collaboration feel simple."',
-          name: "Sarah Malik",
-          role: "Innovation Director, Forma",
-          initials: "SM",
+            '"Practical AI, not slide decks. Hash Labs wired models into our workflows with measurable accuracy and a plan for iteration."',
+          name: "Omar Siddiqui",
+          role: "CTO, analytics company",
+          initials: "OS",
         },
       ];
 
@@ -1108,6 +1108,49 @@
 
       // Keep one service and its image active at all times.
       if (helpItems.length) showPreview(helpItems[0]);
+    }
+
+    /* Labs story — fast word-by-word color on scroll */
+    const labsStory = document.querySelector("[data-labs-story]");
+    const wordReveal = labsStory && labsStory.querySelector("[data-word-reveal]");
+    if (labsStory && wordReveal && typeof ScrollTrigger !== "undefined") {
+      const raw = wordReveal.textContent.trim().replace(/\s+/g, " ");
+      const parts = raw.split(" ");
+      wordReveal.textContent = "";
+      const words = parts.map((part) => {
+        const span = document.createElement("span");
+        span.className = "word";
+        span.textContent = part;
+        wordReveal.appendChild(span);
+        wordReveal.appendChild(document.createTextNode(" "));
+        return span;
+      });
+
+      gsap.set(words, { color: "var(--labs-muted)" });
+
+      gsap.to(words, {
+        color: "var(--labs-active)",
+        ease: "none",
+        stagger: 0.04,
+        scrollTrigger: {
+          trigger: wordReveal,
+          start: "top 78%",
+          end: "bottom 42%",
+          scrub: 0.35, /* snappy / a little fast */
+        },
+      });
+
+      gsap.from(".labs-story-follow", {
+        opacity: 0,
+        y: 28,
+        duration: 0.7,
+        ease: "power2.out",
+        scrollTrigger: {
+          trigger: labsStory,
+          start: "top 75%",
+          once: true,
+        },
+      });
     }
   }
 

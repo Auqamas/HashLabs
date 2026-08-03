@@ -3249,3 +3249,506 @@
     line-height: 1.3;
   }
 }
+
+/* —— Content pages (docs, legal, resources) —— */
+.content-page {
+  padding: 1.5rem 1.25rem 4rem;
+  background: #fff;
+}
+
+@media (min-width: 768px) {
+  .content-page {
+    padding: 2rem 2rem 5rem;
+  }
+}
+
+.content-page-inner {
+  max-width: 48rem;
+  margin: 0 auto;
+}
+
+.content-block {
+  margin-bottom: 2rem;
+}
+
+.content-block h2 {
+  font-size: clamp(1.35rem, 3vw, 1.75rem);
+  font-weight: 700;
+  color: #0f172a;
+  margin-bottom: 0.75rem;
+  line-height: 1.25;
+}
+
+.content-block p,
+.content-block ul {
+  color: #4b5563;
+  line-height: 1.7;
+}
+
+.content-block ul {
+  padding-left: 1.25rem;
+  margin-top: 0.65rem;
+}
+
+.content-block li {
+  margin-bottom: 0.4rem;
+}
+
+.content-block a {
+  color: #0284c7;
+}
+
+.footer-terms a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.footer-terms a:hover {
+  color: #5b8fff;
+}
+
+/* ═══════════════════════════════════════════════════════════════
+   Circular Arc Showcase — cards sit on a lifted center ring
+   ═══════════════════════════════════════════════════════════════ */
+.inno-showcase {
+  position: relative;
+  width: 100%;
+  min-height: clamp(780px, 92vh, 980px);
+  padding: 6rem 0 8.4rem;
+  background-color: transparent;
+  overflow: visible; /* allow blue patch to bleed into the section below */
+  color: #1e293b;
+  font-family: inherit;
+  user-select: none;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.inno-bg-canvas {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: -38%; /* extend under the labs story */
+  pointer-events: none;
+  z-index: 0;
+  overflow: hidden; /* still clipped at the top — protects the marquee */
+}
+
+.cutout-shape {
+  position: absolute;
+  pointer-events: none;
+  will-change: transform;
+}
+
+/* Blue patch — smaller, contained, drifts inside section */
+.shape-blue-circle {
+  width: min(720px, 68vw);
+  height: min(720px, 68vw);
+  border-radius: 50%;
+  background: #6c97ff;
+  bottom: -22%;
+  left: -14%;
+  opacity: 0.92;
+  animation: innoBlobDriftA 22s ease-in-out infinite alternate;
+}
+
+/* Green patch — kept below the top edge so marquee stays clear */
+.shape-lime-arc {
+  width: min(620px, 58vw);
+  height: min(620px, 58vw);
+  border-radius: 48% 52% 45% 55% / 42% 48% 52% 58%;
+  background: #54f08b;
+  top: 18%;
+  right: -16%;
+  opacity: 0.9;
+  animation: innoBlobDriftB 26s ease-in-out infinite alternate;
+}
+
+@keyframes innoBlobDriftA {
+  0%   { transform: translate(0, 0) scale(1); }
+  33%  { transform: translate(6%, -4%) scale(1.04); }
+  66%  { transform: translate(2%, 4%) scale(0.98); }
+  100% { transform: translate(8%, -2%) scale(1.03); }
+}
+
+@keyframes innoBlobDriftB {
+  0%   { transform: translate(0, 0) rotate(0deg) scale(1); }
+  40%  { transform: translate(-5%, 5%) rotate(6deg) scale(1.05); }
+  70%  { transform: translate(-2%, 1%) rotate(-3deg) scale(0.97); }
+  100% { transform: translate(-7%, 6%) rotate(4deg) scale(1.03); }
+}
+
+.inno-showcase-container {
+  position: relative;
+  z-index: 1;
+  width: 100%;
+}
+
+.inno-showcase-head {
+  text-align: center;
+  padding: 0 1.5rem;
+  margin-bottom: clamp(2rem, 4vw, 3.25rem);
+  max-width: 920px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.inno-showcase-title {
+  font-size: clamp(2.4rem, 5.5vw, 4.25rem);
+  font-weight: 800;
+  letter-spacing: -0.035em;
+  line-height: 1.08;
+  color: #0f172a;
+  margin: 0;
+}
+
+.inno-accent {
+  color: #c026d3;
+  background: none;
+  -webkit-text-fill-color: #c026d3;
+}
+
+/*
+  Viewport clips the arc at a hard bottom edge —
+  side cards sink below and get hidden (reference “floor” cut).
+*/
+.inno-showcase-viewport {
+  --inno-gap: clamp(0.85rem, 1.15vw, 1.25rem);
+  /* Side inset — lower = bigger cards (still keeps 5 visible) */
+  --inno-side: clamp(1rem, 2.25vw, 2.5rem);
+  width: 100%;
+  overflow: hidden;
+  height: clamp(600px, 62vw, 720px);
+  padding: 0.75rem 0 0;
+  cursor: grab;
+  touch-action: none; /* drag + arrows only */
+}
+
+.inno-showcase-viewport:active {
+  cursor: grabbing;
+}
+
+.inno-showcase-track {
+  position: relative;
+  display: flex;
+  align-items: flex-start;
+  gap: var(--inno-gap);
+  padding: 0.5rem var(--inno-side) 0;
+  will-change: transform;
+  width: max-content;
+}
+
+/*
+  Exactly 5 cards across:
+  center + left/right neighbors + outer pair inset past the screen edges.
+*/
+.inno-card {
+  --arc-y: 0px;
+  --arc-rot: 0deg;
+  flex: 0 0 calc((100vw - (2 * var(--inno-side)) - (4 * var(--inno-gap))) / 5);
+  background: #ffffff;
+  border-radius: 1.4rem;
+  border: 2px solid rgba(0, 0, 0, 0.06);
+  padding: 1.13rem 1.13rem 1.35rem;
+  /* box-shadow:
+    0 4px 6px rgba(15, 23, 42, 0.03),
+    0 16px 36px -12px rgba(15, 23, 42, 0.1); */
+  transform: translate3d(0, var(--arc-y), 0) rotate(var(--arc-rot));
+  transform-origin: 50% 100%;
+  transition:
+    box-shadow 280ms ease,
+    border-color 280ms ease;
+  will-change: transform;
+  display: flex;
+  flex-direction: column;
+}
+
+.inno-card:hover {
+  z-index: 8;
+  /* border-color: rgba(192, 38, 211, 0.18); */
+  box-shadow:
+    0 8px 16px rgba(15, 23, 42, 0.05),
+    0 28px 56px -14px rgba(174, 182, 202, 0.18);
+}
+
+.inno-card-img-wrap {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  border-radius: 1.1rem;
+  overflow: hidden;
+  background: #e8eef5;
+  margin-bottom: 1.2rem;
+}
+
+.inno-card-img-wrap img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 320ms cubic-bezier(0.2, 0.8, 0.2, 1);
+}
+
+.inno-card:hover .inno-card-img-wrap img {
+  transform: scale(1.04);
+}
+
+.inno-card-body {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  min-height: 0;
+}
+
+.inno-card-title {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #0f172a;
+  margin: 0 0 0.45rem;
+  line-height: 1.25;
+  letter-spacing: -0.02em;
+}
+
+.inno-card-desc {
+  font-size: 0.9rem;
+  color: #000000;
+  line-height: 1.55;
+  margin: 0 0 1.05rem;
+  flex: 1;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.inno-card-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: #0f172a;
+  text-decoration: none;
+  transition: color 240ms ease, gap 240ms ease;
+  margin-top: auto;
+}
+
+.inno-arrow {
+  width: 16px;
+  height: 16px;
+  transition: transform 240ms cubic-bezier(0.2, 0.8, 0.2, 1);
+}
+
+.inno-card:hover .inno-card-link {
+  color: #c026d3;
+  gap: 0.55rem;
+}
+
+.inno-card:hover .inno-arrow {
+  transform: translateX(4px);
+}
+
+/* Prev / next — tight against the card viewport */
+.inno-showcase-controls {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.65rem;
+  margin-top: -2rem;
+  margin-bottom: 4rem;
+  position: relative;
+  z-index: 20;
+}
+
+.inno-nav-btn {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  border: 1.5px solid rgba(15, 23, 42, 0.14);
+  background: transparent;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  color: #1e293b;
+  transition: background 220ms ease, border-color 220ms ease, transform 220ms ease, box-shadow 220ms ease;
+}
+
+.inno-nav-btn:hover {
+  /* background: #ffffff; */
+  border-color: 1px solid rgb(0, 0, 0);
+  background-color: #0980c5;
+  color: white;
+  /* box-shadow: 0 10px 24px rgba(15, 23, 42, 0.1); */
+  /* transform: scale(1.05); */
+}
+
+.inno-nav-btn:active {
+  transform: scale(0.96);
+}
+
+@media (max-width: 640px) {
+  .inno-showcase {
+    min-height: auto;
+    padding: 4rem 0 3rem;
+  }
+
+  .inno-showcase-title {
+    font-size: clamp(1.85rem, 8vw, 2.4rem);
+  }
+
+  .inno-showcase-head {
+    margin-bottom: 1.75rem;
+  }
+
+  .inno-showcase-viewport {
+    --inno-gap: 0.85rem;
+    --inno-side: 1.1rem;
+    height: clamp(500px, 122vw, 580px);
+  }
+
+  .inno-card {
+    /* ~1.2 cards on mobile */
+    flex: 0 0 calc(100vw - (2 * var(--inno-side)) - 2.5rem);
+    max-width: 320px;
+    border-radius: 1.2rem;
+    padding: 0.9rem 0.9rem 1.15rem;
+  }
+
+  .inno-card-title {
+    font-size: 1.1rem;
+  }
+
+  .inno-showcase-controls {
+    margin-top: 0.5rem;
+  }
+
+  .shape-blue-circle {
+    width: 420px;
+    height: 420px;
+    bottom: -18%;
+    left: -32%;
+  }
+
+  .shape-lime-arc {
+    width: 360px;
+    height: 360px;
+    top: 22%;
+    right: -30%;
+  }
+}
+
+@media (min-width: 641px) and (max-width: 1023px) {
+  .inno-showcase-viewport {
+    --inno-side: clamp(1.25rem, 2.5vw, 2rem);
+    --inno-gap: 0.95rem;
+    height: clamp(540px, 78vw, 640px);
+  }
+
+  /* Still target ~5 cards, slightly tighter inset */
+  .inno-card {
+    flex: 0 0 calc((100vw - (2 * var(--inno-side)) - (4 * var(--inno-gap))) / 5);
+  }
+}
+
+/* ═══════════════════════════════════════════════════════════════
+   Labs story — scroll word-color reveal
+   ═══════════════════════════════════════════════════════════════ */
+.labs-story {
+  --labs-muted: #9ca3af;
+  --labs-active: #0a0a0a;
+  --labs-ink: #111827;
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  padding: clamp(4rem, 7vw, 6rem) 0 0;
+  background: transparent;
+  overflow: visible;
+  text-align: center;
+}
+
+.labs-story-inner {
+  position: relative;
+  z-index: 1;
+  max-width: 80rem;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+}
+
+.labs-story-inner--follow {
+  margin-top: 0;
+  padding-top: clamp(2.5rem, 5vw, 3.75rem);
+  padding-bottom: clamp(3.5rem, 6vw, 5.5rem);
+}
+
+.labs-story-lead {
+  margin: 0 auto;
+  max-width: 80rem;
+  font-size: clamp(2.5rem, 2.8vw, 3rem);
+  font-weight: 650;
+  line-height: 1.2;
+  letter-spacing: -0.02em;
+  color: var(--labs-muted);
+  padding-bottom: clamp(2.75rem, 5vw, 4rem);
+}
+
+.labs-story-lead .word {
+  display: inline-block;
+  color: var(--labs-muted);
+  transition: none;
+  will-change: color;
+}
+
+.labs-story-lead .word.is-lit,
+.labs-story-lead.is-complete .word {
+  color: var(--labs-active);
+}
+
+/* Flush against the lead text block above */
+.labs-story-marquee {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.labs-story-follow {
+  margin-top: 0;
+  max-width: 36rem;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.labs-story-follow-title {
+  margin: 0 0 1rem;
+  font-size: clamp(1.25rem, 2.2vw, 1.6rem);
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  color: var(--labs-ink);
+}
+
+.labs-story-follow-copy {
+  margin: 0;
+  font-size: clamp(0.95rem, 1.4vw, 1.05rem);
+  line-height: 1.65;
+  color: #4b5563;
+  font-weight: 450;
+}
+
+@media (max-width: 640px) {
+  .labs-story {
+    padding: 3rem 0 0;
+  }
+
+  .labs-story-lead {
+    font-size: clamp(1.75rem, 7.5vw, 2.5rem);
+    padding-bottom: 2rem;
+  }
+
+  .labs-story-inner--follow {
+    padding-top: 2rem;
+    padding-bottom: 3rem;
+  }
+}
+
+

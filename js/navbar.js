@@ -13,6 +13,13 @@ document.addEventListener("DOMContentLoaded", () => {
     { match: ["team.html", "/team"], key: "team" },
     { match: ["work.html", "/work"], key: "work" },
     { match: ["contact.html", "/contact"], key: "contact" },
+    { match: ["documentation.html", "/documentation"], key: "docs" },
+    { match: ["api.html", "/api"], key: "api" },
+    { match: ["community.html", "/community"], key: "community" },
+    { match: ["support.html", "/support"], key: "support" },
+    { match: ["privacy.html", "/privacy"], key: "privacy" },
+    { match: ["terms.html", "/terms"], key: "terms" },
+    { match: ["cookies.html", "/cookies"], key: "cookies" },
     { match: ["index.html", "", "/"], key: "home" },
   ];
 
@@ -28,32 +35,62 @@ document.addEventListener("DOMContentLoaded", () => {
   document
     .querySelectorAll(".nav-links a, .mobile-menu-links a, .mobile-menu-inner > .header-button")
     .forEach((link) => {
-    const href = (link.getAttribute("href") || "").toLowerCase();
-    const isActive =
-      (activeKey === "about" && href.includes("about")) ||
-      (activeKey === "services" && href.includes("services")) ||
-      (activeKey === "team" && href.includes("team")) ||
-      (activeKey === "work" && href.includes("work")) ||
-      (activeKey === "contact" && href.includes("contact"));
+      const href = (link.getAttribute("href") || "").toLowerCase();
+      const isActive =
+        (activeKey === "about" && href.includes("about")) ||
+        (activeKey === "services" && href.includes("services")) ||
+        (activeKey === "team" && href.includes("team")) ||
+        (activeKey === "work" && href.includes("work")) ||
+        (activeKey === "contact" && href.includes("contact"));
 
-    if (isActive) {
-      link.classList.add("active");
-      link.setAttribute("aria-current", "page");
-    }
-  });
+      if (isActive) {
+        link.classList.add("active");
+        link.setAttribute("aria-current", "page");
+      }
+    });
 
-  // --- Floating nav scroll state ---
-  const onScroll = () => {
+  // --- Floating nav: scroll state + hide on scroll down / show on scroll up ---
+  let lastY = window.scrollY || 0;
+  let ticking = false;
+
+  const updateHeaderOnScroll = () => {
     if (!header) return;
-    header.classList.toggle("scrolled", window.scrollY > 12);
+    const y = window.scrollY || 0;
+    const menuOpen = mobileMenu && mobileMenu.classList.contains("active");
+
+    header.classList.toggle("scrolled", y > 12);
+
+    if (menuOpen) {
+      header.classList.remove("header-hidden");
+      header.classList.add("menu-open-state");
+    } else {
+      header.classList.remove("menu-open-state");
+      if (y > lastY && y > 90) {
+        header.classList.add("header-hidden");
+      } else {
+        header.classList.remove("header-hidden");
+      }
+    }
+
+    lastY = y;
+    ticking = false;
   };
-  onScroll();
-  window.addEventListener("scroll", onScroll, { passive: true });
+
+  window.addEventListener(
+    "scroll",
+    () => {
+      if (!ticking) {
+        window.requestAnimationFrame(updateHeaderOnScroll);
+        ticking = true;
+      }
+    },
+    { passive: true }
+  );
+  updateHeaderOnScroll();
 
   // --- Mobile menu ---
   if (!hamburger || !mobileMenu) return;
 
-  // Wrap link text for baseline reveal + right-side arrow
   mobileMenu
     .querySelectorAll(".mobile-menu-links a, .mobile-menu-inner > .header-button")
     .forEach((link) => {
@@ -80,12 +117,14 @@ document.addEventListener("DOMContentLoaded", () => {
 
   const setMenuState = (open) => {
     if (open) {
-      // Restart staggered baseline animation each open
       mobileMenu.classList.remove("active");
       void mobileMenu.offsetWidth;
       mobileMenu.classList.add("active");
+      header && header.classList.add("menu-open-state");
+      header && header.classList.remove("header-hidden");
     } else {
       mobileMenu.classList.remove("active");
+      header && header.classList.remove("menu-open-state");
     }
 
     hamburger.classList.toggle("open", open);
