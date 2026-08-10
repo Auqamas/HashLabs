@@ -1152,6 +1152,29 @@
         },
       });
     }
+
+
+
+    /* Capabilities Section Scroll Trigger Entrance */
+    const capCards = document.querySelectorAll(".home-cap-card");
+    if (capCards.length && typeof ScrollTrigger !== "undefined") {
+      gsap.fromTo(
+        capCards,
+        { opacity: 0, y: 40 },
+        {
+          opacity: 1,
+          y: 0,
+          duration: 0.8,
+          stagger: 0.15,
+          ease: "power3.out",
+          scrollTrigger: {
+            trigger: ".home-capabilities",
+            start: "top 78%",
+            toggleActions: "play none none none",
+          },
+        }
+      );
+    }
   }
 
   if (document.readyState === "loading") {

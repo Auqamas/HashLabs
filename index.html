@@ -27,6 +27,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Cabin:ital,wght@0,400..700;1,400..700&family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Londrina+Solid:wght@100;300;400;900&family=Megrim&family=Rubik:ital,wght@0,300..900;1,300..900&family=Sulphur+Point:wght@300;400;700&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Anonymous+Pro:ital,wght@0,400;0,700;1,400;1,700&family=Cabin:ital,wght@0,400..700;1,400..700&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=League+Spartan:wght@100..900&family=Londrina+Solid:wght@100;300;400;900&family=Megrim&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <style id="agent-visual-check">#loader{display:none!important}#main{width:100vw!important;opacity:1!important}</style>
 </head>
 <body>
 
@@ -89,45 +90,215 @@
 
     <div id="main">
 
-        <section class="page1">
+        <!--
+          One stage for hero + video: ribbons, corner color patches, and both
+          content blocks share the same overflow box so patches are never
+          clipped at the hero/video seam. Marquee settings live in
+          js/hero-marquee.js → CONFIG.
+        -->
+        <section class="ribbon-stage home-showcase" aria-label="Hash Labs intro">
+          <div class="ribbon-canvas" aria-hidden="true">
+            <svg
+              class="ribbon-svg"
+              id="ribbonSvg"
+              xmlns="http://www.w3.org/2000/svg"
+              xmlns:xlink="http://www.w3.org/1999/xlink"
+            >
+              <defs>
+                <!-- Same palette as pages.css `.animated-gradient` -->
+                <linearGradient id="ribbonGradientA" gradientUnits="userSpaceOnUse">
+                  <stop offset="0%" stop-color="#bfd1f8"/>
+                  <stop offset="25%" stop-color="#adf4fd"/>
+                  <stop offset="50%" stop-color="#f5b4ff"/>
+                  <stop offset="75%" stop-color="#fff9c4"/>
+                  <stop offset="100%" stop-color="#afe6ff"/>
+                </linearGradient>
+
+                <linearGradient id="ribbonGradientB" gradientUnits="userSpaceOnUse">
+                  <stop offset="0%" stop-color="#f5b4ff"/>
+                  <stop offset="25%" stop-color="#fff9c4"/>
+                  <stop offset="50%" stop-color="#afe6ff"/>
+                  <stop offset="75%" stop-color="#bfd1f8"/>
+                  <stop offset="100%" stop-color="#adf4fd"/>
+                </linearGradient>
+              </defs>
+
+              <!-- Ribbon 1: travels right → left -->
+              <g class="ribbon">
+                <path id="ribbonPathA" class="ribbon-band" stroke="url(#ribbonGradientA)" />
+                <text class="ribbon-text" dy="0.34em">
+                  <textPath id="ribbonTextA" href="#ribbonPathA" xlink:href="#ribbonPathA" startOffset="0"></textPath>
+                </text>
+              </g>
+
+              <!-- Ribbon 2: travels left → right, passes over ribbon 1 -->
+              <g class="ribbon">
+                <path id="ribbonPathB" class="ribbon-band" stroke="url(#ribbonGradientB)" />
+                <text class="ribbon-text" dy="0.34em">
+                  <textPath id="ribbonTextB" href="#ribbonPathB" xlink:href="#ribbonPathB" startOffset="0"></textPath>
+                </text>
+              </g>
+            </svg>
+          </div>
+
+          <!-- Corner color patches — live on the shared stage so they can
+               drift across the hero/video boundary without being clipped. -->
+          <div class="video-bg" aria-hidden="true">
+            <span class="video-blob video-blob--1"></span>
+            <span class="video-blob video-blob--2"></span>
+          </div>
+
+          <div class="page1">
             <div class="page-content">
                 <img width="70px" src="assets/logo/logo t.png" alt="">
                 <h1>Build, ship and scale <br> <span class="color-g">software that works</span></h1>
                 <p>Custom software, cloud platforms, and AI systems — engineered in Lahore for modern businesses</p>
-                <div class="buttons">
-                    <a href="pages/work.html"><button type="button">Our Work</button></a>
-                    <a href="pages/team.html"><button type="button">Join Our Team</button></a>
+                <div class="hero-cta">
+                    <a href="pages/work.html">Our Work</a>
+                    <a class="cta-cyan" href="pages/team.html">Join Our Team</a>
                 </div>
             </div>
+          </div>
+
+          <div class="hash-video">
+            <div class="video-frame">
+              <video
+                muted
+                loop
+                playsinline
+                preload="auto"
+                src="assets/images/About-us HAshlabs.mp4"
+              ></video>
+            </div>
+          </div>
         </section>
 
-        <div class="hash-video">
-            <video autoplay muted loop src="assets/images/About-us HAshlabs.mp4"></video>
-        </div>
-
+        <!-- Core Capabilities -->
         <section class="home-capabilities">
-          <div class="home-cap-inner">
-            <h2>What we build</h2>
-            <p class="home-cap-sub">End-to-end IT delivery for products that need to ship and scale.</p>
-            <div class="home-cap-grid">
-              <article>
-                <h3>Software Products</h3>
-                <p>Custom platforms, MVPs, and product engineering from discovery through production releases.</p>
-              </article>
-              <article>
-                <h3>Cloud &amp; DevOps</h3>
-                <p>Cloud architecture, CI/CD, and reliable infrastructure so your systems stay fast and secure.</p>
-              </article>
-              <article>
-                <h3>AI &amp; Data</h3>
-                <p>Machine learning pipelines, analytics, and intelligent features grounded in real business data.</p>
-              </article>
-              <article>
-                <h3>Full-Stack Apps</h3>
-                <p>Web and mobile applications with clean APIs, solid UX, and stacks built for long-term maintainability.</p>
-              </article>
+          <div class="home-cap-stage">
+            <div class="home-cap-copy">
+              <h2>Whether it's software, cloud, or AI systems we build work that works.</h2>
+              <p class="home-cap-sub">Good engineering isn't just about code. It's about solving real problems and shipping results. Here's ours.</p>
+              <div class="home-cap-stats">
+                <div class="home-cap-stat">
+                  <span class="home-cap-stat-num" data-counter data-target="2000" data-suffix="+" data-format="k">0</span>
+                  <span class="home-cap-stat-label">Projects delivered</span>
+                </div>
+                <div class="home-cap-stat">
+                  <span class="home-cap-stat-num" data-counter data-target="35" data-suffix="+">0</span>
+                  <span class="home-cap-stat-label">Core capabilities</span>
+                </div>
+                <div class="home-cap-stat">
+                  <span class="home-cap-stat-num" data-counter data-target="95" data-suffix="%">0</span>
+                  <span class="home-cap-stat-label">Client retention</span>
+                </div>
+              </div>
             </div>
-            <a class="home-cap-link" href="pages/services.html">Explore services →</a>
+          </div>
+        </section>
+
+        <!-- Capability cards — overlapping horizontal stack -->
+        <section class="home-cap-cards">
+          <div class="home-cap-inner">
+            <div class="swiper cap-stack capStackSwiper" data-cap-stack>
+              <div class="swiper-wrapper">
+              <article class="swiper-slide cap-stack-card cap-stack-card--cyan">
+                <div class="cap-stack-photo">
+                  <img src="https://goldenowl-asia-assets-production.s3.ap-southeast-1.amazonaws.com/uploads/2025-05-08T15%3A13%3A19.901Z_software.jpeg" alt="Software engineering">
+                </div>
+                <div class="cap-stack-body">
+                  <h3>
+                    Software
+                    <span class="cap-verified" aria-hidden="true">
+                      <svg viewBox="0 0 24 24" width="18" height="18" fill="none"><path d="M9.2 16.6 4.8 12.2l1.4-1.4 3 3 8-8.2 1.5 1.4-9.5 9.6Z" fill="#fff"/></svg>
+                    </span>
+                  </h3>
+                  <p>Products that ship and scale — clean architecture, fast delivery.</p>
+                  <div class="cap-stack-meta">
+                    <div class="cap-stack-stats">
+                      <span class="cap-stat"><svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75"/></svg>2K+</span>
+                      <span class="cap-stat"><svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="4" width="14" height="16" rx="2"/><path d="M7 8h6M7 12h6M7 16h3"/><path d="M17 8h4v12a2 2 0 0 1-2 2h-2"/></svg>React</span>
+                    </div>
+                    <a class="cap-stack-follow" href="pages/services.html">Explore +</a>
+                  </div>
+                </div>
+              </article>
+
+              <article class="swiper-slide cap-stack-card cap-stack-card--sun">
+                <div class="cap-stack-photo">
+                  <img src="https://assets.gcore.pro/site-media/uploads-staging/cloud_server_1_0610d0aa12.png" alt="Cloud infrastructure">
+                </div>
+                <div class="cap-stack-body">
+                  <h3>
+                    Cloud
+                    <span class="cap-verified" aria-hidden="true">
+                      <svg viewBox="0 0 24 24" width="18" height="18" fill="none"><path d="M9.2 16.6 4.8 12.2l1.4-1.4 3 3 8-8.2 1.5 1.4-9.5 9.6Z" fill="#fff"/></svg>
+                    </span>
+                  </h3>
+                  <p>DevOps built for reliability — pipelines, containers, uptime.</p>
+                  <div class="cap-stack-meta">
+                    <div class="cap-stack-stats">
+                      <span class="cap-stat"><svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75"/></svg>120+</span>
+                      <span class="cap-stat"><svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="4" width="14" height="16" rx="2"/><path d="M7 8h6M7 12h6M7 16h3"/><path d="M17 8h4v12a2 2 0 0 1-2 2h-2"/></svg>AWS</span>
+                    </div>
+                    <a class="cap-stack-follow" href="pages/services.html">Explore +</a>
+                  </div>
+                </div>
+              </article>
+
+              <article class="swiper-slide cap-stack-card cap-stack-card--orchid">
+                <div class="cap-stack-photo">
+                  <img src="https://6222830.fs1.hubspotusercontent-na1.net/hubfs/6222830/MicroSourcing/Blogs/2023/How-AI-is-improving-data-management/How%20AI%20is%20improving%20data%20management%20.jpg" alt="AI and data management">
+                </div>
+                <div class="cap-stack-body">
+                  <h3>
+                    AI &amp; Data
+                    <span class="cap-verified" aria-hidden="true">
+                      <svg viewBox="0 0 24 24" width="18" height="18" fill="none"><path d="M9.2 16.6 4.8 12.2l1.4-1.4 3 3 8-8.2 1.5 1.4-9.5 9.6Z" fill="#fff"/></svg>
+                    </span>
+                  </h3>
+                  <p>Models and pipelines that turn data into clear decisions.</p>
+                  <div class="cap-stack-meta">
+                    <div class="cap-stack-stats">
+                      <span class="cap-stat"><svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75"/></svg>48</span>
+                      <span class="cap-stat"><svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="4" width="14" height="16" rx="2"/><path d="M7 8h6M7 12h6M7 16h3"/><path d="M17 8h4v12a2 2 0 0 1-2 2h-2"/></svg>LLMs</span>
+                    </div>
+                    <a class="cap-stack-follow" href="pages/services.html">Explore +</a>
+                  </div>
+                </div>
+              </article>
+
+              <article class="swiper-slide cap-stack-card cap-stack-card--mint">
+                <div class="cap-stack-photo">
+                  <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQC7GfWG45q52W66XZ-0tpwN7Y84KzQ8KrNw3gFG7KVrVCdhYKWf-fkKNmE&s=10" alt="Mobile and web development">
+                </div>
+                <div class="cap-stack-body">
+                  <h3>
+                    Mobile &amp; Web
+                    <span class="cap-verified" aria-hidden="true">
+                      <svg viewBox="0 0 24 24" width="18" height="18" fill="none"><path d="M9.2 16.6 4.8 12.2l1.4-1.4 3 3 8-8.2 1.5 1.4-9.5 9.6Z" fill="#fff"/></svg>
+                    </span>
+                  </h3>
+                  <p>Full-stack experiences people love — fast, fluid, usable.</p>
+                  <div class="cap-stack-meta">
+                    <div class="cap-stack-stats">
+                      <span class="cap-stat"><svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75"/></svg>95%</span>
+                      <span class="cap-stat"><svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="4" width="14" height="16" rx="2"/><path d="M7 8h6M7 12h6M7 16h3"/><path d="M17 8h4v12a2 2 0 0 1-2 2h-2"/></svg>Apps</span>
+                    </div>
+                    <a class="cap-stack-follow" href="pages/services.html">Explore +</a>
+                  </div>
+                </div>
+              </article>
+              </div>
+            </div>
+            <p class="cap-stack-drag-hint" aria-hidden="true">Drag to explore →</p>
+
+            <div class="home-cap-footer">
+              <a class="home-cap-cta-btn" href="pages/services.html">
+                <span>View All Services &amp; Capabilities</span>
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+              </a>
+            </div>
           </div>
         </section>
 
@@ -401,6 +572,7 @@
     <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/MotionPathPlugin.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/lenis@1.1.18/dist/lenis.min.js"></script>
     <script src="https://kit.fontawesome.com/236b5f9539.js" crossorigin="anonymous"></script>
     <script>
@@ -430,6 +602,8 @@
     </script>
     <script src="js/navbar.js"></script>
     <script src="js/home-smooth-scroll.js"></script>
+    <script src="js/hero-marquee.js"></script>
+    <script src="js/home.js"></script>
     <script>
         const swiper = new Swiper('.partnersSwiper', {
             loop: true,

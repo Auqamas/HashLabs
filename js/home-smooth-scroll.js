@@ -1,7 +1,5 @@
 /**
- * Homepage-only smooth scroll.
- * Slows vertical wheel/trackpad scrolling for a heavier, cinematic feel.
- * Other pages continue to use js/smooth-scroll.js.
+ * Homepage smooth scroll — matched to other pages (js/smooth-scroll.js).
  */
 (() => {
   const reduceMotion =
@@ -39,15 +37,14 @@
 
     started = true;
 
-    // Slower than the shared site scroll: longer lerp + smaller wheel steps.
     const lenis = new Lenis({
-      duration: 2.4,
+      duration: 1.35,
       easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
       orientation: "vertical",
       gestureOrientation: "vertical",
       smoothWheel: true,
-      wheelMultiplier: 0.45,
-      touchMultiplier: 0.85,
+      wheelMultiplier: 0.9,
+      touchMultiplier: 1.1,
       syncTouch: false,
     });
 
@@ -79,8 +76,7 @@
     let current = window.scrollY;
     let target = window.scrollY;
     let ticking = false;
-    const ease = 0.045;
-    const wheelScale = 0.45;
+    const ease = 0.085;
 
     const onWheel = (e) => {
       e.preventDefault();
@@ -88,7 +84,7 @@
         0,
         document.documentElement.scrollHeight - window.innerHeight
       );
-      target += e.deltaY * wheelScale;
+      target += e.deltaY;
       target = Math.max(0, Math.min(target, max));
       if (!ticking) {
         ticking = true;
