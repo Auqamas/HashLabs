@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>404 — Page Not Found | The Hash Labs</title>
+  <title>404 Error | The Hash Labs</title>
   <meta name="description" content="This page could not be found. Return to The Hash Labs homepage, browse our work, or get in touch with our Lahore-based IT team.">
   <meta name="robots" content="noindex, follow">
   <link rel="shortcut icon" href="/assets/logo/logo t.png" type="image/x-icon">
@@ -16,9 +16,10 @@
     * { box-sizing: border-box; margin: 0; padding: 0; }
 
     body {
-      background: #ffffff;
+      background: #070b16;
       font-family: "Raleway", sans-serif;
       overflow: hidden;
+      color: #f8fafc;
     }
 
     .err404 {
@@ -26,7 +27,71 @@
       min-height: 100vh;
       min-height: 100dvh;
       overflow: hidden;
-      background: #ffffff;
+      background:
+        radial-gradient(ellipse 80% 60% at 12% 18%, rgba(125, 211, 252, 0.16), transparent 55%),
+        radial-gradient(ellipse 70% 50% at 88% 82%, rgba(167, 139, 250, 0.18), transparent 50%),
+        radial-gradient(ellipse 50% 40% at 50% 50%, rgba(14, 165, 233, 0.08), transparent 60%),
+        #070b16;
+    }
+
+    .err404-grain {
+      position: absolute;
+      inset: 0;
+      z-index: 8;
+      pointer-events: none;
+      opacity: 0.18;
+      mix-blend-mode: overlay;
+      background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+    }
+
+    .err404-orb {
+      position: absolute;
+      border-radius: 50%;
+      filter: blur(70px);
+      pointer-events: none;
+      z-index: 0;
+      animation: err404Orb 16s ease-in-out infinite;
+    }
+
+    .err404-orb--a {
+      width: 42vw;
+      height: 42vw;
+      max-width: 420px;
+      max-height: 420px;
+      top: -8%;
+      left: -6%;
+      background: #7dd3fc;
+      opacity: 0.28;
+    }
+
+    .err404-orb--b {
+      width: 48vw;
+      height: 48vw;
+      max-width: 520px;
+      max-height: 520px;
+      right: -10%;
+      bottom: -12%;
+      background: #c4b5fd;
+      opacity: 0.26;
+      animation-delay: -7s;
+    }
+
+    .err404-orb--c {
+      width: 28vw;
+      height: 28vw;
+      max-width: 280px;
+      max-height: 280px;
+      left: 42%;
+      top: 58%;
+      background: #f5b4ff;
+      opacity: 0.16;
+      animation-delay: -3s;
+      animation-duration: 20s;
+    }
+
+    @keyframes err404Orb {
+      0%, 100% { transform: translate(0, 0) scale(1); }
+      50% { transform: translate(4%, -6%) scale(1.08); }
     }
 
     .err404-brand {
@@ -38,7 +103,7 @@
       align-items: center;
       gap: 0.55rem;
       text-decoration: none;
-      color: #0f172a;
+      color: #f8fafc;
       transition: opacity 0.25s ease;
     }
 
@@ -48,6 +113,7 @@
       width: clamp(28px, 4vw, 36px);
       height: auto;
       object-fit: contain;
+      filter: brightness(1.15);
     }
 
     .err404-brand span {
@@ -63,28 +129,26 @@
       min-height: 100vh;
       min-height: 100dvh;
       display: flex;
-      flex-direction: column;
       align-items: center;
       justify-content: center;
       padding: 5rem 1.5rem 3rem;
     }
 
-    /* Shared 404 digit styling — back + front layers must match exactly */
     .err404-code {
       position: absolute;
       left: 50%;
-      top: 48%;
+      top: 50%;
       transform: translate(-50%, -50%);
       display: flex;
       align-items: center;
       justify-content: center;
       pointer-events: none;
       user-select: none;
-      line-height: 0.82;
+      line-height: 0.8;
       font-size: clamp(9rem, 42vw, 28rem);
       font-weight: 700;
       letter-spacing: -0.07em;
-      color: #111827;
+      color: #f8fafc;
       font-family: "Raleway", sans-serif;
     }
 
@@ -92,17 +156,14 @@
       display: block;
     }
 
-    /* Full 404 sits behind the weave marquee */
     .err404-code--back {
       z-index: 2;
     }
 
-    /* 4s + left half of 0 sit in front of the weave marquee */
     .err404-code--front {
       z-index: 4;
     }
 
-    /* Left half of 0 only — covers marquee on the left; right half stays behind */
     .err404-code--front .zero-left {
       clip-path: inset(0 50% 0 0);
     }
@@ -110,23 +171,21 @@
     .err404-band {
       position: absolute;
       left: 50%;
-      top: 48%;
+      top: 50%;
       width: 160vmax;
       transform-origin: center;
       margin-left: -80vmax;
-      box-shadow: 0 10px 40px rgba(15, 23, 42, 0.08);
+      box-shadow: 0 16px 48px rgba(2, 6, 23, 0.35);
       pointer-events: none;
     }
 
-    /* Fully behind the whole 404 */
     .err404-band--deep {
-      transform: translateY(-50%) rotate(28deg);
+      transform: translateY(-50%) rotate(22deg);
       z-index: 1;
     }
 
-    /* Weaves through the 0: behind on the left, over on the right */
     .err404-band--weave {
-      transform: translateY(-50%) rotate(-28deg);
+      transform: translateY(-50%) rotate(-22deg);
       z-index: 3;
     }
 
@@ -146,13 +205,13 @@
       white-space: nowrap;
       font-size: clamp(1rem, 2.2vw, 1.25rem);
       font-weight: 600;
-      color: #111827;
+      color: #0f172a;
       font-family: "Raleway", sans-serif;
     }
 
     .err404-track span {
       padding: 0 1.5rem;
-      border-right: 1px solid rgba(156, 163, 175, 0.85);
+      border-right: 1px solid rgba(15, 23, 42, 0.22);
     }
 
     .sr-only {
@@ -168,12 +227,18 @@
     }
 
     @media (prefers-reduced-motion: reduce) {
-      .animated-gradient { animation: none; }
+      .animated-gradient,
+      .err404-orb { animation: none; }
     }
   </style>
 </head>
 <body>
   <main class="err404 font-raleway">
+    <div class="err404-orb err404-orb--a" aria-hidden="true"></div>
+    <div class="err404-orb err404-orb--b" aria-hidden="true"></div>
+    <div class="err404-orb err404-orb--c" aria-hidden="true"></div>
+    <div class="err404-grain" aria-hidden="true"></div>
+
     <a class="err404-brand" href="/index.html">
       <img src="/assets/logo/logo t.png" alt="The Hash Labs logo">
       <span>The<br>Hash Labs</span>
@@ -182,7 +247,6 @@
     <h1 class="sr-only">404 — Page does not exist</h1>
 
     <div class="err404-stage">
-      <!-- Marquee fully behind the 404 -->
       <div class="err404-band err404-band--deep" aria-hidden="true">
         <div class="animated-gradient">
           <div class="err404-marquee" data-marquee-wrapper data-speed="60" data-direction="reverse">
@@ -200,12 +264,10 @@
         </div>
       </div>
 
-      <!-- Full 404 behind the weave marquee -->
       <div class="err404-code err404-code--back" aria-hidden="true">
-        <span>4</span><span>0</span><span>4</span>
+        <span class="digit-4">4</span><span>0</span><span class="digit-4">4</span>
       </div>
 
-      <!-- Weave marquee: under left half of 0, over right half of 0 -->
       <div class="err404-band err404-band--weave" aria-hidden="true">
         <div class="animated-gradient">
           <div class="err404-marquee" data-marquee-wrapper data-speed="55">
@@ -223,11 +285,9 @@
         </div>
       </div>
 
-      <!-- Front layer: both 4s + left half of 0 only -->
       <div class="err404-code err404-code--front" aria-hidden="true">
-        <span>4</span><span class="zero-left">0</span><span>4</span>
+        <span class="digit-4">4</span><span class="zero-left">0</span><span class="digit-4">4</span>
       </div>
-
     </div>
   </main>
 

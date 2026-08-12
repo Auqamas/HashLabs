@@ -15,11 +15,15 @@
     video.muted = true;
     video.loop = true;
     video.playsInline = true;
-    video.preload = "auto";
+    video.preload = "metadata";
     video.removeAttribute("poster");
     video.removeAttribute("controls");
 
     const tryPlay = () => {
+      if (video.readyState < 2) {
+        video.preload = "auto";
+        video.load();
+      }
       const playPromise = video.play();
       if (playPromise && typeof playPromise.catch === "function") {
         playPromise.catch(() => {});
@@ -210,10 +214,128 @@
     });
   }
 
+  /* ---------- Impact line: pin + gray → black word reveal (About) ---------- */
+  function initImpactLine() {
+    const line = document.querySelector("[data-impact-line]");
+    if (!line) return;
+
+    const raw = (line.textContent || "").trim().replace(/\s+/g, " ");
+    const words = raw.split(" ");
+    line.textContent = "";
+    words.forEach((w, i) => {
+      const span = document.createElement("span");
+      span.className = "about-impact-word";
+      span.textContent = w;
+      line.appendChild(span);
+      if (i < words.length - 1) {
+        line.appendChild(document.createTextNode(" "));
+      }
+    });
+
+    const wordEls = line.querySelectorAll(".about-impact-word");
+
+    if (
+      reduceMotion ||
+      typeof gsap === "undefined" ||
+      typeof ScrollTrigger === "undefined"
+    ) {
+      wordEls.forEach((el) => el.classList.add("is-on"));
+      return;
+    }
+
+    gsap.registerPlugin(ScrollTrigger);
+    const pinWrap = line.closest(".about-impact-pin") || line;
+
+    ScrollTrigger.create({
+      trigger: pinWrap,
+      start: "top 28%",
+      end: "+=70%",
+      pin: true,
+      scrub: 0.5,
+      anticipatePin: 1,
+      onUpdate: (self) => {
+        const n = wordEls.length;
+        const active = Math.min(n - 1, Math.floor(self.progress * n));
+        wordEls.forEach((el, idx) => {
+          el.classList.toggle("is-on", idx <= active);
+        });
+      },
+    });
+  }
+
+  /* ---------- FAQ: pin left, scroll right ---------- */
+  function initFaqSection() {
+    const section = document.querySelector("[data-faq-stage]");
+    if (!section) return;
+
+    const buttons = section.querySelectorAll(".faq-question");
+    buttons.forEach((btn) => {
+      btn.addEventListener("click", () => {
+        const item = btn.closest(".faq-item");
+        const content = btn.nextElementSibling;
+        const icon = btn.querySelector(".faq-q-icon svg");
+        const isOpen = content.classList.contains("open");
+
+        section.querySelectorAll(".faq-item").forEach((el) => {
+          el.classList.remove("is-open");
+        });
+        section.querySelectorAll(".faq-answer").forEach((a) => {
+          a.classList.remove("open");
+        });
+        section.querySelectorAll(".faq-question").forEach((q) => {
+          q.setAttribute("aria-expanded", "false");
+        });
+        section.querySelectorAll(".faq-q-icon svg").forEach((i) => {
+          i.classList.remove("rotate-180");
+        });
+
+        if (!isOpen) {
+          item.classList.add("is-open");
+          content.classList.add("open");
+          btn.setAttribute("aria-expanded", "true");
+          if (icon) icon.classList.add("rotate-180");
+        }
+
+        if (typeof ScrollTrigger !== "undefined") {
+          requestAnimationFrame(() => ScrollTrigger.refresh());
+        }
+      });
+    });
+
+    if (typeof gsap === "undefined" || typeof ScrollTrigger === "undefined") return;
+
+    gsap.registerPlugin(ScrollTrigger);
+
+    const lead = section.querySelector(".faq-lead");
+    const listWrap = section.querySelector(".faq-list-wrap");
+    if (!lead || !listWrap) return;
+
+    const mm = gsap.matchMedia();
+
+    mm.add("(min-width: 992px)", () => {
+      const pinTrigger = ScrollTrigger.create({
+        trigger: section,
+        start: "top top+=80",
+        end: () => {
+          const distance = listWrap.offsetHeight - window.innerHeight + 180;
+          return `+=${Math.max(0, distance)}`;
+        },
+        pin: lead,
+        pinSpacing: true,
+        invalidateOnRefresh: true,
+        anticipatePin: 1,
+      });
+
+      return () => pinTrigger.kill();
+    });
+  }
+
   function boot() {
     initVideoSection();
     initCapCounters();
     initCapStack();
+    initImpactLine();
+    initFaqSection();
   }
 
   if (document.readyState === "loading") {

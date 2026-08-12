@@ -1,11 +1,57 @@
 /**
  * Shery.js + Three.js enhancements for About / Services / Work / Contact
- * Requires (in order): GSAP, ScrollTrigger, Three r155, controlKit, Shery.js
+ * Heavy libs load AFTER the page loader reveals so first paint stays fast.
  */
 (function () {
   const reduce =
     window.matchMedia &&
     window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+
+  const THREE_SRC = "https://cdnjs.cloudflare.com/ajax/libs/three.js/0.155.0/three.min.js";
+  const CONTROLKIT_SRC =
+    "https://cdn.jsdelivr.net/gh/automat/controlkit.js@master/bin/controlKit.min.js";
+  const SHERY_SRC = "https://unpkg.com/sheryjs/dist/Shery.js";
+
+  function loadScript(src) {
+    return new Promise((resolve, reject) => {
+      if (document.querySelector(`script[src="${src}"]`)) {
+        resolve();
+        return;
+      }
+      const s = document.createElement("script");
+      s.src = src;
+      s.async = true;
+      s.onload = () => resolve();
+      s.onerror = () => reject(new Error("Failed to load " + src));
+      document.head.appendChild(s);
+    });
+  }
+
+  function ensureHeavyLibs() {
+    const needsShery = !!(
+      document.querySelector(".shery-text, .shery-img, .shery-multi, .magnet, .shery-hover") ||
+      document.getElementById("three-stage")
+    );
+    if (!needsShery && !document.getElementById("three-stage")) {
+      return Promise.resolve(false);
+    }
+
+    const chain = Promise.resolve();
+    return chain
+      .then(() =>
+        typeof THREE === "undefined" ? loadScript(THREE_SRC) : null
+      )
+      .then(() =>
+        typeof ControlKit === "undefined" && typeof controlKit === "undefined"
+          ? loadScript(CONTROLKIT_SRC)
+          : null
+      )
+      .then(() =>
+        typeof Shery === "undefined" ? loadScript(SHERY_SRC) : null
+      )
+      .then(() => true)
+      .catch(() => false);
+  }
 
   function initShery() {
     if (typeof Shery === "undefined" || reduce) return;
@@ -371,21 +417,24 @@
   }
 
   function boot() {
-    // Shery needs layout sizes — slight delay after loader
     const run = () => {
-      initShery();
-      initThreeStage();
-      if (typeof ScrollTrigger !== "undefined") {
-        setTimeout(() => ScrollTrigger.refresh(), 400);
-      }
+      ensureHeavyLibs().then((ok) => {
+        if (!ok && typeof Shery === "undefined" && !document.getElementById("three-stage")) {
+          return;
+        }
+        initShery();
+        initThreeStage();
+        if (typeof ScrollTrigger !== "undefined") {
+          setTimeout(() => ScrollTrigger.refresh(), 400);
+        }
+      });
     };
 
     if (document.getElementById("loader") && document.getElementById("loader").style.display !== "none") {
-      window.addEventListener("hashlabs:ready", () => setTimeout(run, 200), { once: true });
-      // Fallback if loader event never fires
-      setTimeout(run, 3200);
+      window.addEventListener("hashlabs:ready", () => setTimeout(run, 120), { once: true });
+      setTimeout(run, 2200);
     } else {
-      setTimeout(run, 400);
+      setTimeout(run, 200);
     }
   }
 

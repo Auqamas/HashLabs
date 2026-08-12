@@ -19,14 +19,16 @@
   <link rel="stylesheet" href="/css/footer.css">
   <link rel="stylesheet" href="/css/loader.css">
   <link rel="stylesheet" href="/css/pages.css">
+  <link rel="stylesheet" href="/css/svc-showcase.css">
   <link rel="stylesheet" href="https://unpkg.com/sheryjs/dist/Shery.css" />
   <link rel="shortcut icon" href="/assets/logo/logo t.png" type="image/x-icon">
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin>
+  <link rel="preconnect" href="https://unpkg.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Raleway:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <script defer src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+  <script defer src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
 </head>
 <body>
   <div id="loader"><h1>The Hash Labs.</h1></div>
@@ -105,235 +107,452 @@
       </div>
     </section>
 
-    <!-- Scroll: studio intro → red wash → service menu → help stories (from behind) -->
-    <section class="svc-scroll" data-svc-scroll aria-label="Service menu">
-      <div class="svc-scroll-pin" data-svc-pin>
-        <!-- Behind layer: hover-text section revealed as service stage lifts -->
-        <section class="help-stories-section help-stories-section--reveal" data-help-reveal aria-hidden="true">
-          <div class="help-stories-container">
-            <div class="client-stories-card">
-              <div class="stories-topline">
-                <div class="stories-progress-track" aria-hidden="true">
-                  <div class="stories-progress-bar" id="story-progress"></div>
-                </div>
-                <div class="stories-nav">
-                  <button type="button" class="story-nav-btn" id="story-prev" aria-label="Previous story">←</button>
-                  <button type="button" class="story-nav-btn" id="story-next" aria-label="Next story">→</button>
-                  <span class="story-counter" id="story-counter">01/04</span>
-                </div>
-              </div>
-
-              <span class="stories-kicker">( REAL CLIENT STORIES )</span>
-
-              <div class="story-content-wrapper">
-                <blockquote class="story-quote" id="story-quote">
-                  "Hash Labs rebuilt our customer portal and API layer in weeks, not months. Performance jumped and our internal team finally understood the architecture."
-                </blockquote>
-                <div class="story-author">
-                  <span class="story-avatar-fallback" id="story-avatar" aria-hidden="true">AR</span>
-                  <div class="story-author-info">
-                    <strong id="story-author-name">Ayesha Rahman</strong>
-                    <span id="story-author-role">Head of Product, Fintech client</span>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <div class="help-list-wrapper">
-              <div class="help-list-header">What we can help with</div>
-
-              <ul class="help-items-list" id="help-items-list">
-                <li class="help-item" data-img="/assets/images/Services-main-image.png">
-                  <span class="help-item-title">UI &amp; Product Design</span>
-                </li>
-                <li class="help-item" data-img="/assets/images/img-ser%201.png">
-                  <span class="help-item-title">Web &amp; API Platforms</span>
-                </li>
-                <li class="help-item" data-img="/assets/images/img-ser%202s.png">
-                  <span class="help-item-title">Mobile App Development</span>
-                </li>
-                <li class="help-item" data-img="/assets/images/sim%20img.png">
-                  <span class="help-item-title">Cloud Architecture</span>
-                </li>
-                <li class="help-item" data-img="/assets/covers/company-data.png">
-                  <span class="help-item-title">AI &amp; Data Strategy</span>
-                </li>
-                <li class="help-item" data-img="/assets/images/V1.png">
-                  <span class="help-item-title">Full-Stack Engineering</span>
-                </li>
-                <li class="help-item" data-img="/assets/images/ai_digital_growth.jpg">
-                  <span class="help-item-title">Cloud &amp; DevOps</span>
-                </li>
-                <li class="help-item" data-img="/assets/images/ai_neural_core.jpg">
-                  <span class="help-item-title">Cybersecurity</span>
-                </li>
-              </ul>
-
-              <div class="help-preview-container" id="help-preview-container">
-                <img id="help-preview-img" src="/assets/images/Services-main-image.png" alt="Service preview">
-              </div>
-            </div>
-          </div>
-        </section>
-
-        <!-- Front stage lifts away to reveal help stories -->
-        <div class="svc-front" data-svc-front>
-        <!-- Dark intro (visible on light bg) -->
-        <div class="svc-intro svc-intro--dark" data-svc-intro-dark>
-          <p class="svc-intro-line">
-            <span class="svc-intro-line-inner" data-svc-line>
-              <span class="svc-word">We</span>
-              <span class="svc-intro-thumbs svc-intro-inline" data-svc-collapse="thumbs" aria-hidden="true">
-                <img src="/assets/images/tech_thumb_1.jpg" alt="">
-                <img src="/assets/images/tech_thumb_2.jpg" alt="">
-                <img src="/assets/images/ai_neural_core.jpg" alt="">
-              </span>
-                <span class="svc-word">are an IT</span>
-            </span>
-          </p>
-          <p class="svc-intro-line">
-            <span class="svc-intro-line-inner" data-svc-line>
-              <span class="svc-word">company</span>
-              <span class="svc-intro-arrow svc-intro-inline" data-svc-collapse="arrow" aria-hidden="true">→</span>
-              <span class="svc-word">dedicated</span>
-            </span>
-          </p>
-          <p class="svc-intro-line">
-            <span class="svc-intro-line-inner" data-svc-line>
-                <span class="svc-word">to craft</span>
-                <a class="svc-intro-cta svc-intro-inline" data-svc-collapse="cta" href="/pages/contact.html">Work with us</a>
-                <span class="svc-word">software</span>
-            </span>
-          </p>
-        </div>
-
-        <!-- Red wash + light intro (revealed as wash rises) -->
-        <div class="svc-wash" data-svc-wash>
-          <div class="svc-intro svc-intro--light" data-svc-intro-light aria-hidden="true">
-            <p class="svc-intro-line">
-              <span class="svc-intro-line-inner" data-svc-line>
-                <span class="svc-word">We</span>
-                <span class="svc-intro-thumbs svc-intro-inline" data-svc-collapse="thumbs" aria-hidden="true">
-                  <img src="/assets/images/tech_thumb_1.jpg" alt="">
-                  <img src="/assets/images/tech_thumb_2.jpg" alt="">
-                  <img src="/assets/images/ai_neural_core.jpg" alt="">
-                </span>
-                <span class="svc-word">are an IT</span>
-              </span>
-            </p>
-            <p class="svc-intro-line">
-              <span class="svc-intro-line-inner" data-svc-line>
-                <span class="svc-word">company</span>
-                <span class="svc-intro-arrow svc-intro-inline" data-svc-collapse="arrow" aria-hidden="true">→</span>
-                <span class="svc-word">dedicated</span>
-              </span>
-            </p>
-            <p class="svc-intro-line">
-              <span class="svc-intro-line-inner" data-svc-line>
-                <span class="svc-word">to craft</span>
-                <a class="svc-intro-cta svc-intro-cta--on-red svc-intro-inline" data-svc-collapse="cta" href="/pages/contact.html" tabindex="-1">Work with us</a>
-                <span class="svc-word">software</span>
-              </span>
-            </p>
-          </div>
-        </div>
-
-        <!-- Service menu (appears after intro exits) -->
-        <div class="svc-menu" data-svc-menu aria-hidden="true">
-          <div class="svc-menu-copy">
-            <h2 class="svc-menu-title">
-              We introduce <br> methodologies, processes, and learnings to drive software and IT projects.
-            </h2>
-            <p class="svc-menu-sub">Ensuring reliable systems that drive growth and long-term success.</p>
-          </div>
-
-          <div class="svc-deck" data-svc-deck>
-            <article class="svc-deck-card is-front" data-svc-card style="--i:0">
-              <span class="svc-deck-num">01.</span>
-              <h3 class="svc-deck-title">Design</h3>
-              <p class="svc-deck-body">Research-backed UX, component systems, and product interfaces that guide users instead of decorating screens.</p>
-              <div class="svc-deck-media">
-                <img src="/assets/images/Services-main-image.png" alt="Product and interface design">
-              </div>
-            </article>
-            <article class="svc-deck-card" data-svc-card style="--i:1">
-              <span class="svc-deck-num">02.</span>
-              <h3 class="svc-deck-title">Engineering</h3>
-              <p class="svc-deck-body">Web apps, dashboards, and full-stack platforms with clean APIs and maintainable codebases.</p>
-              <div class="svc-deck-media">
-                <img src="/assets/images/img-ser%201.png" alt="Web and application engineering">
-              </div>
-            </article>
-            <article class="svc-deck-card" data-svc-card style="--i:2">
-              <span class="svc-deck-num">03.</span>
-              <h3 class="svc-deck-title">Cloud</h3>
-              <p class="svc-deck-body">Cloud architecture, CI/CD, and infrastructure that keep products secure, scalable, and easy to operate.</p>
-              <div class="svc-deck-media">
-                <img src="/assets/images/img-ser%202s.png" alt="Cloud architecture and DevOps">
-              </div>
-            </article>
-            <article class="svc-deck-card" data-svc-card style="--i:3">
-              <span class="svc-deck-num">04.</span>
-              <h3 class="svc-deck-title">AI &amp; Data</h3>
-              <p class="svc-deck-body">Practical AI features, data pipelines, and analytics that turn information into decisions.</p>
-              <div class="svc-deck-media">
-                <img src="/assets/images/V4.png" alt="AI and data platforms">
-              </div>
-            </article>
-          </div>
-
-          <div class="svc-menu-tools" aria-hidden="true">
-            <button type="button" class="svc-tool-btn" data-svc-prev title="Previous service">
-              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" aria-hidden="true"><path d="M15 18l-6-6 6-6"/></svg>
-            </button>
-            <button type="button" class="svc-tool-btn svc-tool-btn--dark" data-svc-next title="Next service">
-              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" aria-hidden="true"><path d="M9 18l6-6-6-6"/></svg>
-            </button>
-          </div>
-        </div>
-        </div><!-- /.svc-front -->
+    <!-- Agency intro: photo strip + copy + client logos -->
+    <section class="svc-agency" aria-labelledby="svc-agency-kicker">
+      <div class="svc-agency-photos" data-stagger>
+        <figure class="svc-agency-photo"><img src="/assets/images/svc-agency-1.png" alt="Hash Labs team reviewing a product dashboard together"></figure>
+        <figure class="svc-agency-photo"><img src="/assets/images/svc-agency-2.png" alt="Engineer reviewing code and system architecture"></figure>
+        <figure class="svc-agency-photo"><img src="/assets/images/svc-agency-3.png" alt="Developers pair-programming at a shared workstation"></figure>
+        <figure class="svc-agency-photo"><img src="/assets/images/svc-agency-4.png" alt="Designers reviewing a mobile interface on a tablet"></figure>
       </div>
+
+      <div class="svc-agency-copy">
+        <p class="svc-agency-kicker reveal" id="svc-agency-kicker">NEXT-GEN AGENCY</p>
+        <p class="svc-agency-lead" data-svc-word-reveal>
+          End-to-end IT services that turn product ideas into secure, scalable systems from strategy and engineering to cloud, AI, and long-term support.
+        </p>
+      </div>
+
+      <div class="svc-agency-logos" aria-label="EE, CS, and IT technologies and platforms">
+        <div class="svc-agency-logos-track" data-marquee-track>
+          <img src="https://cdn.simpleicons.org/react" alt="React" title="React" loading="lazy">
+          <img src="https://cdn.simpleicons.org/anthropic" alt="Claude" title="Claude" loading="lazy">
+          <img src="https://cdn.simpleicons.org/googlegemini" alt="Gemini" title="Gemini" loading="lazy">
+          <img src="https://cdn.simpleicons.org/cursor" alt="Cursor" title="Cursor" loading="lazy">
+          <img src="/assets/images/icons/openai.svg" alt="OpenAI" title="OpenAI" loading="lazy">
+          <img src="https://cdn.simpleicons.org/huggingface" alt="Hugging Face" title="Hugging Face" loading="lazy">
+          <img src="https://cdn.simpleicons.org/langchain" alt="LangChain" title="LangChain" loading="lazy">
+          <img src="https://cdn.simpleicons.org/ollama" alt="Ollama" title="Ollama" loading="lazy">
+          <img src="https://cdn.simpleicons.org/perplexity" alt="Perplexity" title="Perplexity" loading="lazy">
+          <img src="https://cdn.simpleicons.org/tensorflow" alt="TensorFlow" title="TensorFlow" loading="lazy">
+          <img src="https://cdn.simpleicons.org/pytorch" alt="PyTorch" title="PyTorch" loading="lazy">
+          <img src="https://cdn.simpleicons.org/scikitlearn" alt="scikit-learn" title="scikit-learn" loading="lazy">
+          <img src="https://cdn.simpleicons.org/opencv" alt="OpenCV" title="OpenCV" loading="lazy">
+          <img src="/assets/images/icons/matlab.svg" alt="MATLAB" title="MATLAB" loading="lazy">
+          <img src="https://cdn.simpleicons.org/octave" alt="GNU Octave" title="GNU Octave" loading="lazy">
+          <img src="https://cdn.simpleicons.org/wolfram" alt="Wolfram" title="Wolfram" loading="lazy">
+          <img src="https://cdn.simpleicons.org/jupyter" alt="Jupyter" title="Jupyter" loading="lazy">
+          <img src="https://cdn.simpleicons.org/anaconda" alt="Anaconda" title="Anaconda" loading="lazy">
+          <img src="https://cdn.simpleicons.org/labview" alt="LabVIEW" title="LabVIEW" loading="lazy">
+          <img src="https://cdn.simpleicons.org/ansys" alt="Ansys" title="Ansys" loading="lazy">
+          <img src="https://cdn.simpleicons.org/autocad" alt="AutoCAD" title="AutoCAD" loading="lazy">
+          <img src="/assets/images/icons/altiumdesigner.svg" alt="Altium Designer" title="Altium Designer" loading="lazy">
+          <img src="https://cdn.simpleicons.org/kicad" alt="KiCad" title="KiCad" loading="lazy">
+          <img src="https://cdn.simpleicons.org/freecad" alt="FreeCAD" title="FreeCAD" loading="lazy">
+          <img src="https://cdn.simpleicons.org/arduino" alt="Arduino" title="Arduino" loading="lazy">
+          <img src="https://cdn.simpleicons.org/raspberrypi" alt="Raspberry Pi" title="Raspberry Pi" loading="lazy">
+          <img src="https://cdn.simpleicons.org/espressif" alt="Espressif" title="Espressif" loading="lazy">
+          <img src="https://cdn.simpleicons.org/stmicroelectronics" alt="STMicroelectronics" title="STMicroelectronics" loading="lazy">
+          <img src="https://cdn.simpleicons.org/nxp" alt="NXP" title="NXP" loading="lazy">
+          <img src="https://cdn.simpleicons.org/nordicsemiconductor" alt="Nordic Semiconductor" title="Nordic Semiconductor" loading="lazy">
+          <img src="https://cdn.simpleicons.org/intel" alt="Intel" title="Intel" loading="lazy">
+          <img src="https://cdn.simpleicons.org/nvidia" alt="NVIDIA" title="NVIDIA" loading="lazy">
+          <img src="https://cdn.simpleicons.org/broadcom" alt="Broadcom" title="Broadcom" loading="lazy">
+          <img src="https://cdn.simpleicons.org/siemens" alt="Siemens" title="Siemens" loading="lazy">
+          <img src="https://cdn.simpleicons.org/bosch" alt="Bosch" title="Bosch" loading="lazy">
+          <img src="https://cdn.simpleicons.org/mqtt" alt="MQTT" title="MQTT" loading="lazy">
+          <img src="https://cdn.simpleicons.org/zigbee" alt="Zigbee" title="Zigbee" loading="lazy">
+          <img src="https://cdn.simpleicons.org/python" alt="Python" title="Python" loading="lazy">
+          <img src="https://cdn.simpleicons.org/c" alt="C" title="C" loading="lazy">
+          <img src="https://cdn.simpleicons.org/cplusplus" alt="C++" title="C++" loading="lazy">
+          <img src="/assets/images/icons/csharp.svg" alt="C#" title="C#" loading="lazy">
+          <img src="/assets/images/icons/dotnet.svg" alt=".NET" title=".NET" loading="lazy">
+          <img src="https://cdn.simpleicons.org/openjdk" alt="Java" title="Java" loading="lazy">
+          <img src="https://cdn.simpleicons.org/go" alt="Go" title="Go" loading="lazy">
+          <img src="https://cdn.simpleicons.org/rust" alt="Rust" title="Rust" loading="lazy">
+          <img src="https://cdn.simpleicons.org/typescript" alt="TypeScript" title="TypeScript" loading="lazy">
+          <img src="https://cdn.simpleicons.org/javascript" alt="JavaScript" title="JavaScript" loading="lazy">
+          <img src="https://cdn.simpleicons.org/php" alt="PHP" title="PHP" loading="lazy">
+          <img src="https://cdn.simpleicons.org/ruby" alt="Ruby" title="Ruby" loading="lazy">
+          <img src="https://cdn.simpleicons.org/swift" alt="Swift" title="Swift" loading="lazy">
+          <img src="https://cdn.simpleicons.org/kotlin" alt="Kotlin" title="Kotlin" loading="lazy">
+          <img src="https://cdn.simpleicons.org/scala" alt="Scala" title="Scala" loading="lazy">
+          <img src="https://cdn.simpleicons.org/r" alt="R" title="R" loading="lazy">
+          <img src="https://cdn.simpleicons.org/nodedotjs" alt="Node.js" title="Node.js" loading="lazy">
+          <img src="https://cdn.simpleicons.org/nextdotjs" alt="Next.js" title="Next.js" loading="lazy">
+          <img src="https://cdn.simpleicons.org/angular" alt="Angular" title="Angular" loading="lazy">
+          <img src="https://cdn.simpleicons.org/vuedotjs" alt="Vue.js" title="Vue.js" loading="lazy">
+          <img src="https://cdn.simpleicons.org/svelte" alt="Svelte" title="Svelte" loading="lazy">
+          <img src="https://cdn.simpleicons.org/django" alt="Django" title="Django" loading="lazy">
+          <img src="https://cdn.simpleicons.org/flask" alt="Flask" title="Flask" loading="lazy">
+          <img src="https://cdn.simpleicons.org/fastapi" alt="FastAPI" title="FastAPI" loading="lazy">
+          <img src="https://cdn.simpleicons.org/spring" alt="Spring" title="Spring" loading="lazy">
+          <img src="https://cdn.simpleicons.org/graphql" alt="GraphQL" title="GraphQL" loading="lazy">
+          <img src="https://cdn.simpleicons.org/electron" alt="Electron" title="Electron" loading="lazy">
+          <img src="https://cdn.simpleicons.org/flutter" alt="Flutter" title="Flutter" loading="lazy">
+          <img src="https://cdn.simpleicons.org/android" alt="Android" title="Android" loading="lazy">
+          <img src="https://cdn.simpleicons.org/tailwindcss" alt="Tailwind CSS" title="Tailwind CSS" loading="lazy">
+          <img src="https://cdn.simpleicons.org/git" alt="Git" title="Git" loading="lazy">
+          <img src="https://cdn.simpleicons.org/github" alt="GitHub" title="GitHub" loading="lazy">
+          <img src="https://cdn.simpleicons.org/gitlab" alt="GitLab" title="GitLab" loading="lazy">
+          <img src="https://cdn.simpleicons.org/bitbucket" alt="Bitbucket" title="Bitbucket" loading="lazy">
+          <img src="https://cdn.simpleicons.org/linux" alt="Linux" title="Linux" loading="lazy">
+          <img src="https://cdn.simpleicons.org/ubuntu" alt="Ubuntu" title="Ubuntu" loading="lazy">
+          <img src="https://cdn.simpleicons.org/docker" alt="Docker" title="Docker" loading="lazy">
+          <img src="https://cdn.simpleicons.org/kubernetes" alt="Kubernetes" title="Kubernetes" loading="lazy">
+          <img src="https://cdn.simpleicons.org/helm" alt="Helm" title="Helm" loading="lazy">
+          <img src="https://cdn.simpleicons.org/terraform" alt="Terraform" title="Terraform" loading="lazy">
+          <img src="https://cdn.simpleicons.org/ansible" alt="Ansible" title="Ansible" loading="lazy">
+          <img src="https://cdn.simpleicons.org/jenkins" alt="Jenkins" title="Jenkins" loading="lazy">
+          <img src="https://cdn.simpleicons.org/circleci" alt="CircleCI" title="CircleCI" loading="lazy">
+          <img src="https://cdn.simpleicons.org/githubactions" alt="GitHub Actions" title="GitHub Actions" loading="lazy">
+          <img src="/assets/images/icons/amazonwebservices.svg" alt="AWS" title="AWS" loading="lazy">
+          <img src="https://cdn.simpleicons.org/googlecloud" alt="Google Cloud" title="Google Cloud" loading="lazy">
+          <img src="https://cdn.simpleicons.org/cloudflare" alt="Cloudflare" title="Cloudflare" loading="lazy">
+          <img src="https://cdn.simpleicons.org/nginx" alt="Nginx" title="Nginx" loading="lazy">
+          <img src="https://cdn.simpleicons.org/apache" alt="Apache" title="Apache" loading="lazy">
+          <img src="https://cdn.simpleicons.org/prometheus" alt="Prometheus" title="Prometheus" loading="lazy">
+          <img src="https://cdn.simpleicons.org/grafana" alt="Grafana" title="Grafana" loading="lazy">
+          <img src="https://cdn.simpleicons.org/elasticsearch" alt="Elasticsearch" title="Elasticsearch" loading="lazy">
+          <img src="https://cdn.simpleicons.org/mongodb" alt="MongoDB" title="MongoDB" loading="lazy">
+          <img src="https://cdn.simpleicons.org/postgresql" alt="PostgreSQL" title="PostgreSQL" loading="lazy">
+          <img src="https://cdn.simpleicons.org/mysql" alt="MySQL" title="MySQL" loading="lazy">
+          <img src="https://cdn.simpleicons.org/redis" alt="Redis" title="Redis" loading="lazy">
+          <img src="https://cdn.simpleicons.org/sqlite" alt="SQLite" title="SQLite" loading="lazy">
+          <img src="/assets/images/icons/oracle.svg" alt="Oracle" title="Oracle" loading="lazy">
+          <img src="https://cdn.simpleicons.org/firebase" alt="Firebase" title="Firebase" loading="lazy">
+          <img src="https://cdn.simpleicons.org/supabase" alt="Supabase" title="Supabase" loading="lazy">
+          <img src="https://cdn.simpleicons.org/cisco" alt="Cisco" title="Cisco" loading="lazy">
+          <img src="https://cdn.simpleicons.org/vmware" alt="VMware" title="VMware" loading="lazy">
+          <img src="https://cdn.simpleicons.org/wireshark" alt="Wireshark" title="Wireshark" loading="lazy">
+          <img src="https://cdn.simpleicons.org/virtualbox" alt="VirtualBox" title="VirtualBox" loading="lazy">
+          <img src="/assets/images/icons/visualstudiocode.svg" alt="VS Code" title="VS Code" loading="lazy">
+          <img src="https://cdn.simpleicons.org/jetbrains" alt="JetBrains" title="JetBrains" loading="lazy">
+          <img src="https://cdn.simpleicons.org/intellijidea" alt="IntelliJ IDEA" title="IntelliJ IDEA" loading="lazy">
+          <img src="https://cdn.simpleicons.org/pycharm" alt="PyCharm" title="PyCharm" loading="lazy">
+          <img src="https://cdn.simpleicons.org/eclipseide" alt="Eclipse" title="Eclipse" loading="lazy">
+          <img src="https://cdn.simpleicons.org/postman" alt="Postman" title="Postman" loading="lazy">
+          <img src="https://cdn.simpleicons.org/swagger" alt="Swagger" title="Swagger" loading="lazy">
+          <img src="/assets/images/icons/sonarqube.svg" alt="SonarQube" title="SonarQube" loading="lazy">
+          <img src="https://cdn.simpleicons.org/jira" alt="Jira" title="Jira" loading="lazy">
+          <img src="https://cdn.simpleicons.org/confluence" alt="Confluence" title="Confluence" loading="lazy">
+          <img src="https://cdn.simpleicons.org/figma" alt="Figma" title="Figma" loading="lazy">
+          <img src="https://cdn.simpleicons.org/blender" alt="Blender" title="Blender" loading="lazy">
+          <img src="https://cdn.simpleicons.org/unity" alt="Unity" title="Unity" loading="lazy">
+          <img src="https://cdn.simpleicons.org/unrealengine" alt="Unreal Engine" title="Unreal Engine" loading="lazy">
+          <img src="https://cdn.simpleicons.org/pandas" alt="Pandas" title="Pandas" loading="lazy">
+          <img src="https://cdn.simpleicons.org/numpy" alt="NumPy" title="NumPy" loading="lazy">
+          <img src="https://cdn.simpleicons.org/plotly" alt="Plotly" title="Plotly" loading="lazy">
+          <img src="/assets/images/icons/tableau.svg" alt="Tableau" title="Tableau" loading="lazy">
+          <img src="https://cdn.simpleicons.org/latex" alt="LaTeX" title="LaTeX" loading="lazy">
+          <img src="https://cdn.simpleicons.org/cmake" alt="CMake" title="CMake" loading="lazy">
+          <img src="https://cdn.simpleicons.org/gnubash" alt="Bash" title="Bash" loading="lazy">
+          <!-- seamless loop duplicate -->
+          <img src="https://cdn.simpleicons.org/react" alt="" aria-hidden="true" loading="lazy">
+          <img src="https://cdn.simpleicons.org/anthropic" alt="" aria-hidden="true" loading="lazy">
+          <img src="https://cdn.simpleicons.org/googlegemini" alt="" aria-hidden="true" loading="lazy">
+          <img src="https://cdn.simpleicons.org/cursor" alt="" aria-hidden="true" loading="lazy">
+          <img src="/assets/images/icons/openai.svg" alt="" aria-hidden="true" loading="lazy">
+          <img src="https://cdn.simpleicons.org/huggingface" alt="" aria-hidden="true" loading="lazy">
+          <img src="https://cdn.simpleicons.org/langchain" alt="" aria-hidden="true" loading="lazy">
+          <img src="https://cdn.simpleicons.org/ollama" alt="" aria-hidden="true" loading="lazy">
+          <img src="https://cdn.simpleicons.org/perplexity" alt="" aria-hidden="true" loading="lazy">
+          <img src="https://cdn.simpleicons.org/tensorflow" alt="" aria-hidden="true" loading="lazy">
+          <img src="https://cdn.simpleicons.org/pytorch" alt="" aria-hidden="true" loading="lazy">
+          <img src="https://cdn.simpleicons.org/scikitlearn" alt="" aria-hidden="true" loading="lazy">
+          <img src="https://cdn.simpleicons.org/opencv" alt="" aria-hidden="true" loading="lazy">
+          <img src="/assets/images/icons/matlab.svg" alt="" aria-hidden="true" loading="lazy">
+          <img src="https://cdn.simpleicons.org/octave" alt="" aria-hidden="true" loading="lazy">
+          <img src="https://cdn.simpleicons.org/wolfram" alt="" aria-hidden="true" loading="lazy">
+          <img src="https://cdn.simpleicons.org/jupyter" alt="" aria-hidden="true" loading="lazy">
+          <img src="https://cdn.simpleicons.org/anaconda" alt="" aria-hidden="true" loading="lazy">
+          <img src="https://cdn.simpleicons.org/labview" alt="" aria-hidden="true" loading="lazy">
+          <img src="https://cdn.simpleicons.org/ansys" alt="" aria-hidden="true" loading="lazy">
+          <img src="https://cdn.simpleicons.org/autocad" alt="" aria-hidden="true" loading="lazy">
+          <img src="/assets/images/icons/altiumdesigner.svg" alt="" aria-hidden="true" loading="lazy">
+          <img src="https://cdn.simpleicons.org/kicad" alt="" aria-hidden="true" loading="lazy">
+          <img src="https://cdn.simpleicons.org/freecad" alt="" aria-hidden="true" loading="lazy">
+          <img src="https://cdn.simpleicons.org/arduino" alt="" aria-hidden="true" loading="lazy">
+          <img src="https://cdn.simpleicons.org/raspberrypi" alt="" aria-hidden="true" loading="lazy">
+          <img src="https://cdn.simpleicons.org/espressif" alt="" aria-hidden="true" loading="lazy">
+          <img src="https://cdn.simpleicons.org/stmicroelectronics" alt="" aria-hidden="true" loading="lazy">
+          <img src="https://cdn.simpleicons.org/nxp" alt="" aria-hidden="true" loading="lazy">
+          <img src="https://cdn.simpleicons.org/nordicsemiconductor" alt="" aria-hidden="true" loading="lazy">
+          <img src="https://cdn.simpleicons.org/intel" alt="" aria-hidden="true" loading="lazy">
+          <img src="https://cdn.simpleicons.org/nvidia" alt="" aria-hidden="true" loading="lazy">
+          <img src="https://cdn.simpleicons.org/broadcom" alt="" aria-hidden="true" loading="lazy">
+          <img src="https://cdn.simpleicons.org/siemens" alt="" aria-hidden="true" loading="lazy">
+          <img src="https://cdn.simpleicons.org/bosch" alt="" aria-hidden="true" loading="lazy">
+          <img src="https://cdn.simpleicons.org/mqtt" alt="" aria-hidden="true" loading="lazy">
+          <img src="https://cdn.simpleicons.org/zigbee" alt="" aria-hidden="true" loading="lazy">
+          <img src="https://cdn.simpleicons.org/python" alt="" aria-hidden="true" loading="lazy">
+          <img src="https://cdn.simpleicons.org/c" alt="" aria-hidden="true" loading="lazy">
+          <img src="https://cdn.simpleicons.org/cplusplus" alt="" aria-hidden="true" loading="lazy">
+          <img src="/assets/images/icons/csharp.svg" alt="" aria-hidden="true" loading="lazy">
+          <img src="/assets/images/icons/dotnet.svg" alt="" aria-hidden="true" loading="lazy">
+          <img src="https://cdn.simpleicons.org/openjdk" alt="" aria-hidden="true" loading="lazy">
+          <img src="https://cdn.simpleicons.org/go" alt="" aria-hidden="true" loading="lazy">
+          <img src="https://cdn.simpleicons.org/rust" alt="" aria-hidden="true" loading="lazy">
+          <img src="https://cdn.simpleicons.org/typescript" alt="" aria-hidden="true" loading="lazy">
+          <img src="https://cdn.simpleicons.org/javascript" alt="" aria-hidden="true" loading="lazy">
+          <img src="https://cdn.simpleicons.org/php" alt="" aria-hidden="true" loading="lazy">
+          <img src="https://cdn.simpleicons.org/ruby" alt="" aria-hidden="true" loading="lazy">
+          <img src="https://cdn.simpleicons.org/swift" alt="" aria-hidden="true" loading="lazy">
+          <img src="https://cdn.simpleicons.org/kotlin" alt="" aria-hidden="true" loading="lazy">
+          <img src="https://cdn.simpleicons.org/scala" alt="" aria-hidden="true" loading="lazy">
+          <img src="https://cdn.simpleicons.org/r" alt="" aria-hidden="true" loading="lazy">
+          <img src="https://cdn.simpleicons.org/nodedotjs" alt="" aria-hidden="true" loading="lazy">
+          <img src="https://cdn.simpleicons.org/nextdotjs" alt="" aria-hidden="true" loading="lazy">
+          <img src="https://cdn.simpleicons.org/angular" alt="" aria-hidden="true" loading="lazy">
+          <img src="https://cdn.simpleicons.org/vuedotjs" alt="" aria-hidden="true" loading="lazy">
+          <img src="https://cdn.simpleicons.org/svelte" alt="" aria-hidden="true" loading="lazy">
+          <img src="https://cdn.simpleicons.org/django" alt="" aria-hidden="true" loading="lazy">
+          <img src="https://cdn.simpleicons.org/flask" alt="" aria-hidden="true" loading="lazy">
+          <img src="https://cdn.simpleicons.org/fastapi" alt="" aria-hidden="true" loading="lazy">
+          <img src="https://cdn.simpleicons.org/spring" alt="" aria-hidden="true" loading="lazy">
+          <img src="https://cdn.simpleicons.org/graphql" alt="" aria-hidden="true" loading="lazy">
+          <img src="https://cdn.simpleicons.org/electron" alt="" aria-hidden="true" loading="lazy">
+          <img src="https://cdn.simpleicons.org/flutter" alt="" aria-hidden="true" loading="lazy">
+          <img src="https://cdn.simpleicons.org/android" alt="" aria-hidden="true" loading="lazy">
+          <img src="https://cdn.simpleicons.org/tailwindcss" alt="" aria-hidden="true" loading="lazy">
+          <img src="https://cdn.simpleicons.org/git" alt="" aria-hidden="true" loading="lazy">
+          <img src="https://cdn.simpleicons.org/github" alt="" aria-hidden="true" loading="lazy">
+          <img src="https://cdn.simpleicons.org/gitlab" alt="" aria-hidden="true" loading="lazy">
+          <img src="https://cdn.simpleicons.org/bitbucket" alt="" aria-hidden="true" loading="lazy">
+          <img src="https://cdn.simpleicons.org/linux" alt="" aria-hidden="true" loading="lazy">
+          <img src="https://cdn.simpleicons.org/ubuntu" alt="" aria-hidden="true" loading="lazy">
+          <img src="https://cdn.simpleicons.org/docker" alt="" aria-hidden="true" loading="lazy">
+          <img src="https://cdn.simpleicons.org/kubernetes" alt="" aria-hidden="true" loading="lazy">
+          <img src="https://cdn.simpleicons.org/helm" alt="" aria-hidden="true" loading="lazy">
+          <img src="https://cdn.simpleicons.org/terraform" alt="" aria-hidden="true" loading="lazy">
+          <img src="https://cdn.simpleicons.org/ansible" alt="" aria-hidden="true" loading="lazy">
+          <img src="https://cdn.simpleicons.org/jenkins" alt="" aria-hidden="true" loading="lazy">
+          <img src="https://cdn.simpleicons.org/circleci" alt="" aria-hidden="true" loading="lazy">
+          <img src="https://cdn.simpleicons.org/githubactions" alt="" aria-hidden="true" loading="lazy">
+          <img src="/assets/images/icons/amazonwebservices.svg" alt="" aria-hidden="true" loading="lazy">
+          <img src="https://cdn.simpleicons.org/googlecloud" alt="" aria-hidden="true" loading="lazy">
+          <img src="https://cdn.simpleicons.org/cloudflare" alt="" aria-hidden="true" loading="lazy">
+          <img src="https://cdn.simpleicons.org/nginx" alt="" aria-hidden="true" loading="lazy">
+          <img src="https://cdn.simpleicons.org/apache" alt="" aria-hidden="true" loading="lazy">
+          <img src="https://cdn.simpleicons.org/prometheus" alt="" aria-hidden="true" loading="lazy">
+          <img src="https://cdn.simpleicons.org/grafana" alt="" aria-hidden="true" loading="lazy">
+          <img src="https://cdn.simpleicons.org/elasticsearch" alt="" aria-hidden="true" loading="lazy">
+          <img src="https://cdn.simpleicons.org/mongodb" alt="" aria-hidden="true" loading="lazy">
+          <img src="https://cdn.simpleicons.org/postgresql" alt="" aria-hidden="true" loading="lazy">
+          <img src="https://cdn.simpleicons.org/mysql" alt="" aria-hidden="true" loading="lazy">
+          <img src="https://cdn.simpleicons.org/redis" alt="" aria-hidden="true" loading="lazy">
+          <img src="https://cdn.simpleicons.org/sqlite" alt="" aria-hidden="true" loading="lazy">
+          <img src="/assets/images/icons/oracle.svg" alt="" aria-hidden="true" loading="lazy">
+          <img src="https://cdn.simpleicons.org/firebase" alt="" aria-hidden="true" loading="lazy">
+          <img src="https://cdn.simpleicons.org/supabase" alt="" aria-hidden="true" loading="lazy">
+          <img src="https://cdn.simpleicons.org/cisco" alt="" aria-hidden="true" loading="lazy">
+          <img src="https://cdn.simpleicons.org/vmware" alt="" aria-hidden="true" loading="lazy">
+          <img src="https://cdn.simpleicons.org/wireshark" alt="" aria-hidden="true" loading="lazy">
+          <img src="https://cdn.simpleicons.org/virtualbox" alt="" aria-hidden="true" loading="lazy">
+          <img src="/assets/images/icons/visualstudiocode.svg" alt="" aria-hidden="true" loading="lazy">
+          <img src="https://cdn.simpleicons.org/jetbrains" alt="" aria-hidden="true" loading="lazy">
+          <img src="https://cdn.simpleicons.org/intellijidea" alt="" aria-hidden="true" loading="lazy">
+          <img src="https://cdn.simpleicons.org/pycharm" alt="" aria-hidden="true" loading="lazy">
+          <img src="https://cdn.simpleicons.org/eclipseide" alt="" aria-hidden="true" loading="lazy">
+          <img src="https://cdn.simpleicons.org/postman" alt="" aria-hidden="true" loading="lazy">
+          <img src="https://cdn.simpleicons.org/swagger" alt="" aria-hidden="true" loading="lazy">
+          <img src="/assets/images/icons/sonarqube.svg" alt="" aria-hidden="true" loading="lazy">
+          <img src="https://cdn.simpleicons.org/jira" alt="" aria-hidden="true" loading="lazy">
+          <img src="https://cdn.simpleicons.org/confluence" alt="" aria-hidden="true" loading="lazy">
+          <img src="https://cdn.simpleicons.org/figma" alt="" aria-hidden="true" loading="lazy">
+          <img src="https://cdn.simpleicons.org/blender" alt="" aria-hidden="true" loading="lazy">
+          <img src="https://cdn.simpleicons.org/unity" alt="" aria-hidden="true" loading="lazy">
+          <img src="https://cdn.simpleicons.org/unrealengine" alt="" aria-hidden="true" loading="lazy">
+          <img src="https://cdn.simpleicons.org/pandas" alt="" aria-hidden="true" loading="lazy">
+          <img src="https://cdn.simpleicons.org/numpy" alt="" aria-hidden="true" loading="lazy">
+          <img src="https://cdn.simpleicons.org/plotly" alt="" aria-hidden="true" loading="lazy">
+          <img src="/assets/images/icons/tableau.svg" alt="" aria-hidden="true" loading="lazy">
+          <img src="https://cdn.simpleicons.org/latex" alt="" aria-hidden="true" loading="lazy">
+          <img src="https://cdn.simpleicons.org/cmake" alt="" aria-hidden="true" loading="lazy">
+          <img src="https://cdn.simpleicons.org/gnubash" alt="" aria-hidden="true" loading="lazy">
+        </div>
+      </div>
+
+    <!-- Strategic momentum + purposeful innovation -->
+    <section class="svc-split">
+      <article class="svc-split-block">
+        <div class="svc-split-copy">
+          <p class="svc-split-kicker">STRATEGIC MOMENTUM</p>
+          <h2 class="svc-split-title">Driving sustained business growth</h2>
+          <ul class="svc-split-list">
+            <li>Clear goals help create a focused growth roadmap</li>
+            <li>Our strategies are built on real data and insights</li>
+            <li>Risk is evaluated to ensure sustainable decisions.</li>
+          </ul>
+          <a class="svc-split-cta magnet" href="/pages/contact.html">
+            <span class="svc-split-cta-label">START A FREE MEETING</span>
+            <span class="svc-split-cta-icon" aria-hidden="true">→</span>
+          </a>
+        </div>
+        <div class="svc-split-visual svc-split-visual--revenue reveal-right">
+          <div class="svc-revenue-card">
+            <p class="svc-revenue-label">Revenue Summary</p>
+            <p class="svc-revenue-value">$27,000</p>
+            <div class="svc-revenue-chart" aria-hidden="true">
+              <div class="svc-revenue-y">
+                <span>27,000</span><span>18,000</span><span>12,000</span><span>8,000</span>
+              </div>
+              <div class="svc-revenue-bars">
+                <span class="is-purple" style="--h:42%"></span>
+                <span class="is-mint" style="--h:88%"></span>
+                <span class="is-lime" style="--h:62%"></span>
+                <span class="is-gray" style="--h:48%"></span>
+                <span class="is-ink" style="--h:74%"><i></i></span>
+              </div>
+              <div class="svc-revenue-x">
+                <span>01</span><span>02</span><span>03</span><span>04</span><span>05</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </article>
+
+      <article class="svc-split-block svc-split-block--innovation">
+        <div class="svc-split-copy">
+          <p class="svc-split-kicker">PURPOSEFUL INNOVATION</p>
+          <h2 class="svc-split-title">Creating Impact Through Solutions</h2>
+          <ul class="svc-split-list">
+            <li>Product, cloud, and AI decisions stay aligned from day one</li>
+            <li>We ship systems teams can operate without hand-holding</li>
+            <li>Every solution is measured against real business outcomes.</li>
+          </ul>
+          <a class="svc-split-cta magnet" href="/pages/contact.html">
+            <span class="svc-split-cta-label">START A FREE MEETING</span>
+            <span class="svc-split-cta-icon" aria-hidden="true">→</span>
+          </a>
+        </div>
+        <div class="svc-split-visual svc-split-visual--radar reveal-right">
+          <div class="svc-radar-card">
+            <p class="svc-radar-note">Consultation is not only “Advising”</p>
+            <div class="svc-radar" aria-hidden="true">
+              <svg viewBox="0 0 320 280" fill="none">
+                <polygon points="160,28 268,96 228,220 92,220 52,96" stroke="#d8c4ff" stroke-width="1.5"/>
+                <polygon points="160,62 236,110 210,190 110,190 84,110" stroke="#c7b0ff" stroke-width="1.5"/>
+                <polygon points="160,96 204,124 188,168 132,168 116,124" fill="rgba(236,72,153,0.12)" stroke="#e879f9" stroke-width="1.5"/>
+                <line x1="160" y1="28" x2="160" y2="220" stroke="#e9dffd" stroke-width="1"/>
+                <line x1="52" y1="96" x2="268" y2="96" stroke="#e9dffd" stroke-width="1"/>
+                <line x1="92" y1="220" x2="228" y2="28" stroke="#e9dffd" stroke-width="1"/>
+                <circle cx="160" cy="140" r="34" fill="url(#svcRadarGlow)"/>
+                <defs>
+                  <radialGradient id="svcRadarGlow" cx="50%" cy="45%" r="55%">
+                    <stop offset="0%" stop-color="#fda4ff"/>
+                    <stop offset="55%" stop-color="#d946ef"/>
+                    <stop offset="100%" stop-color="#a855f7"/>
+                  </radialGradient>
+                </defs>
+              </svg>
+              <span class="svc-radar-center">Solution</span>
+              <span class="svc-radar-tag is-top">Collaboration</span>
+              <span class="svc-radar-tag is-left">Guidance</span>
+              <span class="svc-radar-tag is-right">Partnership</span>
+            </div>
+          </div>
+        </div>
+      </article>
     </section>
 
-    <section class="studio-statement" data-studio-statement aria-labelledby="studio-statement-title">
-      <div class="studio-statement-label" data-statement-label>ABOUT THE HASH LABS</div>
-
-      <div class="studio-statement-grid">
-        <h2 class="studio-statement-title" id="studio-statement-title" aria-label="An IT partner where ideas, software and people unite">
-          <span class="studio-statement-line"><span>AN <span class="text-indigo-500">IT PARTNER</span></span></span>
-          <span class="studio-statement-line studio-statement-line--indent"><span>WHERE <span class="text-indigo-500">IDEAS</span>,</span></span>
-          <span class="studio-statement-line"><span><span class="text-indigo-500">SOFTWARE</span> AND</span></span>
-          <span class="studio-statement-line"><span><span class="text-indigo-500">PEOPLE</span> UNITE</span></span>
+    <!-- Testament / quality bento -->
+    <section class="svc-testament" aria-labelledby="svc-testament-title">
+      <div class="svc-testament-head">
+        <h2 class="svc-testament-title" id="svc-testament-title">
+          A testament to our journey of successful projects, recognized for Quality and driven by uncompromising high-quality projects with excellence.
         </h2>
+        <a class="svc-testament-cta magnet" href="/pages/work.html" aria-label="View projects">
+          <span aria-hidden="true">→</span>
+        </a>
+      </div>
 
-        <div class="studio-statement-copy mt-[28vh]">
-          <p data-statement-copy>
-            THE HASH LABS IS AN IT AND COMPUTER SCIENCE COMPANY THAT BUILDS SOFTWARE PRODUCTS, CLOUD SYSTEMS, AND INTELLIGENT PLATFORMS FOR AMBITIOUS BUSINESSES.
-          </p>
-          <p data-statement-copy>
-            PRODUCT DESIGNERS, SOFTWARE ENGINEERS, DATA SPECIALISTS, AND CLOUD ARCHITECTS WORK AS ONE TEAM—TURNING COMPLEX PROBLEMS INTO RELIABLE DIGITAL PRODUCTS.
-          </p>
-          <!-- <a class="studio-statement-link" href="/pages/about.html" data-statement-link>
-            MORE ABOUT US <span aria-hidden="true">↳</span>
-          </a> -->
-        </div>
+      <div class="svc-testament-grid">
+        <article class="svc-bento svc-bento--quality">
+          <span class="svc-bento-tag">01 / QUALITY</span>
+          <img class="svc-bento-bg" src="/assets/images/grass.jpg" alt="">
+          <p class="svc-bento-watermark" aria-hidden="true">HashLabs</p>
+          <div class="svc-bento-panel">
+            <h3>Excellence Through Consistent Quality Work</h3>
+            <p>We deliver excellence through consistent, uncompromising quality in every project we undertake, ensuring measurable impact &amp; lasting results.</p>
+          </div>
+        </article>
 
+        <article class="svc-bento svc-bento--stat">
+          <div class="svc-bento-stat-copy">
+            <p class="svc-bento-metric">98%</p>
+            <p>Excellence is driven by our commitment to unwavering quality in every project, creating measurable outcomes and long-term value.</p>
+          </div>
+          <div class="svc-bento-stack" aria-hidden="true">
+            <img src="/assets/images/work-design-v2.png" alt="">
+            <img src="/assets/images/work-project-v2.png" alt="">
+            <img src="/assets/images/work-execution-v2.png" alt="">
+          </div>
+          <a class="svc-bento-chip magnet" href="/pages/work.html">Projects</a>
+        </article>
+
+        <article class="svc-bento svc-bento--count">
+          <img class="svc-bento-bg" src="/assets/images/team_3.png" alt="">
+          <div class="svc-bento-count-copy">
+            <p class="svc-bento-metric">56+</p>
+            <p>Excellence is driven by our commitment to unwavering quality in every project, creating measurable outcomes and long-term value.</p>
+          </div>
+        </article>
       </div>
     </section>
 
-    <!-- <section class="section-pad" style="background:#f8fafc;">
-      <div style="max-width:80rem;margin:0 auto;">
-        <div class="reveal" style="margin-bottom:2rem;">
-          <h2 class="section-title">Ways to engage</h2>
-          <p class="section-sub">Structure that respects your stage — discovery, build, or ongoing velocity.</p>
-        </div>
-        <div class="value-grid" data-stagger>
-          <div class="value-item"><div class="num">SPRINT</div><h3>Discovery sprint</h3><p>1–2 weeks to clarify scope, risks, and a recommended architecture with a clear estimate.</p></div>
-          <div class="value-item"><div class="num">BUILD</div><h3>Delivery program</h3><p>Milestone-based build with demos, QA gates, and a defined launch checklist.</p></div>
-          <div class="value-item"><div class="num">CARE</div><h3>Care retainer</h3><p>Monthly hours for iteration, monitoring, dependency upgrades, and feature follow-through.</p></div>
-        </div>
+    <!-- Long-term partnership checkerboard -->
+    <section class="svc-partner" aria-labelledby="svc-partner-title">
+      <div class="svc-partner-head">
+        <p class="svc-partner-kicker">LONG-TERM PARTNERSHIP</p>
+        <h2 class="svc-partner-title" id="svc-partner-title">Built Around Long Term Value</h2>
       </div>
-    </section> -->
+
+      <div class="svc-partner-grid">
+        <article class="svc-partner-card is-light">
+          <span class="svc-partner-icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="6" cy="12" r="2.2"/><circle cx="18" cy="6" r="2.2"/><circle cx="18" cy="18" r="2.2"/><path d="M8 11.2 15.8 7.2M8 12.8l7.8 4"/></svg>
+          </span>
+          <h3>Shared Vision</h3>
+          <p>We align our goals with yours to create a clear path toward lasting success.</p>
+        </article>
+        <article class="svc-partner-card is-mint">
+          <span class="svc-partner-icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 4c4 3 6 5.5 6 8.2A6 6 0 0 1 6 12.2C6 9.5 8 7 12 4Z"/><path d="M12 9.2c2.1 1.5 3.1 2.8 3.1 4.1a3.1 3.1 0 1 1-6.2 0c0-1.3 1-2.6 3.1-4.1Z"/></svg>
+          </span>
+          <h3>Continuous Support</h3>
+          <p>Our team stays with you at every stage, ensuring consistent progress and reliability.</p>
+        </article>
+        <article class="svc-partner-card is-light">
+          <span class="svc-partner-icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 3 19 6.5v5.2c0 4.3-2.9 7.7-7 9.3-4.1-1.6-7-5-7-9.3V6.5L12 3Z"/><path d="m9.2 12.2 1.9 1.9 3.8-4"/></svg>
+          </span>
+          <h3>Mutual Growth</h3>
+          <p>We focus on strategies that help both sides evolve and achieve sustainable results.</p>
+        </article>
+        <article class="svc-partner-card is-mint">
+          <span class="svc-partner-icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M9 8h6M9 12h6M9 16h4"/><rect x="4.5" y="4.5" width="15" height="15" rx="4"/></svg>
+          </span>
+          <h3>Trusted Collaboration</h3>
+          <p>Open communication and transparency build a strong foundation for working together.</p>
+        </article>
+        <article class="svc-partner-card is-light">
+          <span class="svc-partner-icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M8 12.5 10.4 15 16 9"/><path d="M7.5 18.5h9a2 2 0 0 0 1.7-3l-1.1-1.8a6.5 6.5 0 1 0-10.2 0L6 15.5a2 2 0 0 0 1.5 3Z"/></svg>
+          </span>
+          <h3>Lasting Commitment</h3>
+          <p>We invest in relationships designed to deliver value well beyond project completion.</p>
+        </article>
+        <article class="svc-partner-card is-mint">
+          <span class="svc-partner-icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="5" y="5" width="14" height="14" rx="2"/><circle cx="5" cy="5" r="1.4" fill="currentColor"/><circle cx="19" cy="5" r="1.4" fill="currentColor"/><circle cx="5" cy="19" r="1.4" fill="currentColor"/><circle cx="19" cy="19" r="1.4" fill="currentColor"/></svg>
+          </span>
+          <h3>Future Focus</h3>
+          <p>Our approach prioritizes long-term impact and adaptability as your needs evolve.</p>
+        </article>
+      </div>
+    </section>
 
     <section class="section-pad">
       <div class="reveal-scale" style="max-width:80rem;margin:0 auto;">
@@ -393,15 +612,12 @@
   </div>
 
   <script src="https://cdn.tailwindcss.com"></script>
-  <script src="https://cdn.jsdelivr.net/npm/lenis@1.1.18/dist/lenis.min.js"></script>
-  <script src="/js/script.js"></script>
-  <script src="/js/navbar.js"></script>
-  <script src="/js/smooth-scroll.js"></script>
-  <script src="/js/scroll.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/0.155.0/three.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/gh/automat/controlkit.js@master/bin/controlKit.min.js"></script>
-  <script src="https://unpkg.com/sheryjs/dist/Shery.js"></script>
-  <script src="/js/page-animations.js"></script>
-  <script src="/js/shery-3d.js"></script>
+  <script defer src="https://cdn.jsdelivr.net/npm/lenis@1.1.18/dist/lenis.min.js"></script>
+  <script defer src="/js/script.js"></script>
+  <script defer src="/js/navbar.js"></script>
+  <script defer src="/js/smooth-scroll.js"></script>
+  <script defer src="/js/scroll.js"></script>
+  <script defer src="/js/page-animations.js"></script>
+  <script defer src="/js/shery-3d.js"></script>
 </body>
 </html>

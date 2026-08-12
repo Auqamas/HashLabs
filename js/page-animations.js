@@ -16,6 +16,9 @@
           el.style.opacity = "1";
           el.style.transform = "none";
         });
+      document.querySelectorAll("[data-svc-word-reveal]").forEach((line) => {
+        line.style.color = "#111111";
+      });
       return;
     }
 
@@ -313,6 +316,59 @@
             el.classList.toggle("is-on", idx <= active);
           });
         },
+      });
+    });
+
+    // Services agency lead: on-view word reveal (not scroll-scrubbed)
+    document.querySelectorAll("[data-svc-word-reveal]").forEach((line) => {
+      const raw = (line.textContent || "").trim().replace(/\s+/g, " ");
+      const parts = raw.split(" ");
+      line.textContent = "";
+      parts.forEach((w, i) => {
+        const span = document.createElement("span");
+        span.className = "svc-agency-word";
+        span.textContent = w;
+        line.appendChild(span);
+        if (i < parts.length - 1) {
+          line.appendChild(document.createTextNode(" "));
+        }
+      });
+
+      const wordEls = Array.from(line.querySelectorAll(".svc-agency-word"));
+      if (!wordEls.length) return;
+
+      if (typeof ScrollTrigger === "undefined") {
+        wordEls.forEach((el) => el.classList.add("is-on"));
+        return;
+      }
+
+      const revealCalls = [];
+
+      const resetWords = () => {
+        revealCalls.forEach((call) => call.kill());
+        revealCalls.length = 0;
+        wordEls.forEach((el) => el.classList.remove("is-on"));
+      };
+
+      const playReveal = () => {
+        resetWords();
+        wordEls.forEach((el, idx) => {
+          revealCalls.push(
+            gsap.delayedCall(idx * 0.05, () => {
+              el.classList.add("is-on");
+            })
+          );
+        });
+      };
+
+      ScrollTrigger.create({
+        trigger: line,
+        start: "top 85%",
+        end: "bottom 12%",
+        onEnter: playReveal,
+        onEnterBack: playReveal,
+        onLeave: resetWords,
+        onLeaveBack: resetWords,
       });
     });
 

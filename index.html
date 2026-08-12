@@ -24,10 +24,10 @@
     <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Cabin:ital,wght@0,400..700;1,400..700&family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Londrina+Solid:wght@100;300;400;900&family=Megrim&family=Rubik:ital,wght@0,300..900;1,300..900&family=Sulphur+Point:wght@300;400;700&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Anonymous+Pro:ital,wght@0,400;0,700;1,400;1,700&family=Cabin:ital,wght@0,400..700;1,400..700&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=League+Spartan:wght@100..900&family=Londrina+Solid:wght@100;300;400;900&family=Megrim&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
-    <style id="agent-visual-check">#loader{display:none!important}#main{width:100vw!important;opacity:1!important}</style>
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin>
+    <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
+    <link rel="dns-prefetch" href="https://unpkg.com">
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Plus+Jakarta+Sans:wght@500;600;700&family=Raleway:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 </head>
 <body>
 
@@ -166,7 +166,7 @@
                 muted
                 loop
                 playsinline
-                preload="auto"
+                preload="metadata"
                 src="assets/images/About-us HAshlabs.mp4"
               ></video>
             </div>
@@ -303,8 +303,29 @@
         </section>
 
         <section id="working" class="working">
+            <div class="partners-tilt-scroller" aria-hidden="true">
+              <div class="partners-tilt-band">
+                <div class="partners-tilt-loop" data-marquee-wrapper data-speed="55">
+                  <div class="partners-tilt-track" data-marquee-track>
+                    <span>Hash Labs</span>
+                    <span>Tech Partners</span>
+                    <span>Build Ship</span>
+                    <span>Cloud AI</span>
+                    <span>Design Code</span>
+                    <span>Secure Scale</span>
+                    <span>Ship Iterate</span>
+                    <span>Real Impact</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+
             <div class="heading infinite-scroll">
-              <h1 class="scroll-text">Meet Our Trusted <span class="gradient-text"> Tech Partners</span></h1>
+              <h1 class="scroll-text">
+                The technology partners powering every <span class="heading-accent">idea</span>, every
+                <span class="heading-accent">build</span>, and every <span class="heading-accent">breakthrough</span> we bring to life.
+              </h1>
+              <!-- <p class="heading-sub">Together, we bring ambitious ideas to life through reliable, scalable, and production-ready systems that help us turn bold ideas into reliable, scalable, and production-ready systems.</p> -->
             </div>
           
             <div class="swiper partnersSwiper">
@@ -363,130 +384,302 @@
             </div>
         </section>
 
-        <section class="work-section">
-          <div class="content-box">
-            <div class="left">
-              <div class="tabs">
-                <h1 class="tab active" data-tab="design">Design</h1>
-                <h1 class="tab" data-tab="project">Project</h1>
-                <h1 class="tab" data-tab="execution">Execution</h1>
-              </div>
-              <p class="tab-text">Our engineers and product designers turn ideas into clear technical blueprints. We define architecture, user flows, and system requirements so every build starts with a solid software foundation.</p>
-            </div>
-            <div class="right">
-              <img id="tab-image" src="assets/images/V1.png" alt="Work Image">
-            </div>
+        <section class="about-impact home-impact">
+          <div class="about-impact-pin">
+            <p class="about-impact-line" data-impact-line>
+              The Hash Labs is an IT and computer science company specializing in software development, cloud systems, AI, and digital engineering for businesses and institutions.
+            </p>
           </div>
         </section>
-        
-        <section class="company-data">
-          <div class="data-wrapper">
-            <div class="data-text">
-              <p>The Hash Labs is an IT and computer science company specializing in software development, cloud systems, AI, and digital engineering for businesses and institutions.</p>
-              <div class="company-data-actions">
-                <a class="company-data-cta" href="pages/about.html">About Hash Labs →</a>
-                <a class="company-data-cta company-data-cta--secondary" href="pages/contact.html">Talk to us</a>
+
+        <section class="about-marquee-straight" aria-hidden="true">
+          <div class="about-marquee-band">
+            <div class="about-marquee-loop" data-marquee-wrapper data-speed="55">
+              <div class="about-marquee-track" data-marquee-track>
+                <span class="about-marquee-item">Hash Labs</span>
+                <span class="about-marquee-item">Build Ship</span>
+                <span class="about-marquee-item">Design Code</span>
+                <span class="about-marquee-item">Cloud AI</span>
+                <span class="about-marquee-item">Secure Scale</span>
+                <span class="about-marquee-item">Think Make</span>
+                <span class="about-marquee-item">Learn Iterate</span>
+                <span class="about-marquee-item">Real Impact</span>
               </div>
             </div>
           </div>
         </section>
 
-        <section class="newsletter">
-          <div class="letter-heading">
-            <h1>Ready to build?</h1>
-            <h1>Join HashLabs.</h1>
+        <section class="work-showcase" data-work-stage data-theme="design">
+          <div class="work-showcase-inner">
+            <div class="work-showcase-head">
+              <div>
+                <h2 class="work-title">From first sketch to <span class="work-title-accent">real-world impact.</span></h2>
+              </div>
+              <p class="work-intro">A focused path that keeps strategy, engineering, and launch moving as one.</p>
+            </div>
+
+            <div class="work-panel">
+              <div class="work-tablist" role="tablist">
+                <button class="work-tab active" type="button" role="tab" aria-selected="true" data-tab="design">
+                  <span class="work-tab-top">
+                    <span class="work-tab-index">01</span>
+                    <span class="work-tab-label">Design</span>
+                  </span>
+                  <span class="work-tab-caption">Discover &amp; define</span>
+                  <span class="work-tab-progress" aria-hidden="true"><span class="work-tab-progress-fill" data-progress-fill></span></span>
+                </button>
+                <button class="work-tab" type="button" role="tab" aria-selected="false" data-tab="project">
+                  <span class="work-tab-top">
+                    <span class="work-tab-index">02</span>
+                    <span class="work-tab-label">Project</span>
+                  </span>
+                  <span class="work-tab-caption">Build &amp; connect</span>
+                  <span class="work-tab-progress" aria-hidden="true"><span class="work-tab-progress-fill" data-progress-fill></span></span>
+                </button>
+                <button class="work-tab" type="button" role="tab" aria-selected="false" data-tab="execution">
+                  <span class="work-tab-top">
+                    <span class="work-tab-index">03</span>
+                    <span class="work-tab-label">Execution</span>
+                  </span>
+                  <span class="work-tab-caption">Launch &amp; evolve</span>
+                  <span class="work-tab-progress" aria-hidden="true"><span class="work-tab-progress-fill" data-progress-fill></span></span>
+                </button>
+              </div>
+
+              <div class="work-story">
+                <div class="work-media-shell">
+                  <div class="work-media">
+                    <img id="tab-image" src="assets/images/work-design-v2.png" alt="Minimal UX design workspace with wireframes on a tablet">
+                  </div>
+                  <span class="work-media-badge" id="tab-badge">01 / 03</span>
+                  <span class="work-float-note" id="tab-note">Clarity before code</span>
+                  <span class="work-orbit work-orbit-one" aria-hidden="true"></span>
+                  <span class="work-orbit work-orbit-two" aria-hidden="true"></span>
+                </div>
+
+                <div class="work-copy">
+                  <span class="work-copy-label">Current phase</span>
+                  <p class="work-tab-text" id="tab-text">Our engineers and product designers turn ideas into clear technical blueprints. We define architecture, user flows, and system requirements so every build starts with a solid software foundation.</p>
+
+                  <div class="work-tab-tags" id="tab-tags">
+                    <span class="work-tag">Architecture</span>
+                    <span class="work-tag">Wireframes</span>
+                    <span class="work-tag">Prototyping</span>
+                  </div>
+
+                  <div class="work-phase-mark" aria-hidden="true">
+                    <span id="tab-number">01</span>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
-          <form class="letter-mail" id="newsletterForm">
-            <input type="email" id="emailInput" placeholder="Enter your email" required />
-            <button type="submit" class="subscribe-btn">Subscribe</button>
-          </form>
-          <p id="responseMessage" class="response-message"></p>
-        </section> 
+        </section>
         
-        <section class="faq-section">
-          <h2>Frequently Asked <br><span class="color-g"> Questions</span></h2>
+        <section class="faq-section" data-faq-stage>
+          <div class="faq-inner">
+            <div class="faq-grid">
+              <div class="faq-lead">
+                <h2 class="faq-heading">Got questions? <span class="color-g">We have answers.</span></h2>
+                <p class="faq-lead-text">Straight answers about how we work, what we deliver, and what to expect when you partner with us.</p>
+              </div>
 
-          <div class="faq-wrapper">
-            <div class="faq-item">
-              <button class="faq-question">
-                <span>What is The Hash Labs?</span>
-                <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
-                  <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"/>
-                </svg>
-              </button>
-              <div class="faq-answer">
-                The Hash Labs is an IT and computer science company that designs, builds, and scales software products. We help businesses modernize with web apps, cloud infrastructure, AI systems, and reliable engineering support.
-              </div>
-            </div>
-      
-            <div class="faq-item">
-              <button class="faq-question">
-                <span>What services do you offer?</span>
-                <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
-                  <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"/>
-                </svg>
-              </button>
-              <div class="faq-answer">
-                We offer a full range of IT and CS services, including: <br><br>
+              <div class="faq-list-wrap">
+                <div class="faq-wrapper">
+                <div class="faq-item">
+                  <button class="faq-question" type="button" aria-expanded="false">
+                    <span class="faq-q-text">What is The Hash Labs?</span>
+                    <span class="faq-q-icon" aria-hidden="true">
+                      <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"/>
+                      </svg>
+                    </span>
+                  </button>
+                  <div class="faq-answer">
+                    <p>The Hash Labs is an IT and computer science company that designs, builds, and scales software products. We help businesses modernize with web apps, cloud infrastructure, AI systems, and reliable engineering support.</p>
+                  </div>
+                </div>
 
-                &nbsp;  1. Custom software development  <br>
-                &nbsp;  2. Web and mobile application engineering  <br>
-                &nbsp;  3. UI/UX design for digital products  <br>
-                &nbsp;  4. Cloud architecture and DevOps  <br>
-                &nbsp;  5. Full-stack development  <br>
-                &nbsp;  6. AI and machine learning solutions  <br>
-                &nbsp;  7. Embedded systems and IoT software  <br>
-                &nbsp;  8. Automation and process tooling  <br>
-                &nbsp;  9. Data platforms and analytics  <br>
-                &nbsp;  10. IT consulting and technical research  <br>
-              </div>
-            </div>
-      
-            <div class="faq-item">
-              <button class="faq-question">
-                <span>How long does a typical project take?</span>
-                <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
-                  <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"/>
-                </svg>
-              </button>
-              <div class="faq-answer">
-                Timelines depend on scope and complexity. A focused MVP may take a few weeks, while larger platforms can run several months. Contact us at hr@thehashlabs.com and we will outline a clear delivery plan for your project.
-              </div>
-            </div>
-      
-            <div class="faq-item">
-              <button class="faq-question">
-                <span>Do you provide ongoing support after the project is completed?</span>
-                <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
-                  <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"/>
-                </svg>
-              </button>
-              <div class="faq-answer">
-                Yes. We provide post-launch support including updates, monitoring, performance tuning, bug fixes, and feature iterations so your software stays secure and reliable.
-              </div>
-            </div>
-      
-            <div class="faq-item">
-              <button class="faq-question">
-                <span>What technologies do you use?</span>
-                <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
-                  <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"/>
-                </svg>
-              </button>
-              <div class="faq-answer">
-                We choose the stack that fits the problem. Common tools include Python, JavaScript/TypeScript, modern web frameworks, cloud platforms, databases, CI/CD pipelines, and ML libraries — always matched to performance, security, and maintainability needs.
-              </div>
-            </div>
-      
-            <div class="faq-item">
-              <button class="faq-question">
-                <span>Is Hash Labs suitable for long-term projects?</span>
-                <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
-                  <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"/>
-                </svg>
-              </button>
-              <div class="faq-answer">
-                Yes. We support short-term sprints and long-term product partnerships, adapting our engineering process to your roadmap and release cadence.
+                <div class="faq-item">
+                  <button class="faq-question" type="button" aria-expanded="false">
+                    <span class="faq-q-text">What services do you offer?</span>
+                    <span class="faq-q-icon" aria-hidden="true">
+                      <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"/>
+                      </svg>
+                    </span>
+                  </button>
+                  <div class="faq-answer">
+                    <p>We offer a full range of IT and computer science services, including:</p>
+                    <ul class="faq-list">
+                      <li>Custom software development</li>
+                      <li>Web and mobile application engineering</li>
+                      <li>UI/UX design for digital products</li>
+                      <li>Cloud architecture and DevOps</li>
+                      <li>Full-stack development</li>
+                      <li>AI and machine learning solutions</li>
+                      <li>Embedded systems and IoT software</li>
+                      <li>Automation and process tooling</li>
+                      <li>Data platforms and analytics</li>
+                      <li>IT consulting and technical research</li>
+                    </ul>
+                  </div>
+                </div>
+
+                <div class="faq-item">
+                  <button class="faq-question" type="button" aria-expanded="false">
+                    <span class="faq-q-text">How long does a typical project take?</span>
+                    <span class="faq-q-icon" aria-hidden="true">
+                      <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"/>
+                      </svg>
+                    </span>
+                  </button>
+                  <div class="faq-answer">
+                    <p>Timelines depend on scope and complexity. A focused MVP may take a few weeks, while larger platforms can run several months. Contact us at <a href="mailto:hr@thehashlabs.com">hr@thehashlabs.com</a> and we will outline a clear delivery plan for your project.</p>
+                  </div>
+                </div>
+
+                <div class="faq-item">
+                  <button class="faq-question" type="button" aria-expanded="false">
+                    <span class="faq-q-text">Do you provide ongoing support after the project is completed?</span>
+                    <span class="faq-q-icon" aria-hidden="true">
+                      <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"/>
+                      </svg>
+                    </span>
+                  </button>
+                  <div class="faq-answer">
+                    <p>Yes. We provide post-launch support including updates, monitoring, performance tuning, bug fixes, and feature iterations so your software stays secure and reliable.</p>
+                  </div>
+                </div>
+
+                <div class="faq-item">
+                  <button class="faq-question" type="button" aria-expanded="false">
+                    <span class="faq-q-text">What technologies do you use?</span>
+                    <span class="faq-q-icon" aria-hidden="true">
+                      <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"/>
+                      </svg>
+                    </span>
+                  </button>
+                  <div class="faq-answer">
+                    <p>We choose the stack that fits the problem. Common tools include Python, JavaScript/TypeScript, modern web frameworks, cloud platforms, databases, CI/CD pipelines, and ML libraries — always matched to performance, security, and maintainability needs.</p>
+                  </div>
+                </div>
+
+                <div class="faq-item">
+                  <button class="faq-question" type="button" aria-expanded="false">
+                    <span class="faq-q-text">Is Hash Labs suitable for long-term projects?</span>
+                    <span class="faq-q-icon" aria-hidden="true">
+                      <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"/>
+                      </svg>
+                    </span>
+                  </button>
+                  <div class="faq-answer">
+                    <p>Yes. We support short-term sprints and long-term product partnerships, adapting our engineering process to your roadmap and release cadence.</p>
+                  </div>
+                </div>
+
+                <div class="faq-item">
+                  <button class="faq-question" type="button" aria-expanded="false">
+                    <span class="faq-q-text">How do you price projects?</span>
+                    <span class="faq-q-icon" aria-hidden="true">
+                      <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"/>
+                      </svg>
+                    </span>
+                  </button>
+                  <div class="faq-answer">
+                    <p>Pricing depends on scope, timeline, and team size. We offer fixed-scope builds, milestone-based delivery, and retainer models for ongoing work. After a short discovery call, we share a clear estimate with milestones and deliverables.</p>
+                  </div>
+                </div>
+
+                <div class="faq-item">
+                  <button class="faq-question" type="button" aria-expanded="false">
+                    <span class="faq-q-text">Do you work with startups and enterprises?</span>
+                    <span class="faq-q-icon" aria-hidden="true">
+                      <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"/>
+                      </svg>
+                    </span>
+                  </button>
+                  <div class="faq-answer">
+                    <p>Yes. We partner with early-stage teams shipping their first product and with larger organizations modernizing legacy systems. Our process scales from focused MVPs to multi-team platform work.</p>
+                  </div>
+                </div>
+
+                <div class="faq-item">
+                  <button class="faq-question" type="button" aria-expanded="false">
+                    <span class="faq-q-text">Can you integrate with our existing systems?</span>
+                    <span class="faq-q-icon" aria-hidden="true">
+                      <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"/>
+                      </svg>
+                    </span>
+                  </button>
+                  <div class="faq-answer">
+                    <p>Absolutely. We regularly connect new products to CRMs, payment gateways, ERP tools, internal APIs, and cloud services — designing integrations that are secure, documented, and easy to maintain.</p>
+                  </div>
+                </div>
+
+                <div class="faq-item">
+                  <button class="faq-question" type="button" aria-expanded="false">
+                    <span class="faq-q-text">Where is your team based?</span>
+                    <span class="faq-q-icon" aria-hidden="true">
+                      <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"/>
+                      </svg>
+                    </span>
+                  </button>
+                  <div class="faq-answer">
+                    <p>Our core team is based in Lahore, Pakistan, and we collaborate with clients globally. We work across time zones with async updates, shared dashboards, and scheduled syncs so delivery stays transparent.</p>
+                  </div>
+                </div>
+
+                <div class="faq-item">
+                  <button class="faq-question" type="button" aria-expanded="false">
+                    <span class="faq-q-text">How do you handle communication during a project?</span>
+                    <span class="faq-q-icon" aria-hidden="true">
+                      <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"/>
+                      </svg>
+                    </span>
+                  </button>
+                  <div class="faq-answer">
+                    <p>Every engagement includes a dedicated point of contact, sprint reviews, and shared progress tracking. You get regular demos, written updates, and direct access to engineers when technical decisions need input.</p>
+                  </div>
+                </div>
+
+                <div class="faq-item">
+                  <button class="faq-question" type="button" aria-expanded="false">
+                    <span class="faq-q-text">Do you sign NDAs and protect client data?</span>
+                    <span class="faq-q-icon" aria-hidden="true">
+                      <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"/>
+                      </svg>
+                    </span>
+                  </button>
+                  <div class="faq-answer">
+                    <p>Yes. We sign NDAs when required and follow secure development practices including access controls, environment separation, and careful handling of credentials and production data.</p>
+                  </div>
+                </div>
+
+                <div class="faq-item">
+                  <button class="faq-question" type="button" aria-expanded="false">
+                    <span class="faq-q-text">Can you help rescue or refactor an existing product?</span>
+                    <span class="faq-q-icon" aria-hidden="true">
+                      <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"/>
+                      </svg>
+                    </span>
+                  </button>
+                  <div class="faq-answer">
+                    <p>Yes. We audit codebases, stabilize failing releases, improve performance, and refactor for maintainability — often while keeping the product live and minimizing disruption to users.</p>
+                  </div>
+                </div>
+                </div>
               </div>
             </div>
           </div>
@@ -569,83 +762,52 @@
 
     </div>
 
-    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/MotionPathPlugin.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/lenis@1.1.18/dist/lenis.min.js"></script>
-    <script src="https://kit.fontawesome.com/236b5f9539.js" crossorigin="anonymous"></script>
+    <script defer src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script defer src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    <script defer src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/MotionPathPlugin.min.js"></script>
+    <script defer src="https://cdn.jsdelivr.net/npm/lenis@1.1.18/dist/lenis.min.js"></script>
+    <script defer src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <script defer src="js/navbar.js"></script>
+    <script defer src="js/home-smooth-scroll.js"></script>
+    <script defer src="js/scroll.js"></script>
+    <script defer src="js/hero-marquee.js"></script>
+    <script defer src="js/home.js"></script>
+    <script defer src="js/script.js"></script>
     <script>
-      const faqButtons = document.querySelectorAll(".faq-question");
-  
-      faqButtons.forEach((btn) => {
-        btn.addEventListener("click", () => {
-          const content = btn.nextElementSibling;
-          const icon = btn.querySelector("svg");
-  
-          document.querySelectorAll(".faq-answer").forEach(a => {
-            if (a !== content) {
-              a.classList.remove("open");
-            }
-          });
-  
-          document.querySelectorAll(".faq-question svg").forEach(i => {
-            if (i !== icon) {
-              i.classList.remove("rotate-180");
-            }
-          });
-  
-          content.classList.toggle("open");
-          icon.classList.toggle("rotate-180");
-        });
-      });
-    </script>
-    <script src="js/navbar.js"></script>
-    <script src="js/home-smooth-scroll.js"></script>
-    <script src="js/hero-marquee.js"></script>
-    <script src="js/home.js"></script>
-    <script>
-        const swiper = new Swiper('.partnersSwiper', {
+      document.addEventListener("DOMContentLoaded", () => {
+        if (typeof Swiper !== "undefined" && document.querySelector(".partnersSwiper")) {
+          new Swiper(".partnersSwiper", {
             loop: true,
             autoplay: {
-            delay: 3000,
-            disableOnInteraction: false,
+              delay: 3000,
+              disableOnInteraction: false,
             },
             spaceBetween: 30,
             speed: 1000,
             grabCursor: true,
             slidesPerView: 1,
-
             breakpoints: {
-            640: {
-                slidesPerView: 1.2,
+              640: { slidesPerView: 1.2 },
+              768: { slidesPerView: 2 },
+              1024: { slidesPerView: 3 },
+              1280: { slidesPerView: 4 },
             },
-            768: {
-                slidesPerView: 2,
-            },
-            1024: {
-                slidesPerView: 3,
-            },
-            1280: {
-                slidesPerView: 4,
-            }
-            },
-
             pagination: false,
-        });
-
-        function scrollToWorking() {
-          document.getElementById("working").scrollIntoView({ behavior: "smooth" });
+          });
         }
 
-        document.getElementById('newsletterForm')?.addEventListener('submit', (e) => {
+        document.getElementById("newsletterForm")?.addEventListener("submit", (e) => {
           e.preventDefault();
-          const msg = document.getElementById('responseMessage');
-          if (msg) msg.textContent = 'Thanks — you are on the list. We will be in touch.';
+          const msg = document.getElementById("responseMessage");
+          if (msg) msg.textContent = "Thanks — you are on the list. We will be in touch.";
           e.target.reset();
         });
+      });
+
+      function scrollToWorking() {
+        document.getElementById("working")?.scrollIntoView({ behavior: "smooth" });
+      }
     </script>
-    <script src="js/script.js"></script>
 
 </body>
 </html>
