@@ -60,7 +60,7 @@
     layouts: [
       { minWidth: 1200, font: 24, band: 62, tracking: -0.02, route: "wide" },
       { minWidth: 768, font: 19, band: 48, tracking: -0.02, route: "medium" },
-      { minWidth: 0, font: 14, band: 26, tracking: -0.02, route: "compact" },
+      { minWidth: 0, font: 20, band: 48, tracking: -0.02, route: "compact" },
     ],
 
     /**

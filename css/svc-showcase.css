@@ -3,7 +3,7 @@
    ========================================================================== */
 
 :root {
-  --svc-show-serif: "Instrument Serif", "Times New Roman", serif;
+  --svc-show-serif: "Raleway", sans-serif;
   --svc-show-ink: #111111;
   --svc-show-muted: #8a8a8a;
   --svc-show-soft: #f4f4f4;
@@ -163,7 +163,7 @@
   margin: 0 0 1.5rem;
   font-family: var(--svc-show-serif);
   font-size: clamp(2.4rem, 4.4vw, 4.35rem);
-  font-weight: 400;
+  font-weight: 700;
   line-height: 1.05;
   letter-spacing: -0.03em;
   color: var(--svc-show-ink);
@@ -207,13 +207,24 @@
   gap: 1.25rem;
   min-width: min(100%, 18rem);
   padding: 0.85rem 0.9rem 0.85rem 1.35rem;
-  border-radius: 999px;
-  background: #111;
+  border-radius: 0.5rem;
+  background-image: linear-gradient(to right, #4f46e5, #9333ea, #db2777);
+  background-size: 200% 200%;
+  background-position: left;
   color: #fff;
   text-decoration: none;
-  font-size: 0.78rem;
+  font-family: "Raleway", sans-serif;
+  font-size: 0.88rem;
   font-weight: 700;
-  letter-spacing: 0.08em;
+  letter-spacing: 0.04em;
+  box-shadow: 0 4px 14px rgba(79, 70, 229, 0.25);
+  transition: background-position 0.5s ease, transform 0.25s ease, box-shadow 0.3s ease;
+}
+
+.svc-split-cta:hover {
+  background-position: right;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 22px rgba(147, 51, 234, 0.4);
 }
 
 .svc-split-cta-icon {
@@ -222,7 +233,7 @@
   width: 2.35rem;
   height: 2.35rem;
   border-radius: 999px;
-  background: rgba(255, 255, 255, 0.12);
+  background: rgba(255, 255, 255, 0.18);
   font-size: 1rem;
 }
 
@@ -538,13 +549,23 @@
   top: 48%;
   z-index: 4;
   transform: translate(-50%, -50%);
-  padding: 0.55rem 1rem;
-  border-radius: 999px;
-  background: #111;
+  padding: 0.55rem 1.1rem;
+  border-radius: 0.5rem;
+  background-image: linear-gradient(to right, #4f46e5, #9333ea, #db2777);
+  background-size: 200% 200%;
+  background-position: left;
   color: #fff;
+  font-family: "Raleway", sans-serif;
   font-size: 0.78rem;
   font-weight: 700;
   text-decoration: none;
+  box-shadow: 0 4px 14px rgba(79, 70, 229, 0.3);
+  transition: background-position 0.5s ease, transform 0.2s ease;
+}
+
+.svc-bento-chip:hover {
+  background-position: right;
+  transform: translate(-50%, -50%) translateY(-2px);
 }
 
 .svc-bento--count {
@@ -585,7 +606,7 @@
   margin: 0;
   font-family: var(--svc-show-serif);
   font-size: clamp(2.5rem, 5vw, 4.5rem);
-  font-weight: 400;
+  font-weight: 700;
   line-height: 1.05;
   letter-spacing: -0.03em;
 }
